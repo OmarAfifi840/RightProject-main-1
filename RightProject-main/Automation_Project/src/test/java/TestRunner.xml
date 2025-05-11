@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParallelTestSuite" parallel="tests" thread-count="13">
+    <test name="Employee1">
+        <classes>
+            <class name="Parallel.Employees_V2.AllActionsEmployee1_V3"/>
+        </classes>
+    </test>
+<!--    <test name="Employee2">-->
+<!--        <classes>-->
+<!--            <class name="Parallel.Employees_V2.AllActionsEmployee2_V3"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Employee3">-->
+<!--        <classes>-->
+<!--            <class name="Parallel.Employees_V2.AllActionsEmployee3_V3"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Employee4">-->
+<!--        <classes>-->
+<!--            <class name="Parallel.Employees_V2.AllActionsEmployee4_V3"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Employee5">-->
+<!--        <classes>-->
+<!--            <class name="Parallel.Employees_V2.AllActionsEmployee5_V3"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
