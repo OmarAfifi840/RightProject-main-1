@@ -23,7 +23,7 @@ public class AllActionsEmployee1_V3 {
 
     private static  void SendPath(String Path,String Message){
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(3));
-        WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Path)));
+        WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(Path)));
         okButton.click();
         //System.out.println(Message);
         logger.error(Message); //Changed from Info To Error
@@ -61,44 +61,53 @@ public class AllActionsEmployee1_V3 {
 
 
     public static void clickSwalOkIfExists() {
-        String Employee1 = ConfigReader.get("userName1");
+      //  String Employee1 = ConfigReader.get("userName1");
 
         try {
-            SendPath("//*[@id=\"kt_app_body\"]/div[4]/div/div[6]/button[1]", "OK button clicked leave. / UserName :" + Employee1);
-            return;
-        } catch (TimeoutException e1) {
-            Infologger("First OK button not found, trying second XPath... / UserName :" + Employee1);
-        } catch (Exception e) {
-            Infologger("Something went wrong with first XPath: " + e.getMessage() + " / UserName :" + Employee1);
-        }
-
-        try {
-            SendPath("//*[@id=\"kt_app_body\"]/div[5]/div/div[6]/button[1]", "OK button clicked Mission. / UserName :" + Employee1);
-            return;
-        } catch (TimeoutException e2) {
-            Infologger("Second OK button not found, trying third XPath... / UserName :" + Employee1);
-        } catch (Exception e2) {
-            Infologger("Something went wrong with second XPath: " + e2.getMessage() + " / UserName :" + Employee1);
-        }
-
-        try {
-            SendPath("//*[@id=\"kt_app_body\"]/div[4]/div/div[6]/button[1]", "OK button clicked Permission. / UserName :" + Employee1);
-            return;
-        } catch (TimeoutException e3) {
-            Infologger("Third OK button not found, trying fourth XPath... / UserName :" + Employee1);
-        } catch (Exception e3) {
-            Infologger("Something went wrong with third XPath: " + e3.getMessage() + " / UserName :" + Employee1);
-        }
-
-        try {
-            SendPath("//*[@id=\"kt_app_body\"]/div[4]/div/div[6]/button[1]", "OK button clicked WFH. / UserName :" + Employee1);
-            return;
-        } catch (Exception e4) {
-            Infologger("Something went wrong with fourth XPath: " + e4.getMessage() + " / UserName :" + Employee1);
-        }
-
-        Infologger("No OK button appeared, continuing... / UserName :" + Employee1);
+            SendPath("swal2-actions", "OK button clicked.");
+        } catch (TimeoutException e1) {}
+//            Infologger("First OK button not found, trying second XPath... / UserName :" + Employee1);}
     }
+//public static void clickSwalOkIfExists() {
+//        String Employee1 = ConfigReader.get("userName1");
+//
+//        try {
+//            SendPath("//*[@id=\"kt_app_body\"]/div[4]/div/div[6]/button[1]", "OK button clicked leave. / UserName :" + Employee1);
+//            return;
+//        } catch (TimeoutException e1) {
+//            Infologger("First OK button not found, trying second XPath... / UserName :" + Employee1);
+//        } catch (Exception e) {
+//            Infologger("Something went wrong with first XPath: " + e.getMessage() + " / UserName :" + Employee1);
+//        }
+//
+//        try {
+//            SendPath("//*[@id=\"kt_app_body\"]/div[5]/div/div[6]/button[1]", "OK button clicked Mission. / UserName :" + Employee1);
+//            return;
+//        } catch (TimeoutException e2) {
+//            Infologger("Second OK button not found, trying third XPath... / UserName :" + Employee1);
+//        } catch (Exception e2) {
+//            Infologger("Something went wrong with second XPath: " + e2.getMessage() + " / UserName :" + Employee1);
+//        }
+//
+//        try {
+//            SendPath("//*[@id=\"kt_app_body\"]/div[3]/div/div[6]/button[1]", "OK button clicked Permission. / UserName :" + Employee1);
+//
+//            return;
+//        } catch (TimeoutException e3) {
+//            Infologger("Third OK button not found, trying fourth XPath... / UserName :" + Employee1);
+//        } catch (Exception e3) {
+//            Infologger("Something went wrong with third XPath: " + e3.getMessage() + " / UserName :" + Employee1);
+//        }
+//
+//        try {
+//            SendPath("//*[@id=\"kt_app_body\"]/div[3]/div/div[6]/button[1]", "OK button clicked WFH. / UserName :" + Employee1);
+//            return;
+//        } catch (Exception e4) {
+//            Infologger("Something went wrong with fourth XPath: " + e4.getMessage() + " / UserName :" + Employee1);
+//        }
+//
+//        Infologger("No OK button appeared, continuing... / UserName :" + Employee1);
+//    }
 
 
     public static void startBrowser() {
@@ -198,9 +207,10 @@ public class AllActionsEmployee1_V3 {
                 swalerrorMessage("Leave");
             }
             catch (TimeoutException e1) {
-                Infologger("Leave"+" Request is submitted successfully"+ " / UserName :" + Employee1);
+                Infologger("Leave"+" Request is submitted successfully"+" / UserName :" + Employee1);
             }
         }
+
     }
 
     private void submitMissionRequest() throws InterruptedException {

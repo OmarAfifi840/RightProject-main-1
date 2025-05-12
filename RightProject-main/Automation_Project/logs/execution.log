@@ -13,3 +13,19 @@
 2025-05-11 13:52:25 INFO  AllActionsEmployee1_V3:38 - WFH / UserName :200130
 2025-05-11 13:52:36 ERROR AllActionsEmployee1_V3:57 - Request: WFH | Swal Message: Selected employee is not assigned to shift within the selected period / UserName: 200130
 2025-05-11 13:52:36 ERROR AllActionsEmployee1_V3:29 - OK button clicked leave. / UserName :200130
+2025-05-12 13:25:39 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-12 13:27:18 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-12 13:28:01 INFO  AllActionsEmployee1_V3:38 - Leave Request is submitted successfully / UserName :200130
+2025-05-12 13:29:06 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-12 13:29:44 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
+2025-05-12 13:31:56 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-12 13:32:36 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
+2025-05-12 13:32:36 ERROR AllActionsEmployee1_V3:29 - OK button clicked.
+2025-05-12 13:32:37 INFO  AllActionsEmployee1_V3:38 - Mission / UserName :200130
+2025-05-12 15:25:48 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-12 15:26:21 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
+2025-05-12 15:26:21 ERROR AllActionsEmployee1_V3:29 - OK button clicked.
+2025-05-12 15:27:28 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-12 15:27:52 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
+2025-05-12 15:27:53 ERROR AllActionsEmployee1_V3:29 - OK button clicked.
+2025-05-12 15:27:53 INFO  AllActionsEmployee1_V3:38 - Mission / UserName :200130
