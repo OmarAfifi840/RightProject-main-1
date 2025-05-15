@@ -29,3 +29,15 @@
 2025-05-12 15:27:52 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
 2025-05-12 15:27:53 ERROR AllActionsEmployee1_V3:29 - OK button clicked.
 2025-05-12 15:27:53 INFO  AllActionsEmployee1_V3:38 - Mission / UserName :200130
+2025-05-13 16:42:08 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-14 11:05:40 INFO  AllActionsEmployee1_V3:37 - Leave / UserName :200130
+2025-05-15 13:48:26 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-15 13:56:05 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-15 14:00:57 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-15 14:26:50 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-15 14:28:22 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
+2025-05-15 14:32:17 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
+2025-05-15 14:34:52 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
+2025-05-15 14:37:06 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
+2025-05-15 14:38:52 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
+2025-05-15 14:39:53 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
