@@ -28,12 +28,37 @@ public class AllActionsEmployee1_V3 {
         logger.error(Message); //Changed from Info To Error
     }
 
-    private static WebElement employeeCode(String reqType) {
-        return driver1.findElement(By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-"+reqType+"/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span")) ;
-        //html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-"+reqType+"/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span
-        //return driver1.findElement(By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-"+reqType+"/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span"));
+    //private static WebElement employeeCode(String reqType) {
+//        Boolean Path = true;
+//
+//
+//
+//        while  ( Path == true )
+//        {
+//            driver1.findElement(By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-"+reqType+"/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span")) ;
+//
+//        }
+//
+//
+//        return null;
+//    }
 
+
+
+    private static WebElement employeeCode(String reqType) {
+        WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(30)); // Wait max 10 seconds
+
+        By locator = By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-"+reqType+"/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span");
+
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            return element;
+        } catch (Exception e) {
+            System.out.println("Element not found within timeout: " + e.getMessage());
+            return null;
+        }
     }
+
 
     private static void Infologger (String Message) {
         //System.out.println(Message);
@@ -174,13 +199,13 @@ public class AllActionsEmployee1_V3 {
         WebElement ScreenNameLeave= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"kt_app_content_container\"]/app-leave-request/div/div/div[1]/div/h2")));
 
 
-
-        Boolean Path = true;
-        while  ( Path == true )
-        {
-            employeeCode("leave-request");
-            System.out.print("Succeed");
-        }
+        employeeCode("leave-request");
+//        Boolean Path = true;
+//        while  ( Path == true )
+//        {
+//            employeeCode("leave-request");
+//            System.out.print("Succeed");
+//        }
 
 //        if (employeeCode("leave-request") != null) {
             Thread.sleep(1000);
@@ -214,7 +239,7 @@ public class AllActionsEmployee1_V3 {
             driver1.findElement(By.cssSelector("button span.indicator-label")).click();
 
             try {
-                Thread.sleep(8000);
+                Thread.sleep(10000);
                 swalerrorMessage("Leave");
             }
             catch (TimeoutException e1) {
@@ -248,12 +273,12 @@ public class AllActionsEmployee1_V3 {
 
 //        if (employeeCode("mission-request") != null) {
 
-        Boolean Path2 = true;
-        while  ( Path2 == true )
-        {
+//        Boolean Path2 = true;
+//        while  ( Path2 == true )
+//        {
             employeeCode("mission-request");
-            System.out.print("Succeed");
-        }
+//            System.out.print("Succeed");
+//        }
             Thread.sleep(1000);
             driver1.findElement(By.xpath("//*[@id=\"mat-input-9\"]")).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
             driver1.findElement(By.xpath("//*[@id=\"mat-input-9\"]")).clear();
@@ -298,11 +323,11 @@ public class AllActionsEmployee1_V3 {
 
 //        if (employeeCode("permission-request") != null) {
 
-        Boolean Path3 = true;
-        while  ( Path3 == true )
-        {
+//        Boolean Path3 = true;
+//        while  ( Path3 == true )
+//        {
             employeeCode("permission-request");
-        }
+//        }
 
             driver1.findElement(By.id("mat-input-16")).sendKeys(ConfigReader.get("PermissionDateEmployee1"));
             driver1.findElement(By.id("mat-input-16")).clear();
@@ -339,11 +364,11 @@ public class AllActionsEmployee1_V3 {
 //        navigateTo("#kt_app_header_menu > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(4) > a > span.menu-title");
 
 //        if (employeeCode("wfhrequest") != null) {
-        Boolean Path4 = true;
-        while  ( Path4 == true )
-        {
+//        Boolean Path4 = true;
+//        while  ( Path4 == true )
+//        {
             employeeCode("wfhrequest");
-        }
+//        }
 
             driver1.findElement(By.xpath("//app-wfhrequest//input[@formcontrolname='fromDate']")).sendKeys(ConfigReader.get("FromDateEmployee1WFH"));
             driver1.findElement(By.xpath("//app-wfhrequest//input[@formcontrolname='fromDate']")).clear();

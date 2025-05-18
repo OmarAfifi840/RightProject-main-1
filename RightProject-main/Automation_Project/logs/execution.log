@@ -41,3 +41,27 @@
 2025-05-15 14:37:06 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
 2025-05-15 14:38:52 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
 2025-05-15 14:39:53 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
+2025-05-18 10:48:41 INFO  AllActionsEmployee1_V3:50 - Leave / UserName :200130
+2025-05-18 13:21:50 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-18 13:22:44 INFO  AllActionsEmployee1_V3:65 - Leave Request is submitted successfully / UserName :200130
+2025-05-18 13:25:09 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-18 13:25:55 INFO  AllActionsEmployee1_V3:65 - Leave Request is submitted successfully / UserName :200130
+2025-05-18 13:27:24 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-18 13:29:11 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-18 13:29:55 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
+2025-05-18 13:29:56 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-18 13:29:56 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
+2025-05-18 13:30:12 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
+2025-05-18 13:30:12 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-18 13:30:12 INFO  AllActionsEmployee1_V3:65 - Permission / UserName :200130
+2025-05-18 13:30:24 ERROR AllActionsEmployee1_V3:84 - Request: Permission | Swal Message: This Day Is Hloiday For This Employee / UserName: 200130
+2025-05-18 13:30:24 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-18 14:19:15 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-18 14:19:48 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
+2025-05-18 14:19:48 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-18 14:19:49 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
+2025-05-18 14:20:03 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
+2025-05-18 14:20:03 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-18 14:20:04 INFO  AllActionsEmployee1_V3:65 - Permission / UserName :200130
+2025-05-18 14:20:17 ERROR AllActionsEmployee1_V3:84 - Request: Permission | Swal Message: This Day Is Hloiday For This Employee / UserName: 200130
+2025-05-18 14:20:17 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
