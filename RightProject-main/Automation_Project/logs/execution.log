@@ -65,3 +65,24 @@
 2025-05-18 14:20:04 INFO  AllActionsEmployee1_V3:65 - Permission / UserName :200130
 2025-05-18 14:20:17 ERROR AllActionsEmployee1_V3:84 - Request: Permission | Swal Message: This Day Is Hloiday For This Employee / UserName: 200130
 2025-05-18 14:20:17 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-20 09:54:40 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-20 09:55:31 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
+2025-05-20 09:55:31 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-20 10:04:23 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-20 10:05:04 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
+2025-05-20 10:05:04 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-20 10:05:05 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
+2025-05-20 10:05:22 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
+2025-05-20 10:05:22 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-20 10:05:22 INFO  AllActionsEmployee1_V3:65 - Permission / UserName :200130
+2025-05-20 10:05:35 ERROR AllActionsEmployee1_V3:84 - Request: Permission | Swal Message: This Day Is Hloiday For This Employee / UserName: 200130
+2025-05-20 10:05:35 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-20 10:05:36 INFO  AllActionsEmployee1_V3:65 - WFH / UserName :200130
+2025-05-20 10:05:48 ERROR AllActionsEmployee1_V3:84 - Request: WFH | Swal Message: Selected employee is not assigned to shift within the selected period / UserName: 200130
+2025-05-20 10:05:48 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-20 10:22:05 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
+2025-05-20 10:22:44 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
+2025-05-20 10:22:44 INFO  AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-20 10:22:45 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
+2025-05-20 10:23:01 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
+2025-05-20 10:23:01 INFO  AllActionsEmployee1_V3:28 - OK button clicked.

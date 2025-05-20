@@ -25,7 +25,7 @@ public class AllActionsEmployee1_V3 {
         WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(Path)));
         okButton.click();
         //System.out.println(Message);
-        logger.error(Message); //Changed from Info To Error
+        logger.info(Message); 
     }
 
     //private static WebElement employeeCode(String reqType) {
