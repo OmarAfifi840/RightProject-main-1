@@ -13,12 +13,7 @@ import utilities.ConfigReader;
 
 import java.time.Duration;
 
-<<<<<<< Updated upstream
-=======
-//tEST
 
-//Test
->>>>>>> Stashed changes
 
 public class AllActionsEmployee1_V3 {
 
