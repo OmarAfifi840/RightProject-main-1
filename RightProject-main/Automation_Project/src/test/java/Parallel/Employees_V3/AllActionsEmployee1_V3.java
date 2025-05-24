@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
@@ -158,22 +159,34 @@ public class AllActionsEmployee1_V3 {
 
     @Test
     public void performAllActions() throws InterruptedException {
-        startBrowser();
-        login();
-        submitLeaveRequest();
-        submitMissionRequest();
-        submitPermissionRequest();
-        submitWFHRequest();
+
+      try {
+          startBrowser();
+          login();
+          submitLeaveRequest();
+          submitMissionRequest();
+          submitPermissionRequest();
+          submitWFHRequest();
+      } catch (TimeoutException e1)
+      {
+          performAllActions();
+      }
+
     }
+
+
+
     private void login() throws InterruptedException {
         String userName = ConfigReader.get("userName1");
         String password = ConfigReader.get("password1");
 
         Thread.sleep(1000);
-        driver1.findElement(By.cssSelector("#kt_login_signin_form > div.fv-row.mb-8 > input")).sendKeys(userName);
-        driver1.findElement(By.cssSelector("#kt_login_signin_form > div:nth-child(3) > input")).sendKeys(password);
+        driver1.findElement(By.xpath("//*[@formcontrolname='email']")).sendKeys(userName);
+        driver1.findElement(By.xpath("//*[@formcontrolname='password']")).sendKeys(password);
         driver1.findElement(By.id("kt_sign_in_submit")).click();
     }
+
+
 
     private void submitLeaveRequest() throws InterruptedException {
 
@@ -181,7 +194,7 @@ public class AllActionsEmployee1_V3 {
         //WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(240));
         //WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(10));
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(240));
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='kt_app_header_menu']/div[2]/span/span[1]")));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"kt_app_header_wrapper\"]/app-navbar/div[5]/div")));
 
         //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#kt_app_header_menu > div:nth-child(2) > span > span.menu-title")));
 
@@ -209,22 +222,31 @@ public class AllActionsEmployee1_V3 {
 //        }
 
 //        if (employeeCode("leave-request") != null) {
+
+        //    driver1.findElement(By.xpath("//*[@formcontrolname='stateID']")).click();
+        //driver1.findElement(By.xpath("//*[@formcontrolname='']"))
+        Thread.sleep(1000);
+        WebElement dropdownElement = driver1.findElement(By.xpath("//*[@formcontrolname='vacCode']"));
+        Select dropdown = new Select(dropdownElement);
+        dropdown.selectByIndex(0);
+
+
             Thread.sleep(1000);
-            driver1.findElement(By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-leave-request/div/div/div[2]/div/form/div[2]/div[1]/div/mat-form-field/div/div[1]/div[3]/mat-select")).click();
+
+            //driver1.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div/mat-option[1]/span")).click();
             Thread.sleep(1000);
-            driver1.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div/mat-option[1]/span")).click();
-            Thread.sleep(1000);
-            driver1.findElement(By.id("mat-input-3")).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
-            driver1.findElement(By.id("mat-input-3")).clear();
-            driver1.findElement(By.id("mat-input-3")).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
-            driver1.findElement(By.id("mat-input-4")).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
-            driver1.findElement(By.id("mat-input-4")).clear();;
-            driver1.findElement(By.id("mat-input-4")).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
+        driver1.findElement(By.xpath("dateFrom")).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
+        driver1.findElement(By.xpath("dateFrom")).clear();
+        driver1.findElement(By.xpath("dateFrom")).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
+        driver1.findElement(By.xpath("dateTo")).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
+        driver1.findElement(By.xpath("dateTo")).clear();;
+        driver1.findElement(By.xpath("dateTo")).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
+
             WebDriverWait NumberOfdays = new WebDriverWait(driver1, Duration.ofSeconds(10));
 
             wait.until(driver1 -> {
                 try {
-                    WebElement daysField = driver1.findElement(By.id("mat-input-6")); // adjust locator
+                    WebElement daysField = driver1.findElement(By.xpath("totalDays"));
                     String value = daysField.getAttribute("value");
                     if (value != null && !value.isEmpty()) {
                         int days = Integer.parseInt(value);
@@ -235,7 +257,10 @@ public class AllActionsEmployee1_V3 {
                     return false;
                 }});
 
-            WebElement note = driver1.findElement(By.id("mat-input-7"));
+
+
+
+            WebElement note = driver1.findElement(By.xpath("reason"));
             note.sendKeys(ConfigReader.get("notesLeavesEmployee1Leave"));
             driver1.findElement(By.cssSelector("button span.indicator-label")).click();
 
@@ -249,6 +274,9 @@ public class AllActionsEmployee1_V3 {
        }
 
     //}
+
+
+    // driver1.findElement(By.xpath("reason")).click();
 
     private void submitMissionRequest() throws InterruptedException {
 
