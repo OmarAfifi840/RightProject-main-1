@@ -86,3 +86,52 @@
 2025-05-20 10:22:45 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
 2025-05-20 10:23:01 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
 2025-05-20 10:23:01 INFO  AllActionsEmployee1_V3:28 - OK button clicked.
+2025-05-24 12:10:58 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:15:04 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:28:32 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:30:00 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:36:36 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:37:14 INFO  AllActionsEmployee1_V3:67 - Leave Request is submitted successfully / UserName :200130
+2025-05-24 12:38:46 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:39:16 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 12:39:16 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 12:39:17 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 12:43:41 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:44:15 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 12:44:15 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 12:44:15 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 12:45:43 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:46:25 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 12:46:25 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 12:46:26 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 12:49:00 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:49:25 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 12:49:26 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 12:49:26 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 12:51:27 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:51:51 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 12:51:51 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 12:51:51 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 12:54:33 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 12:55:02 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 12:55:02 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 12:55:03 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 13:05:53 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 13:06:21 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 13:06:21 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 13:06:23 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 13:09:55 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
+2025-05-24 13:10:24 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 13:10:24 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 13:10:24 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
+2025-05-24 13:12:38 INFO  AllActionsEmployee1_V3:67 - Mission Request is submitted successfully / UserName : 200130
+2025-05-24 13:12:39 INFO  AllActionsEmployee1_V3:67 - Permission / UserName :200130
+2025-05-24 13:13:58 INFO  AllActionsEmployee1_V3:67 - Permission Request is submitted successfully / UserName : 200130
+2025-05-24 13:13:58 INFO  AllActionsEmployee1_V3:67 - WFH / UserName :200130
+2025-05-24 13:14:12 ERROR AllActionsEmployee1_V3:86 - Request: WFH | Swal Message: Selected employee is not assigned to shift within the selected period / UserName: 200130
+2025-05-24 13:14:12 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 13:18:11 INFO  AllActionsEmployee1_V3:51 - Leave / UserName :200130
+2025-05-24 13:18:35 ERROR AllActionsEmployee1_V3:70 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-05-24 13:18:35 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
+2025-05-24 13:18:36 INFO  AllActionsEmployee1_V3:51 - Mission / UserName :200130
+2025-05-24 13:20:06 INFO  AllActionsEmployee1_V3:51 - Leave / UserName :200130
