@@ -27,7 +27,7 @@ public class AllActionsEmployee1_V3 {
         WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(Path)));
         okButton.click();
         //System.out.println(Message);
-        logger.info(Message); 
+        logger.info(Message);
     }
 
 
@@ -142,23 +142,66 @@ public class AllActionsEmployee1_V3 {
     }
 
     @Test
-    public void performAllActions() throws InterruptedException {
+    
+    public void performAllActions() throws Exception  {
+        while (true) {
+            try {
+                startBrowser();
+                break;
+            } catch (Exception e) {
+                // Retry
+            }
+        }
 
-      try {
-          startBrowser();
-          login();
-          submitLeaveRequest();
-          submitMissionRequest();
-          submitPermissionRequest();
-          submitWFHRequest();
-      } catch (Exception e1)
-      {
-          performAllActions();
-      }
+        while (true) {
+            try {
+                login();
+                break;
+            } catch (Exception e1) {
+                // Retry
+            }
+        }
 
+        while (true) {
+            try {
+                submitLeaveRequest();
+                break;
+            } catch (Exception e) {
+                // Retry
+            }
+        }
+
+        while (true) {
+            try {
+                submitMissionRequest();
+                break;
+            } catch (Exception e) {
+                // Retry
+            }
+        }
+
+        while (true) {
+            try {
+                submitPermissionRequest();
+                break;
+            } catch (Exception e) {
+                // Retry
+            }
+        }
+
+        while (true) {
+            try {
+                submitWFHRequest();
+                break;
+            } catch (Exception e) {
+                // Retry
+            }
+        }
     }
 
-    private void login() throws InterruptedException {
+
+
+        private void login() throws InterruptedException {
         String userName = ConfigReader.get("userName1");
         String password = ConfigReader.get("password1");
 
