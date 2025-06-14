@@ -94,10 +94,20 @@ public class Fields_Validations {
         WebDriverWait wait = new WebDriverWait(driver1,Duration.ofSeconds(15));
         WebElement Type = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@formcontrolname='vacCode']")));
         List<WebElement> options = Type.findElements(By.xpath("//*[@formcontrolname='vacCode']"));
+        WebElement Remain = driver1.findElement(By.id("mat-input-14"));
         if (!options.isEmpty()) {
             System.out.println("Dropdown contains data");
             System.out.println("TC6 Pass");
 
+            // Code for choosing the leave type to load the remain and add thread time out after choosing the leave type
+
+            if (!Remain.equals(0)){
+                System.out.println("Remain loaded");
+                System.out.println("TC7 Pass");
+            } else {
+                System.out.println("Remain Not loaded");
+                System.out.println("TC7 Fail");
+            }
             // add checking remaining use this  (mat-input-14)
         } else {
             System.out.println("Dropdown is empty");
