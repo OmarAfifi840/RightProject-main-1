@@ -13,9 +13,11 @@ public class Test1  {
         Fields_Validations.EmployeeCode();
         Fields_Validations.Department();
         Fields_Validations.HiringDate();
-//        //  Fields_Validations.CostCenter();
+        //  Fields_Validations.CostCenter();
         Fields_Validations.LeavesType();
         Fields_Validations.uploadFile();
         Fields_Validations.FromBalance();
+        Fields_Validations.Cancel();
+
     }
 }

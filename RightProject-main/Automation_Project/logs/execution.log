@@ -1,137 +1,44 @@
-2025-05-11 13:47:00 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-11 13:48:02 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-11 13:51:10 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-11 13:51:48 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1242-LR-01 / UserName: 200130
-2025-05-11 13:51:49 ERROR AllActionsEmployee1_V3:29 - OK button clicked leave. / UserName :200130
-2025-05-11 13:51:49 INFO  AllActionsEmployee1_V3:38 - Mission / UserName :200130
-2025-05-11 13:52:02 ERROR AllActionsEmployee1_V3:57 - Request: Mission | Swal Message: Cannot Take This Mission Because There Is Another Mission In The Same Date With Serial 21 / UserName: 200130
-2025-05-11 13:52:13 INFO  AllActionsEmployee1_V3:38 - First OK button not found, trying second XPath... / UserName :200130
-2025-05-11 13:52:13 ERROR AllActionsEmployee1_V3:29 - OK button clicked Mission. / UserName :200130
-2025-05-11 13:52:13 INFO  AllActionsEmployee1_V3:38 - Permission / UserName :200130
-2025-05-11 13:52:24 ERROR AllActionsEmployee1_V3:57 - Request: Permission | Swal Message: Cannot Take This Permission as there is another permission in same date / UserName: 200130
-2025-05-11 13:52:25 ERROR AllActionsEmployee1_V3:29 - OK button clicked leave. / UserName :200130
-2025-05-11 13:52:25 INFO  AllActionsEmployee1_V3:38 - WFH / UserName :200130
-2025-05-11 13:52:36 ERROR AllActionsEmployee1_V3:57 - Request: WFH | Swal Message: Selected employee is not assigned to shift within the selected period / UserName: 200130
-2025-05-11 13:52:36 ERROR AllActionsEmployee1_V3:29 - OK button clicked leave. / UserName :200130
-2025-05-12 13:25:39 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-12 13:27:18 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-12 13:28:01 INFO  AllActionsEmployee1_V3:38 - Leave Request is submitted successfully / UserName :200130
-2025-05-12 13:29:06 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-12 13:29:44 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
-2025-05-12 13:31:56 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-12 13:32:36 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
-2025-05-12 13:32:36 ERROR AllActionsEmployee1_V3:29 - OK button clicked.
-2025-05-12 13:32:37 INFO  AllActionsEmployee1_V3:38 - Mission / UserName :200130
-2025-05-12 15:25:48 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-12 15:26:21 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
-2025-05-12 15:26:21 ERROR AllActionsEmployee1_V3:29 - OK button clicked.
-2025-05-12 15:27:28 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-12 15:27:52 ERROR AllActionsEmployee1_V3:57 - Request: Leave | Swal Message: There are dates used by serial leave No. 1239-LR-01 / UserName: 200130
-2025-05-12 15:27:53 ERROR AllActionsEmployee1_V3:29 - OK button clicked.
-2025-05-12 15:27:53 INFO  AllActionsEmployee1_V3:38 - Mission / UserName :200130
-2025-05-13 16:42:08 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-14 11:05:40 INFO  AllActionsEmployee1_V3:37 - Leave / UserName :200130
-2025-05-15 13:48:26 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-15 13:56:05 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-15 14:00:57 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-15 14:26:50 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-15 14:28:22 INFO  AllActionsEmployee1_V3:38 - Leave / UserName :200130
-2025-05-15 14:32:17 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
-2025-05-15 14:34:52 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
-2025-05-15 14:37:06 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
-2025-05-15 14:38:52 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
-2025-05-15 14:39:53 INFO  AllActionsEmployee1_V3:40 - Leave / UserName :200130
-2025-05-18 10:48:41 INFO  AllActionsEmployee1_V3:50 - Leave / UserName :200130
-2025-05-18 13:21:50 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-18 13:22:44 INFO  AllActionsEmployee1_V3:65 - Leave Request is submitted successfully / UserName :200130
-2025-05-18 13:25:09 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-18 13:25:55 INFO  AllActionsEmployee1_V3:65 - Leave Request is submitted successfully / UserName :200130
-2025-05-18 13:27:24 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-18 13:29:11 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-18 13:29:55 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
-2025-05-18 13:29:56 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-18 13:29:56 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
-2025-05-18 13:30:12 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
-2025-05-18 13:30:12 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-18 13:30:12 INFO  AllActionsEmployee1_V3:65 - Permission / UserName :200130
-2025-05-18 13:30:24 ERROR AllActionsEmployee1_V3:84 - Request: Permission | Swal Message: This Day Is Hloiday For This Employee / UserName: 200130
-2025-05-18 13:30:24 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-18 14:19:15 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-18 14:19:48 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
-2025-05-18 14:19:48 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-18 14:19:49 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
-2025-05-18 14:20:03 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
-2025-05-18 14:20:03 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-18 14:20:04 INFO  AllActionsEmployee1_V3:65 - Permission / UserName :200130
-2025-05-18 14:20:17 ERROR AllActionsEmployee1_V3:84 - Request: Permission | Swal Message: This Day Is Hloiday For This Employee / UserName: 200130
-2025-05-18 14:20:17 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-20 09:54:40 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-20 09:55:31 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
-2025-05-20 09:55:31 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-20 10:04:23 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-20 10:05:04 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
-2025-05-20 10:05:04 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-20 10:05:05 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
-2025-05-20 10:05:22 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
-2025-05-20 10:05:22 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-20 10:05:22 INFO  AllActionsEmployee1_V3:65 - Permission / UserName :200130
-2025-05-20 10:05:35 ERROR AllActionsEmployee1_V3:84 - Request: Permission | Swal Message: This Day Is Hloiday For This Employee / UserName: 200130
-2025-05-20 10:05:35 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-20 10:05:36 INFO  AllActionsEmployee1_V3:65 - WFH / UserName :200130
-2025-05-20 10:05:48 ERROR AllActionsEmployee1_V3:84 - Request: WFH | Swal Message: Selected employee is not assigned to shift within the selected period / UserName: 200130
-2025-05-20 10:05:48 ERROR AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-20 10:22:05 INFO  AllActionsEmployee1_V3:65 - Leave / UserName :200130
-2025-05-20 10:22:44 ERROR AllActionsEmployee1_V3:84 - Request: Leave | Swal Message: There are dates used by serial leave No. 2871-LR-01 / UserName: 200130
-2025-05-20 10:22:44 INFO  AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-20 10:22:45 INFO  AllActionsEmployee1_V3:65 - Mission / UserName :200130
-2025-05-20 10:23:01 ERROR AllActionsEmployee1_V3:84 - Request: Mission | Swal Message: Cannot save Request, Please Check Mission expiration duration / UserName: 200130
-2025-05-20 10:23:01 INFO  AllActionsEmployee1_V3:28 - OK button clicked.
-2025-05-24 12:10:58 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:15:04 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:28:32 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:30:00 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:36:36 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:37:14 INFO  AllActionsEmployee1_V3:67 - Leave Request is submitted successfully / UserName :200130
-2025-05-24 12:38:46 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:39:16 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 12:39:16 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 12:39:17 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 12:43:41 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:44:15 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 12:44:15 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 12:44:15 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 12:45:43 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:46:25 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 12:46:25 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 12:46:26 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 12:49:00 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:49:25 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 12:49:26 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 12:49:26 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 12:51:27 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:51:51 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 12:51:51 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 12:51:51 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 12:54:33 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 12:55:02 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 12:55:02 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 12:55:03 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 13:05:53 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 13:06:21 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 13:06:21 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 13:06:23 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 13:09:55 INFO  AllActionsEmployee1_V3:67 - Leave / UserName :200130
-2025-05-24 13:10:24 ERROR AllActionsEmployee1_V3:86 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 13:10:24 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 13:10:24 INFO  AllActionsEmployee1_V3:67 - Mission / UserName :200130
-2025-05-24 13:12:38 INFO  AllActionsEmployee1_V3:67 - Mission Request is submitted successfully / UserName : 200130
-2025-05-24 13:12:39 INFO  AllActionsEmployee1_V3:67 - Permission / UserName :200130
-2025-05-24 13:13:58 INFO  AllActionsEmployee1_V3:67 - Permission Request is submitted successfully / UserName : 200130
-2025-05-24 13:13:58 INFO  AllActionsEmployee1_V3:67 - WFH / UserName :200130
-2025-05-24 13:14:12 ERROR AllActionsEmployee1_V3:86 - Request: WFH | Swal Message: Selected employee is not assigned to shift within the selected period / UserName: 200130
-2025-05-24 13:14:12 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 13:18:11 INFO  AllActionsEmployee1_V3:51 - Leave / UserName :200130
-2025-05-24 13:18:35 ERROR AllActionsEmployee1_V3:70 - Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-05-24 13:18:35 INFO  AllActionsEmployee1_V3:30 - OK button clicked.
-2025-05-24 13:18:36 INFO  AllActionsEmployee1_V3:51 - Mission / UserName :200130
-2025-05-24 13:20:06 INFO  AllActionsEmployee1_V3:51 - Leave / UserName :200130
+2025-07-05 12:32:44 INFO  Fields_Validations: Login
+2025-07-05 12:33:20 INFO  Fields_Validations: Start Fields Validation
+2025-07-05 12:33:20 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
+2025-07-05 12:33:20 INFO  Fields_Validations: TC1 Pass
+2025-07-05 12:33:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:20 INFO  Fields_Validations: Field is loaded with data: Triumph
+2025-07-05 12:33:20 INFO  Fields_Validations: TC2 Pass - Data loaded check
+2025-07-05 12:33:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:20 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
+2025-07-05 12:33:20 INFO  Fields_Validations: TC3 Pass - Disabled state check
+2025-07-05 12:33:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:20 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
+2025-07-05 12:33:20 INFO  Fields_Validations: TC4 Pass
+2025-07-05 12:33:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:20 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-07-05 12:33:20 INFO  Fields_Validations: TC5 Pass
+2025-07-05 12:33:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:21 INFO  Fields_Validations: Dropdown contains data:
+2025-07-05 12:33:21 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-05 12:33:21 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-05 12:33:21 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-05 12:33:21 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-05 12:33:21 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-05 12:33:21 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-05 12:33:21 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-05 12:33:21 INFO  Fields_Validations: TC6 Pass
+2025-07-05 12:33:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:31 INFO  Fields_Validations: Remain value: 1.25
+2025-07-05 12:33:31 INFO  Fields_Validations: TC7 Pass
+2025-07-05 12:33:31 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:31 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-07-05 12:33:31 INFO  Fields_Validations: TC7 Pass
+2025-07-05 12:33:31 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:31 INFO  Fields_Validations: Dropdown contains data:
+2025-07-05 12:33:31 INFO  Fields_Validations: 2025
+2025-07-05 12:33:31 INFO  Fields_Validations: TC8 Pass
+2025-07-05 12:33:31 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:31 INFO  Fields_Validations: Dropdown is enabled
+2025-07-05 12:33:31 INFO  Fields_Validations: TC9 Fail
+2025-07-05 12:33:31 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:32 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
+2025-07-05 12:33:32 INFO  Fields_Validations: TC10 Pass
+2025-07-05 12:33:32 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-05 12:33:32 INFO  Fields_Validations: End of Fields Validation
