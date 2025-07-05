@@ -16,5 +16,6 @@ public class Test1  {
 //        //  Fields_Validations.CostCenter();
         Fields_Validations.LeavesType();
         Fields_Validations.uploadFile();
+        Fields_Validations.FromBalance();
     }
 }

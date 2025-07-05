@@ -63,14 +63,11 @@ public class Fields_Validations {
 
         WebElement leaves = driver1.findElement(By.xpath("//*[@id=\"kt_app_header_menu\"]/div[2]/div/div[3]/div/div[1]/a/span[2]"));
         actions.moveToElement(leaves).click().perform();
-        Thread.sleep(50000);
+        Thread.sleep(30000);
     }
 
     public static void EmployeeCode() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(10));
-
-        WebElement depField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-0")));
-
         WebElement EmpCode = driver1.findElement(By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-leave-request/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span"));
         String Field = EmpCode.getText();  // changed from getAttribute("value")
         //Thread.sleep(30000);
@@ -78,9 +75,11 @@ public class Fields_Validations {
         if (Field != null && !Field.isEmpty()) {
             System.out.println("Field is loaded with data: " + Field);
             System.out.println("TC1 Pass");
+            System.out.println("---------------------------------------------------------------------------");
         } else {
             System.out.println("Field is empty");
             System.out.println("TC1 Fail");
+            System.out.println("---------------------------------------------------------------------------");
         }
         // Add in case User is a manager
     }
@@ -96,18 +95,22 @@ public class Fields_Validations {
         });
         if (fieldValue != null) {
             System.out.println("Field is loaded with data: " + fieldValue);
-            System.out.println("TC3 Pass - Data loaded check");
+            System.out.println("TC2 Pass - Data loaded check");
+            System.out.println("---------------------------------------------------------------------------");
         } else {
             System.out.println("Field is empty after waiting");
-            System.out.println("TC3 Fail - Data loaded check");
+            System.out.println("TC2 Fail - Data loaded check");
+            System.out.println("---------------------------------------------------------------------------");
         }
 
         if (!depField.isEnabled()) {
             System.out.println("Department field is disabled (dimmed) as expected");
             System.out.println("TC3 Pass - Disabled state check");
+            System.out.println("---------------------------------------------------------------------------");
         } else {
             System.out.println("Department field is enabled (not dimmed)");
             System.out.println("TC3 Fail - Disabled state check");
+            System.out.println("---------------------------------------------------------------------------");
         }
     }
     public static void HiringDate() throws InterruptedException {
@@ -120,18 +123,22 @@ public class Fields_Validations {
         if (Field != null){
             System.out.println("Field is loaded with data: " + Field);
             System.out.println("TC4 Pass");
+            System.out.println("---------------------------------------------------------------------------");
         }
         else {
             System.out.println("Field is empty after waiting");
             System.out.println("TC4  Fail");
+            System.out.println("---------------------------------------------------------------------------");
         }
         if (!HiringDate.isEnabled()){
             System.out.println("Hiring Date field is disabled (dimmed) as expected");
-            System.out.println("TC4 Pass");
+            System.out.println("TC5 Pass");
+            System.out.println("---------------------------------------------------------------------------");
         }
         else {
             System.out.println("Hiring Date field is enabled (not dimmed)");
-            System.out.println("TC4  Fail");
+            System.out.println("TC5  Fail");
+            System.out.println("---------------------------------------------------------------------------");
         }
     }
 
@@ -238,21 +245,17 @@ public class Fields_Validations {
             // 3. Check if dropdown has data
             if (!options.isEmpty()) {
                 System.out.println("Dropdown contains data:");
-
-                // Print all dropdown options
                 for (WebElement option : options) {
-                    System.out.println(option.getText()); // Print actual text, not WebElement
+                    System.out.println(option.getText());
                 }
 
                 System.out.println("TC6 Pass");
+                System.out.println("---------------------------------------------------------------------------");
 
-                // 4. Select "01 - Annual Leave" (better than hardcoded XPath)
                 WebElement annualLeave = wait.until(ExpectedConditions.elementToBeClickable(
                         By.xpath("//mat-option//span[contains(text(),'Annual Leave')]")
                 ));
                 annualLeave.click();
-
-                // 5. Check "Remain" field value
                 WebElement remainField = wait.until(ExpectedConditions.visibilityOfElementLocated(
                         By.id("mat-input-5")
                 ));
@@ -261,9 +264,11 @@ public class Fields_Validations {
                 if (!remainValue.equals(0)) {
                     System.out.println("Remain value: " + remainValue); // Print actual value
                     System.out.println("TC7 Pass");
+                    System.out.println("---------------------------------------------------------------------------");
                 } else {
                     System.out.println("Remain Not loaded");
                     System.out.println("TC7 Fail");
+                    System.out.println("---------------------------------------------------------------------------");
                 }
             } else {
                 System.out.println("Dropdown is empty");
@@ -271,6 +276,7 @@ public class Fields_Validations {
             }
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
+            System.out.println("---------------------------------------------------------------------------");
         }
     }
     public static void uploadFile() {
@@ -294,13 +300,56 @@ public class Fields_Validations {
             wait.until(ExpectedConditions.attributeContains(
                     By.xpath("//*[@formcontrolname='attachedFile']"),
                     "class",
+                   // "ng-pristine"
                     "ng-dirty"  // Checks if "ng-dirty" exists in class attribute
             ));
             System.out.println("✅ File uploaded: " + fileName);
+            System.out.println("TC7 Pass");
+            System.out.println("---------------------------------------------------------------------------");
         } catch (TimeoutException e) {
             System.err.println("❌ Upload failed");
+            System.out.println("TC7 Fail");
+            System.out.println("---------------------------------------------------------------------------");
             throw e;
         }
+    }
+
+    public static void FromBalance() {
+        WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(20));
+        WebElement FromBalance = driver1.findElement(By.xpath("\"/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-leave-request/div/div/div[2]/div/form/div[2]/div[2]/div/mat-form-field/div/div[1]/div[3]"));
+        boolean isDisabled = FromBalance.getAttribute("disabled") != null;
+
+        try { List<WebElement> fromBalanceField = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-leave-request/div/div/div[2]/div/form/div[2]/div[2]/div/mat-form-field/div/div[1]/div[3]")));
+
+            if (!fromBalanceField.isEmpty()) {
+                System.out.println("Dropdown contains data:");
+
+                for (WebElement option : fromBalanceField) {
+                    System.out.println(option.getText());
+                }}
+
+                    System.out.println("TC8 Pass");
+            System.out.println("---------------------------------------------------------------------------");
+
+        } catch (TimeoutException e) {
+            System.out.println("❌ Timeout: Element not found or condition not met.");
+            System.out.println("TC8 Fail");
+            System.out.println("---------------------------------------------------------------------------");
+            e.printStackTrace();
+        }
+        if (isDisabled) {
+            System.out.println("Dropdown is disabled");
+            System.out.println("TC9 Pass");
+            System.out.println("---------------------------------------------------------------------------");
+        } else {
+            System.out.println("Dropdown is enabled");
+            System.out.println("TC9 Fail");
+            System.out.println("---------------------------------------------------------------------------");
+        }
+    }
+    public static void Cancel(){
+
     }
 }
 
