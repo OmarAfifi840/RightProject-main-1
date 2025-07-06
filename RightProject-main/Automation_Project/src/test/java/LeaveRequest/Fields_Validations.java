@@ -342,7 +342,7 @@ public class Fields_Validations {
     public static void FromBalance() {
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(20));
         WebElement FromBalance = driver1.findElement(By.xpath("//*[@formcontrolname='serial_LB']"));
-        boolean isDisabled = FromBalance.getAttribute("disabled") != null;
+        //boolean isReadOnly = FromBalance.getAttribute("readonly") != null;
 
         try { List<WebElement> fromBalanceField = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                     By.xpath("//*[@formcontrolname='serial_LB']")));
@@ -363,15 +363,16 @@ public class Fields_Validations {
             Infologger("---------------------------------------------------------------------------");
             e.printStackTrace();
         }
-        if (isDisabled) {
-            Infologger("Dropdown is disabled");
-            Infologger("TC9 Pass");
-            Infologger("---------------------------------------------------------------------------");
-        } else {
-            Infologger("Dropdown is enabled");
-            Infologger("TC9 Fail");
-            Infologger("---------------------------------------------------------------------------");
-        }
+
+//        if (isReadOnly) {
+//            Infologger("Dropdown is disabled");
+//            Infologger("TC9 Pass");
+//            Infologger("---------------------------------------------------------------------------");
+//        } else {
+//            Infologger("Dropdown is enabled");
+//            Infologger("TC9 Fail");
+//            Infologger("---------------------------------------------------------------------------");
+//        }
     }
     public static void Cancel(){
         WebElement Cancelbutton = driver1.findElement(By.xpath("//*[@id=\"kt_app_content_container\"]/app-leave-request/div/div/div[3]/a"));

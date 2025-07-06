@@ -18,6 +18,13 @@ public class Test1  {
         Fields_Validations.uploadFile();
         Fields_Validations.FromBalance();
         Fields_Validations.Cancel();
+        //-------------------------//
+        LeavesRequest.Leave(); //Case 1 in When Submitting a request (Happy Scenario)
+        //Case 2 in When Submitting a request
+        Fields_Validations.submitLeaveRequest();
+        When_Submitting_a_request.LeaveType();
+
+
 
     }
 }
