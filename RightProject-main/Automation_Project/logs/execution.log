@@ -1,215 +1,348 @@
-2025-07-06 09:03:53 INFO  Fields_Validations: Login
-2025-07-06 09:06:25 INFO  Fields_Validations: Start Fields Validation
-2025-07-06 09:06:26 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-06 09:06:26 INFO  Fields_Validations: TC1 Pass
-2025-07-06 09:06:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:26 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-06 09:06:26 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-06 09:06:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:26 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-06 09:06:26 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-06 09:06:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:26 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-06 09:06:26 INFO  Fields_Validations: TC4 Pass
-2025-07-06 09:06:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:26 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-06 09:06:26 INFO  Fields_Validations: TC5 Pass
-2025-07-06 09:06:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:27 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 09:06:27 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-06 09:06:27 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-06 09:06:27 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-06 09:06:27 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-06 09:06:27 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-06 09:06:27 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-06 09:06:27 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-06 09:06:27 INFO  Fields_Validations: TC6 Pass
-2025-07-06 09:06:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:38 INFO  Fields_Validations: Remain value: 1.25
-2025-07-06 09:06:38 INFO  Fields_Validations: TC7 Pass
-2025-07-06 09:06:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:38 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-06 09:06:38 INFO  Fields_Validations: TC7 Pass
-2025-07-06 09:06:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:38 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 09:06:39 INFO  Fields_Validations: 2025
-2025-07-06 09:06:39 INFO  Fields_Validations: TC8 Pass
-2025-07-06 09:06:39 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:39 INFO  Fields_Validations: Dropdown is enabled
-2025-07-06 09:06:39 INFO  Fields_Validations: TC9 Fail
-2025-07-06 09:06:39 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:39 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
-2025-07-06 09:06:39 INFO  Fields_Validations: TC10 Pass
-2025-07-06 09:06:39 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 09:06:39 INFO  Fields_Validations: End of Fields Validation
-2025-07-06 10:24:11 INFO  Fields_Validations: Login
-2025-07-06 10:25:11 INFO  Fields_Validations: Start Fields Validation
-2025-07-06 10:25:11 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-06 10:25:11 INFO  Fields_Validations: TC1 Pass
-2025-07-06 10:25:11 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:11 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-06 10:25:11 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-06 10:25:11 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:11 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-06 10:25:11 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-06 10:25:11 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:11 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-06 10:25:11 INFO  Fields_Validations: TC4 Pass
-2025-07-06 10:25:11 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:11 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-06 10:25:11 INFO  Fields_Validations: TC5 Pass
-2025-07-06 10:25:11 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:11 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:25:11 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-06 10:25:11 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-06 10:25:11 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-06 10:25:11 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-06 10:25:11 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-06 10:25:11 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-06 10:25:11 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-06 10:25:11 INFO  Fields_Validations: TC6 Pass
-2025-07-06 10:25:11 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:21 INFO  Fields_Validations: Remain value: 3.25
-2025-07-06 10:25:21 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:25:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:22 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-06 10:25:22 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:25:22 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:22 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:25:22 INFO  Fields_Validations: 2025
-2025-07-06 10:25:22 INFO  Fields_Validations: TC8 Pass
-2025-07-06 10:25:22 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:22 INFO  Fields_Validations: Dropdown is enabled
-2025-07-06 10:25:22 INFO  Fields_Validations: TC9 Fail
-2025-07-06 10:25:22 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:22 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
-2025-07-06 10:25:22 INFO  Fields_Validations: TC10 Pass
-2025-07-06 10:25:22 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:25:22 INFO  Fields_Validations: End of Fields Validation
-2025-07-06 10:30:35 INFO  Fields_Validations: Login
-2025-07-06 10:31:09 INFO  Fields_Validations: Start Fields Validation
-2025-07-06 10:31:09 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-06 10:31:09 INFO  Fields_Validations: TC1 Pass
-2025-07-06 10:31:09 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:09 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-06 10:31:09 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-06 10:31:09 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:09 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-06 10:31:09 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-06 10:31:09 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:09 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-06 10:31:09 INFO  Fields_Validations: TC4 Pass
-2025-07-06 10:31:09 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:09 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-06 10:31:09 INFO  Fields_Validations: TC5 Pass
-2025-07-06 10:31:09 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:10 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:31:10 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-06 10:31:10 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-06 10:31:10 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-06 10:31:10 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-06 10:31:10 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-06 10:31:10 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-06 10:31:10 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-06 10:31:10 INFO  Fields_Validations: TC6 Pass
-2025-07-06 10:31:10 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:20 INFO  Fields_Validations: Remain value: 3.25
-2025-07-06 10:31:20 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:31:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:20 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-06 10:31:20 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:31:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:20 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:31:20 INFO  Fields_Validations: 2025
-2025-07-06 10:31:20 INFO  Fields_Validations: TC8 Pass
-2025-07-06 10:31:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:20 INFO  Fields_Validations: Dropdown is enabled
-2025-07-06 10:31:20 INFO  Fields_Validations: TC9 Fail
-2025-07-06 10:31:20 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:21 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
-2025-07-06 10:31:21 INFO  Fields_Validations: TC10 Pass
-2025-07-06 10:31:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:31:21 INFO  Fields_Validations: End of Fields Validation
-2025-07-06 10:35:19 INFO  Fields_Validations: Login
-2025-07-06 10:35:52 INFO  Fields_Validations: Start Fields Validation
-2025-07-06 10:35:52 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-06 10:35:52 INFO  Fields_Validations: TC1 Pass
-2025-07-06 10:35:52 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:35:52 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-06 10:35:52 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-06 10:35:52 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:35:52 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-06 10:35:52 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-06 10:35:52 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:35:52 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-06 10:35:52 INFO  Fields_Validations: TC4 Pass
-2025-07-06 10:35:52 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:35:52 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-06 10:35:52 INFO  Fields_Validations: TC5 Pass
-2025-07-06 10:35:52 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:35:53 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:35:53 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-06 10:35:53 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-06 10:35:53 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-06 10:35:53 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-06 10:35:53 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-06 10:35:53 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-06 10:35:53 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-06 10:35:53 INFO  Fields_Validations: TC6 Pass
-2025-07-06 10:35:53 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:36:03 INFO  Fields_Validations: Remain value: 3.25
-2025-07-06 10:36:03 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:36:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:36:03 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-06 10:36:03 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:36:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:36:03 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:36:03 INFO  Fields_Validations: 2025
-2025-07-06 10:36:03 INFO  Fields_Validations: TC8 Pass
-2025-07-06 10:36:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:36:03 INFO  Fields_Validations: TC9 Fail
-2025-07-06 10:36:04 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
-2025-07-06 10:36:04 INFO  Fields_Validations: TC10 Pass
-2025-07-06 10:36:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:36:04 INFO  Fields_Validations: End of Fields Validation
-2025-07-06 10:40:30 INFO  Fields_Validations: Login
-2025-07-06 10:41:03 INFO  Fields_Validations: Start Fields Validation
-2025-07-06 10:41:03 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-06 10:41:03 INFO  Fields_Validations: TC1 Pass
-2025-07-06 10:41:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:03 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-06 10:41:03 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-06 10:41:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:03 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-06 10:41:03 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-06 10:41:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:03 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-06 10:41:03 INFO  Fields_Validations: TC4 Pass
-2025-07-06 10:41:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:03 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-06 10:41:03 INFO  Fields_Validations: TC5 Pass
-2025-07-06 10:41:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:03 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:41:03 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-06 10:41:03 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-06 10:41:03 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-06 10:41:03 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-06 10:41:03 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-06 10:41:03 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-06 10:41:03 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-06 10:41:03 INFO  Fields_Validations: TC6 Pass
-2025-07-06 10:41:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:14 INFO  Fields_Validations: Remain value: 3.25
-2025-07-06 10:41:14 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:41:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:14 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-06 10:41:14 INFO  Fields_Validations: TC7 Pass
-2025-07-06 10:41:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:14 INFO  Fields_Validations: Dropdown contains data:
-2025-07-06 10:41:14 INFO  Fields_Validations: 2025
-2025-07-06 10:41:14 INFO  Fields_Validations: TC8 Pass
-2025-07-06 10:41:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:14 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
-2025-07-06 10:41:14 INFO  Fields_Validations: TC10 Pass
-2025-07-06 10:41:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-06 10:41:14 INFO  Fields_Validations: End of Fields Validation
+2025-07-07 10:29:27 INFO  Fields_Validations: Login
+2025-07-07 10:30:24 INFO  Fields_Validations: Start Fields Validation
+2025-07-07 10:30:24 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
+2025-07-07 10:30:24 INFO  Fields_Validations: TC1 Pass
+2025-07-07 10:30:24 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:24 INFO  Fields_Validations: Field is loaded with data: Triumph
+2025-07-07 10:30:24 INFO  Fields_Validations: TC2 Pass - Data loaded check
+2025-07-07 10:30:24 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:24 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
+2025-07-07 10:30:24 INFO  Fields_Validations: TC3 Pass - Disabled state check
+2025-07-07 10:30:24 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:24 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
+2025-07-07 10:30:24 INFO  Fields_Validations: TC4 Pass
+2025-07-07 10:30:24 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:24 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-07-07 10:30:24 INFO  Fields_Validations: TC5 Pass
+2025-07-07 10:30:24 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:25 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 10:30:25 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 10:30:25 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 10:30:25 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 10:30:25 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 10:30:25 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 10:30:25 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 10:30:25 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 10:30:25 INFO  Fields_Validations: TC6 Pass
+2025-07-07 10:30:25 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:35 INFO  Fields_Validations: Remain value: 3.25
+2025-07-07 10:30:35 INFO  Fields_Validations: TC7 Pass
+2025-07-07 10:30:35 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:35 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-07-07 10:30:35 INFO  Fields_Validations: TC7 Pass
+2025-07-07 10:30:35 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:35 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 10:30:35 INFO  Fields_Validations: 2025
+2025-07-07 10:30:35 INFO  Fields_Validations: TC8 Pass
+2025-07-07 10:30:35 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:35 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
+2025-07-07 10:30:35 INFO  Fields_Validations: TC10 Pass
+2025-07-07 10:30:35 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 10:30:35 INFO  Fields_Validations: End of Fields Validation
+2025-07-07 10:39:54 INFO  Fields_Validations: Login
+2025-07-07 10:40:42 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 10:40:42 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 10:40:42 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 10:40:42 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 10:40:42 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 10:40:42 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 10:40:42 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 10:40:42 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 10:45:54 INFO  Fields_Validations: Login
+2025-07-07 10:46:38 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 10:46:38 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 10:46:38 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 10:46:38 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 10:46:38 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 10:46:38 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 10:46:38 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 10:46:38 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 10:47:55 INFO  Fields_Validations: Login
+2025-07-07 10:48:45 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 10:48:45 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 10:48:45 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 10:48:45 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 10:48:45 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 10:48:45 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 10:48:45 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 10:48:45 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:07:43 INFO  Fields_Validations: Login
+2025-07-07 11:09:00 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:09:00 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:09:00 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:09:00 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:09:00 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:09:01 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:09:01 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:09:01 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:13:31 INFO  Fields_Validations: Login
+2025-07-07 11:14:20 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:14:20 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:14:20 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:14:20 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:14:20 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:14:20 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:14:20 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:14:20 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:15:36 INFO  Fields_Validations: Login
+2025-07-07 11:16:19 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:16:19 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:16:19 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:16:19 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:16:19 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:16:19 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:16:19 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:16:19 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:19:09 INFO  Fields_Validations: Login
+2025-07-07 11:19:54 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:19:54 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:19:54 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:19:54 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:19:54 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:19:54 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:19:54 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:19:54 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:22:19 INFO  Fields_Validations: Login
+2025-07-07 11:23:10 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:23:10 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:23:10 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:23:10 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:23:10 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:23:10 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:23:10 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:23:10 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:24:19 INFO  Fields_Validations: Login
+2025-07-07 11:25:08 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:25:08 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:25:08 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:25:08 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:25:08 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:25:08 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:25:08 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:25:08 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:27:22 INFO  Fields_Validations: Login
+2025-07-07 11:28:20 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:28:20 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:28:20 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:28:20 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:28:20 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:28:20 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:28:20 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:28:20 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:32:19 INFO  Fields_Validations: Login
+2025-07-07 11:33:36 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:33:36 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:33:36 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:33:36 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:33:36 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:33:36 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:33:37 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:33:37 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:35:04 INFO  Fields_Validations: Login
+2025-07-07 11:36:10 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:36:10 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:36:10 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:36:10 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:36:10 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:36:10 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:36:10 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:36:10 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:36:32 ERROR Fields_Validations: Request: Leave | Swal Message: Leave Blanace Not Enough / UserName: 200130
+2025-07-07 11:36:32 INFO  Fields_Validations: OK button clicked.
+2025-07-07 11:48:59 INFO  Fields_Validations: Login
+2025-07-07 11:50:23 INFO  Fields_Validations: Start Fields Validation
+2025-07-07 11:50:23 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
+2025-07-07 11:50:23 INFO  Fields_Validations: TC1 Pass
+2025-07-07 11:50:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:23 INFO  Fields_Validations: Field is loaded with data: Triumph
+2025-07-07 11:50:23 INFO  Fields_Validations: TC2 Pass - Data loaded check
+2025-07-07 11:50:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:23 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
+2025-07-07 11:50:23 INFO  Fields_Validations: TC3 Pass - Disabled state check
+2025-07-07 11:50:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:23 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
+2025-07-07 11:50:23 INFO  Fields_Validations: TC4 Pass
+2025-07-07 11:50:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:23 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-07-07 11:50:23 INFO  Fields_Validations: TC5 Pass
+2025-07-07 11:50:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:23 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:50:23 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:50:23 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:50:23 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:50:23 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:50:23 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:50:23 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:50:23 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:50:23 INFO  Fields_Validations: TC6 Pass
+2025-07-07 11:50:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:34 INFO  Fields_Validations: Remain value: 0
+2025-07-07 11:50:34 INFO  Fields_Validations: TC7 Pass
+2025-07-07 11:50:34 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:34 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-07-07 11:50:34 INFO  Fields_Validations: TC7 Pass
+2025-07-07 11:50:34 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:34 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:50:34 INFO  Fields_Validations: 2025
+2025-07-07 11:50:34 INFO  Fields_Validations: TC8 Pass
+2025-07-07 11:50:34 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:35 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
+2025-07-07 11:50:35 INFO  Fields_Validations: TC10 Pass
+2025-07-07 11:50:35 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:35 INFO  Fields_Validations: End of Fields Validation
+2025-07-07 11:50:35 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:50:35 INFO  Fields_Validations: When Submitting a request
+2025-07-07 11:51:43 INFO  Fields_Validations: TC11 Fail
+2025-07-07 11:52:35 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:52:35 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:52:35 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:52:35 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:52:35 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:52:35 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:52:35 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:52:35 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:52:56 INFO  Fields_Validations: TC12 Fail
+2025-07-07 11:55:50 INFO  Fields_Validations: Login
+2025-07-07 11:57:12 INFO  Fields_Validations: Start Fields Validation
+2025-07-07 11:57:12 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
+2025-07-07 11:57:12 INFO  Fields_Validations: TC1 Pass
+2025-07-07 11:57:12 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:12 INFO  Fields_Validations: Field is loaded with data: Triumph
+2025-07-07 11:57:12 INFO  Fields_Validations: TC2 Pass - Data loaded check
+2025-07-07 11:57:12 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:12 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
+2025-07-07 11:57:12 INFO  Fields_Validations: TC3 Pass - Disabled state check
+2025-07-07 11:57:12 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:12 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
+2025-07-07 11:57:12 INFO  Fields_Validations: TC4 Pass
+2025-07-07 11:57:12 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:12 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-07-07 11:57:12 INFO  Fields_Validations: TC5 Pass
+2025-07-07 11:57:12 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:12 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:57:12 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:57:12 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:57:12 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:57:12 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:57:12 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:57:12 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:57:12 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:57:12 INFO  Fields_Validations: TC6 Pass
+2025-07-07 11:57:12 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:23 INFO  Fields_Validations: Remain value: 3.25
+2025-07-07 11:57:23 INFO  Fields_Validations: TC7 Pass
+2025-07-07 11:57:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:23 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-07-07 11:57:23 INFO  Fields_Validations: TC7 Pass
+2025-07-07 11:57:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:23 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:57:23 INFO  Fields_Validations: 2025
+2025-07-07 11:57:23 INFO  Fields_Validations: TC8 Pass
+2025-07-07 11:57:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:23 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
+2025-07-07 11:57:23 INFO  Fields_Validations: TC10 Pass
+2025-07-07 11:57:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:23 INFO  Fields_Validations: End of Fields Validation
+2025-07-07 11:57:23 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:57:23 INFO  Fields_Validations: When Submitting a request
+2025-07-07 11:58:29 INFO  Fields_Validations: Login
+2025-07-07 11:59:27 INFO  Fields_Validations: Start Fields Validation
+2025-07-07 11:59:27 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
+2025-07-07 11:59:27 INFO  Fields_Validations: TC1 Pass
+2025-07-07 11:59:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:27 INFO  Fields_Validations: Field is loaded with data: Triumph
+2025-07-07 11:59:27 INFO  Fields_Validations: TC2 Pass - Data loaded check
+2025-07-07 11:59:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:27 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
+2025-07-07 11:59:27 INFO  Fields_Validations: TC3 Pass - Disabled state check
+2025-07-07 11:59:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:27 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
+2025-07-07 11:59:27 INFO  Fields_Validations: TC4 Pass
+2025-07-07 11:59:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:27 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-07-07 11:59:27 INFO  Fields_Validations: TC5 Pass
+2025-07-07 11:59:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:27 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:59:27 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 11:59:27 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 11:59:27 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 11:59:27 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 11:59:27 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 11:59:27 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 11:59:27 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 11:59:27 INFO  Fields_Validations: TC6 Pass
+2025-07-07 11:59:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:37 INFO  Fields_Validations: Remain value: 0
+2025-07-07 11:59:37 INFO  Fields_Validations: TC7 Pass
+2025-07-07 11:59:37 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:38 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-07-07 11:59:38 INFO  Fields_Validations: TC7 Pass
+2025-07-07 11:59:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:38 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 11:59:38 INFO  Fields_Validations: 2025
+2025-07-07 11:59:38 INFO  Fields_Validations: TC8 Pass
+2025-07-07 11:59:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:38 INFO  Fields_Validations: User clicked Cancel Button, Dashbord is openned. 
+2025-07-07 11:59:38 INFO  Fields_Validations: TC10 Pass
+2025-07-07 11:59:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:38 INFO  Fields_Validations: End of Fields Validation
+2025-07-07 11:59:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 11:59:38 INFO  Fields_Validations: When Submitting a request
+2025-07-07 12:00:30 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 12:00:30 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 12:00:30 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 12:00:30 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 12:00:30 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 12:00:30 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 12:00:30 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 12:00:30 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 12:00:51 INFO  Fields_Validations: TC12 Fail
+2025-07-07 12:02:46 INFO  Fields_Validations: Login
+2025-07-07 12:03:53 INFO  Fields_Validations: Start Fields Validation
+2025-07-07 12:03:53 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
+2025-07-07 12:03:53 INFO  Fields_Validations: TC1 Pass
+2025-07-07 12:03:53 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:03:55 INFO  Fields_Validations: Field is loaded with data: Triumph
+2025-07-07 12:03:55 INFO  Fields_Validations: TC2 Pass - Data loaded check
+2025-07-07 12:03:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:03:55 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
+2025-07-07 12:03:55 INFO  Fields_Validations: TC3 Pass - Disabled state check
+2025-07-07 12:03:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:03:55 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
+2025-07-07 12:03:55 INFO  Fields_Validations: TC4 Pass
+2025-07-07 12:03:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:03:55 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-07-07 12:03:55 INFO  Fields_Validations: TC5 Pass
+2025-07-07 12:03:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:03:55 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 12:03:55 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 12:03:55 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 12:03:55 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 12:03:55 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 12:03:55 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 12:03:55 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 12:03:55 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 12:03:55 INFO  Fields_Validations: TC6 Pass
+2025-07-07 12:03:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:04:05 INFO  Fields_Validations: Remain value: 0
+2025-07-07 12:04:05 INFO  Fields_Validations: TC7 Pass
+2025-07-07 12:04:05 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:04:05 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-07-07 12:04:05 INFO  Fields_Validations: TC7 Pass
+2025-07-07 12:04:05 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:04:05 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 12:04:05 INFO  Fields_Validations: 2025
+2025-07-07 12:04:05 INFO  Fields_Validations: TC8 Pass
+2025-07-07 12:04:05 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-07-07 12:04:28 INFO  Fields_Validations: Dropdown contains data:
+2025-07-07 12:04:28 INFO  Fields_Validations: 01 - Annual Leave
+2025-07-07 12:04:28 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-07-07 12:04:28 INFO  Fields_Validations: 04 - اجازة زواج
+2025-07-07 12:04:28 INFO  Fields_Validations: 05 - اجازة مولود
+2025-07-07 12:04:28 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-07-07 12:04:28 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-07-07 12:04:28 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-07-07 12:04:28 INFO  Fields_Validations: Remain is less than Number of days
+2025-07-07 12:05:13 ERROR Fields_Validations: Request: Leave | Swal Message: Leave Blanace Not Enough / UserName: 200130
+2025-07-07 12:05:13 INFO  Fields_Validations: OK button clicked.
+2025-07-07 12:05:13 INFO  Fields_Validations: TC12 Pass

@@ -1,6 +1,7 @@
 package LeaveRequest;
 
 import Parallel.Employees_V3.AllActionsEmployee1_V3;
+import Three_Browsers_In_Order.LeavesRequest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -374,7 +375,7 @@ public class Fields_Validations {
 //            Infologger("---------------------------------------------------------------------------");
 //        }
     }
-    public static void Cancel(){
+    public static void Cancel() throws InterruptedException {
         WebElement Cancelbutton = driver1.findElement(By.xpath("//*[@id=\"kt_app_content_container\"]/app-leave-request/div/div/div[3]/a"));
         Cancelbutton.click();
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(120));
@@ -390,9 +391,86 @@ public class Fields_Validations {
             Infologger("---------------------------------------------------------------------------");
         }
         Infologger("End of Fields Validation");
+        Infologger("---------------------------------------------------------------------------");
+        Infologger("When Submitting a request");
+
+//        try {
+//            new HappyScenario();
+//            Infologger("TC11 Pass");
+//        } catch (Exception e) {
+//            Infologger("TC11 Fail");
+//        }
 
     }
+    public static void LeaveType() {
+        driver1.findElement(By.xpath("//*[@formcontrolname='vacCode']")).click();
+        driver1.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div/mat-option[1]/span")).click();
+    }
+
+    public static void Dates() throws InterruptedException {
+        driver1.findElement(By.xpath("//*[@formcontrolname='dateFrom']")).sendKeys(ConfigReader.get("FromDateEmployeeLeave"));
+        driver1.findElement(By.xpath("//*[@formcontrolname='dateFrom']")).clear();
+        driver1.findElement(By.xpath("//*[@formcontrolname='dateFrom']")).sendKeys(ConfigReader.get("FromDateEmployeeLeave"));
+        driver1.findElement(By.xpath("//*[@formcontrolname='dateTo']")).sendKeys(ConfigReader.get("ToDateEmployeeLeave"));
+        driver1.findElement(By.xpath("//*[@formcontrolname='dateTo']")).clear();
+        driver1.findElement(By.xpath("//*[@formcontrolname='dateTo']")).sendKeys(ConfigReader.get("ToDateEmployeeLeave"));
+        Thread.sleep(20000);
+    }
+
+    public static void RemainNoOfDays() {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(15));
+
+            WebElement typeDropdown = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//*[@formcontrolname='vacCode']")
+            ));
+            typeDropdown.click();
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    By.xpath("//mat-option//span[@class='mat-option-text']")
+            ));
+            if (!options.isEmpty()) {
+                Infologger("Dropdown contains data:");
+                for (WebElement option : options) {
+                    Infologger(option.getText());
+                }
+                WebElement annualLeave = wait.until(ExpectedConditions.elementToBeClickable(
+                        By.xpath("//mat-option//span[contains(text(),'Annual Leave')]")
+                ));
+                annualLeave.click();
+                WebElement remainField = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                        By.id("mat-input-5")
+                ));
+                String remainValue = remainField.getAttribute("value");
+
+                WebElement NoOfDays = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                        By.id("mat-input-6")
+                ));
+                String DaysNo = NoOfDays.getAttribute("value");
+
+                //try {
+                    // Parse the strings to numbers (using double for decimal numbers, use Integer.parseInt for whole numbers)
+
+                    double remainNum = Double.parseDouble(remainValue.trim());
+                    double daysNum = Double.parseDouble(DaysNo.trim());
+                    if (remainNum < daysNum) {
+                        Infologger("Remain is less than Number of days");
+                        WebElement Send = driver1.findElement(By.xpath("//*[@id=\"kt_app_content_container\"]/app-leave-request/div/div/div[3]/button/span[1]"));
+                        Send.click();
+                        Thread.sleep(10000);
+                        swalerrorMessage("Leave");
+                        Infologger("TC12 Pass");
+
+                    }
+               // } catch (NumberFormatException e) {
+                   // System.out.println("Error parsing numbers: " + e.getMessage());
+               // }
+            }
+        } catch (Exception e) {
+            Infologger("TC12 Fail");
+        }
+    }
 }
+
 
 
 
