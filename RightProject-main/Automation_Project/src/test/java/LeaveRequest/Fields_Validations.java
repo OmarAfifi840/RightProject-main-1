@@ -1,7 +1,5 @@
 package LeaveRequest;
 
-import Parallel.Employees_V3.AllActionsEmployee1_V3;
-import Three_Browsers_In_Order.LeavesRequest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -16,17 +14,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ConfigReader;
 
 import java.io.File;
-import java.util.List;
 import java.time.Duration;
+import java.util.List;
 
 public class Fields_Validations {
     private static final Logger logger = LogManager.getLogger(Fields_Validations.class);
     public static WebDriver driver1;
-    
-    private static void Infologger (String Message) {
+
+    private static void Infologger(String Message) {
         //Infologger(Message);
         logger.info(Message);  //Changed from Error To Info
     }
+
     private static void swalerrorMessage(String requestName) {
         String Employee1 = ConfigReader.get("userName1");
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(30));
@@ -36,24 +35,26 @@ public class Fields_Validations {
         logger.error("Request: " + requestName + " | Swal Message: " + swal.getText() + " / UserName: " + Employee1);
         clickSwalOkIfExists();
     }
+
     public static void clickSwalOkIfExists() {
         //  String Employee1 = ConfigReader.get("userName1");
 
         try {
             SendPath("swal2-actions", "OK button clicked.");
-        } catch (TimeoutException e1) {}
+        } catch (TimeoutException e1) {
+        }
 //            Infologger("First OK button not found, trying second XPath... / UserName :" + Employee1);}
     }
 
-    private static  void SendPath(String Path,String Message){
+    private static void SendPath(String Path, String Message) {
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(3));
         WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(Path)));
         okButton.click();
         //Infologger(Message);
         logger.info(Message);
     }
-    
-    
+
+
     public static void startBrowser() {
         String browser = ConfigReader.get("browser");
         String url = ConfigReader.get("url");
@@ -88,7 +89,6 @@ public class Fields_Validations {
         String Employee1 = ConfigReader.get("userName");
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(120));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"kt_app_header_wrapper\"]/app-navbar/div[5]/div")));
-
 
 
         Actions actions = new Actions(driver1);
@@ -151,29 +151,28 @@ public class Fields_Validations {
             Infologger("---------------------------------------------------------------------------");
         }
     }
+
     public static void HiringDate() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(10));
         WebElement HiringDate = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@formcontrolname='fHiringDate']")));
         String Field = wait.until(d -> {
-        String val = d.findElement(By.xpath("//*[@formcontrolname='fHiringDate']")).getAttribute("value");
-        return val != null && !val.trim().isEmpty() ? val : null;
+            String val = d.findElement(By.xpath("//*[@formcontrolname='fHiringDate']")).getAttribute("value");
+            return val != null && !val.trim().isEmpty() ? val : null;
         });
-        if (Field != null){
+        if (Field != null) {
             Infologger("Field is loaded with data: " + Field);
             Infologger("TC4 Pass");
             Infologger("---------------------------------------------------------------------------");
-        }
-        else {
+        } else {
             Infologger("Field is empty after waiting");
             Infologger("TC4  Fail");
             Infologger("---------------------------------------------------------------------------");
         }
-        if (!HiringDate.isEnabled()){
+        if (!HiringDate.isEnabled()) {
             Infologger("Hiring Date field is disabled (dimmed) as expected");
             Infologger("TC5 Pass");
             Infologger("---------------------------------------------------------------------------");
-        }
-        else {
+        } else {
             Infologger("Hiring Date field is enabled (not dimmed)");
             Infologger("TC5  Fail");
             Infologger("---------------------------------------------------------------------------");
@@ -310,6 +309,7 @@ public class Fields_Validations {
             Infologger("---------------------------------------------------------------------------");
         }
     }
+
     public static void uploadFile() {
         String fileName = "ESS Issues.xlsx"; // Ensure correct filename + extension
         String absolutePath = "D:\\Omar Afifi\\SelfService\\" + fileName;
@@ -326,15 +326,15 @@ public class Fields_Validations {
             wait.until(ExpectedConditions.attributeContains(
                     By.xpath("//*[@formcontrolname='attachedFile']"),
                     "class",
-                   // "ng-pristine"
+                    // "ng-pristine"
                     "ng-dirty"  // Checks if "ng-dirty" exists in class attribute
             ));
             Infologger("✅ File uploaded: " + fileName);
-            Infologger("TC7 Pass");
+            Infologger("TC8 Pass");
             Infologger("---------------------------------------------------------------------------");
         } catch (TimeoutException e) {
             System.err.println("❌ Upload failed");
-            Infologger("TC7 Fail");
+            Infologger("TC8 Fail");
             Infologger("---------------------------------------------------------------------------");
             throw e;
         }
@@ -342,25 +342,26 @@ public class Fields_Validations {
 
     public static void FromBalance() {
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(20));
-        WebElement FromBalance = driver1.findElement(By.xpath("//*[@formcontrolname='serial_LB']"));
         //boolean isReadOnly = FromBalance.getAttribute("readonly") != null;
 
-        try { List<WebElement> fromBalanceField = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+        try {
+            List<WebElement> fromBalanceField = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                     By.xpath("//*[@formcontrolname='serial_LB']")));
 
             if (!fromBalanceField.isEmpty()) {
-                Infologger("Dropdown contains data:");
+                Infologger("Field contains data:");
 
                 for (WebElement option : fromBalanceField) {
                     Infologger(option.getText());
-                }}
+                }
+            }
 
-                    Infologger("TC8 Pass");
+            Infologger("TC9 Pass");
             Infologger("---------------------------------------------------------------------------");
 
         } catch (TimeoutException e) {
             Infologger("❌ Timeout: Element not found or condition not met.");
-            Infologger("TC8 Fail");
+            Infologger("TC9 Fail");
             Infologger("---------------------------------------------------------------------------");
             e.printStackTrace();
         }
@@ -375,17 +376,17 @@ public class Fields_Validations {
 //            Infologger("---------------------------------------------------------------------------");
 //        }
     }
+
     public static void Cancel() throws InterruptedException {
         WebElement Cancelbutton = driver1.findElement(By.xpath("//*[@id=\"kt_app_content_container\"]/app-leave-request/div/div/div[3]/a"));
         Cancelbutton.click();
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(120));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"kt_app_header_wrapper\"]/app-navbar/div[5]/div")));
-        if (  element.isDisplayed() ) {
+        if (element.isDisplayed()) {
             Infologger("User clicked Cancel Button, Dashbord is openned. ");
             Infologger("TC10 Pass");
             Infologger("---------------------------------------------------------------------------");
-        }
-        else {
+        } else {
             Infologger("User clicked Cancel Button, But dashbord is openned. ");
             Infologger("TC10 Fail");
             Infologger("---------------------------------------------------------------------------");
@@ -402,6 +403,7 @@ public class Fields_Validations {
 //        }
 
     }
+
     public static void LeaveType() {
         driver1.findElement(By.xpath("//*[@formcontrolname='vacCode']")).click();
         driver1.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div/mat-option[1]/span")).click();
@@ -429,14 +431,16 @@ public class Fields_Validations {
                     By.xpath("//mat-option//span[@class='mat-option-text']")
             ));
             if (!options.isEmpty()) {
-                Infologger("Dropdown contains data:");
                 for (WebElement option : options) {
-                    Infologger(option.getText());
+//                    Infologger(option.getText());
                 }
                 WebElement annualLeave = wait.until(ExpectedConditions.elementToBeClickable(
                         By.xpath("//mat-option//span[contains(text(),'Annual Leave')]")
                 ));
                 annualLeave.click();
+
+                Infologger(String.valueOf(annualLeave));
+
                 WebElement remainField = wait.until(ExpectedConditions.visibilityOfElementLocated(
                         By.id("mat-input-5")
                 ));
@@ -447,27 +451,31 @@ public class Fields_Validations {
                 ));
                 String DaysNo = NoOfDays.getAttribute("value");
 
+                Infologger("Remaining Leave Value: " + remainValue);
+                Infologger("Number of Days Requested: " + DaysNo);
+
                 //try {
-                    // Parse the strings to numbers (using double for decimal numbers, use Integer.parseInt for whole numbers)
+                // Parse the strings to numbers (using double for decimal numbers, use Integer.parseInt for whole numbers)
 
-                    double remainNum = Double.parseDouble(remainValue.trim());
-                    double daysNum = Double.parseDouble(DaysNo.trim());
-                    if (remainNum < daysNum) {
-                        Infologger("Remain is less than Number of days");
-                        WebElement Send = driver1.findElement(By.xpath("//*[@id=\"kt_app_content_container\"]/app-leave-request/div/div/div[3]/button/span[1]"));
-                        Send.click();
-                        Thread.sleep(10000);
-                        swalerrorMessage("Leave");
-                        Infologger("TC12 Pass");
+                double remainNum = Double.parseDouble(remainValue.trim());
+                double daysNum = Double.parseDouble(DaysNo.trim());
+                if (remainNum < daysNum) {
+                    Infologger("Remain is less than Number of days");
+                    WebElement Send = driver1.findElement(By.xpath("//*[@id=\"kt_app_content_container\"]/app-leave-request/div/div/div[3]/button/span[1]"));
+                    Send.click();
+                    Thread.sleep(10000);
+                    swalerrorMessage("Leave");
+                    Infologger("TC12 Pass");
 
-                    }
-               // } catch (NumberFormatException e) {
-                   // System.out.println("Error parsing numbers: " + e.getMessage());
-               // }
+                }
+                // } catch (NumberFormatException e) {
+                // System.out.println("Error parsing numbers: " + e.getMessage());
+                // }
             }
         } catch (Exception e) {
             Infologger("TC12 Fail");
         }
+
     }
 }
 
