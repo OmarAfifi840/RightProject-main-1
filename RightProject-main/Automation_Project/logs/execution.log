@@ -159,3 +159,165 @@
 2025-07-07 15:52:59 ERROR Fields_Validations: Request: Leave | Swal Message: Leave Blanace Not Enough / UserName: 200130
 2025-07-07 15:52:59 INFO  Fields_Validations: OK button clicked.
 2025-07-07 15:52:59 INFO  Fields_Validations: TC12 Pass
+2025-08-11 10:01:06 INFO  Fields_Validations: Login
+2025-08-11 10:02:14 INFO  Fields_Validations: Start Fields Validation
+2025-08-11 10:02:14 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
+2025-08-11 10:02:14 INFO  Fields_Validations: TC1 Pass
+2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:14 INFO  Fields_Validations: Field is loaded with data: Triumph
+2025-08-11 10:02:14 INFO  Fields_Validations: TC2 Pass - Data loaded check
+2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:14 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
+2025-08-11 10:02:14 INFO  Fields_Validations: TC3 Pass - Disabled state check
+2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:14 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
+2025-08-11 10:02:14 INFO  Fields_Validations: TC4 Pass
+2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:14 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-08-11 10:02:14 INFO  Fields_Validations: TC5 Pass
+2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:14 INFO  Fields_Validations: Dropdown contains data:
+2025-08-11 10:02:14 INFO  Fields_Validations: 01 - Annual Leave
+2025-08-11 10:02:15 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-08-11 10:02:15 INFO  Fields_Validations: 04 - اجازة زواج
+2025-08-11 10:02:15 INFO  Fields_Validations: 05 - اجازة مولود
+2025-08-11 10:02:15 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-08-11 10:02:15 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-08-11 10:02:15 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-08-11 10:02:15 INFO  Fields_Validations: TC6 Pass
+2025-08-11 10:02:15 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:25 INFO  Fields_Validations: Remain value: 0
+2025-08-11 10:02:25 INFO  Fields_Validations: TC7 Pass
+2025-08-11 10:02:25 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:27 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-08-11 10:02:27 INFO  Fields_Validations: TC8 Pass
+2025-08-11 10:02:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:27 INFO  Fields_Validations: Field contains data:
+2025-08-11 10:02:27 INFO  Fields_Validations: 
+2025-08-11 10:02:28 INFO  Fields_Validations: TC9 Pass
+2025-08-11 10:02:28 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:02:49 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (a7fd16d7c90618755c0922785a8fd056)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
+2025-08-11 10:02:49 INFO  Fields_Validations: Remaining Leave Value: 2.5
+2025-08-11 10:02:49 INFO  Fields_Validations: Number of Days Requested: 7
+2025-08-11 10:02:49 INFO  Fields_Validations: Remain is less than Number of days
+2025-08-11 10:03:15 ERROR Fields_Validations: Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-08-11 10:03:15 INFO  Fields_Validations: OK button clicked.
+2025-08-11 10:03:15 INFO  Fields_Validations: TC12 Pass
+2025-08-11 10:08:35 INFO  Fields_Validations: Login
+2025-08-11 10:09:30 INFO  Fields_Validations: Login
+2025-08-11 10:10:09 INFO  Fields_Validations: Start Fields Validation
+2025-08-11 10:10:09 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
+2025-08-11 10:10:09 INFO  Fields_Validations: TC1 Pass
+2025-08-11 10:10:09 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:11:35 INFO  Fields_Validations: Login
+2025-08-11 10:12:19 INFO  Fields_Validations: Start Fields Validation
+2025-08-11 10:12:19 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
+2025-08-11 10:12:19 INFO  Fields_Validations: TC1 Pass
+2025-08-11 10:12:19 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:13:58 INFO  Fields_Validations: Login
+2025-08-11 10:14:44 INFO  Fields_Validations: Start Fields Validation
+2025-08-11 10:14:44 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
+2025-08-11 10:14:44 INFO  Fields_Validations: TC1 Pass
+2025-08-11 10:14:44 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:14:44 INFO  Fields_Validations: Field is loaded with data: 06/28/2022
+2025-08-11 10:14:44 INFO  Fields_Validations: TC4 Pass
+2025-08-11 10:14:44 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:14:44 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-08-11 10:14:44 INFO  Fields_Validations: TC5 Pass
+2025-08-11 10:14:44 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:14:44 INFO  Fields_Validations: Dropdown contains data:
+2025-08-11 10:14:44 INFO  Fields_Validations: 01 - Annual Leave
+2025-08-11 10:14:45 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-08-11 10:14:45 INFO  Fields_Validations: 04 - اجازة زواج
+2025-08-11 10:14:45 INFO  Fields_Validations: 05 - اجازة مولود
+2025-08-11 10:14:45 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-08-11 10:14:45 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-08-11 10:14:45 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-08-11 10:14:45 INFO  Fields_Validations: TC6 Pass
+2025-08-11 10:14:45 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:14:55 INFO  Fields_Validations: Remain value: 0
+2025-08-11 10:14:55 INFO  Fields_Validations: TC7 Pass
+2025-08-11 10:14:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:14:55 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-08-11 10:14:55 INFO  Fields_Validations: TC8 Pass
+2025-08-11 10:14:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:14:55 INFO  Fields_Validations: Field contains data:
+2025-08-11 10:14:55 INFO  Fields_Validations: 
+2025-08-11 10:14:55 INFO  Fields_Validations: TC9 Pass
+2025-08-11 10:14:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:15:16 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (1e09169949b7f76a1f0e62eef870ba72)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
+2025-08-11 10:15:17 INFO  Fields_Validations: Remaining Leave Value: 0
+2025-08-11 10:15:17 INFO  Fields_Validations: Number of Days Requested: 7
+2025-08-11 10:15:17 INFO  Fields_Validations: Remain is less than Number of days
+2025-08-11 10:16:24 INFO  Fields_Validations: TC12 Fail
+2025-08-11 10:42:37 INFO  Fields_Validations: Login
+2025-08-11 10:43:58 INFO  Fields_Validations: Start Fields Validation
+2025-08-11 10:45:45 INFO  Fields_Validations: Login
+2025-08-11 10:46:38 INFO  Fields_Validations: Login
+2025-08-11 10:48:07 INFO  Fields_Validations: Start Fields Validation
+2025-08-11 10:48:07 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
+2025-08-11 10:48:07 INFO  Fields_Validations: TC1 Pass
+2025-08-11 10:48:07 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:48:07 INFO  Fields_Validations: Field is loaded with data: 06/28/2022
+2025-08-11 10:48:07 INFO  Fields_Validations: TC4 Pass
+2025-08-11 10:48:07 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:48:07 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-08-11 10:48:07 INFO  Fields_Validations: TC5 Pass
+2025-08-11 10:48:07 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:48:08 INFO  Fields_Validations: Dropdown contains data:
+2025-08-11 10:48:08 INFO  Fields_Validations: 01 - Annual Leave
+2025-08-11 10:48:08 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-08-11 10:48:08 INFO  Fields_Validations: 04 - اجازة زواج
+2025-08-11 10:48:08 INFO  Fields_Validations: 05 - اجازة مولود
+2025-08-11 10:48:08 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-08-11 10:48:08 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-08-11 10:48:08 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-08-11 10:48:08 INFO  Fields_Validations: TC6 Pass
+2025-08-11 10:48:08 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:48:18 INFO  Fields_Validations: Remain value: 0
+2025-08-11 10:48:18 INFO  Fields_Validations: TC7 Pass
+2025-08-11 10:48:18 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:48:18 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-08-11 10:48:18 INFO  Fields_Validations: TC8 Pass
+2025-08-11 10:48:18 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:48:18 INFO  Fields_Validations: Field contains data:
+2025-08-11 10:48:18 INFO  Fields_Validations: 2025
+2025-08-11 10:48:18 INFO  Fields_Validations: TC9 Pass
+2025-08-11 10:48:18 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:48:40 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (fc2330efccdf87cfe1c758a5b4b72e5f)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
+2025-08-11 10:48:40 INFO  Fields_Validations: Remaining Leave Value: 35.75
+2025-08-11 10:48:40 INFO  Fields_Validations: Number of Days Requested: 1
+2025-08-11 10:50:06 INFO  Fields_Validations: Login
+2025-08-11 10:51:21 INFO  Fields_Validations: Start Fields Validation
+2025-08-11 10:51:21 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
+2025-08-11 10:51:21 INFO  Fields_Validations: TC1 Pass
+2025-08-11 10:51:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:51:21 INFO  Fields_Validations: Field is loaded with data: 06/28/2022
+2025-08-11 10:51:21 INFO  Fields_Validations: TC4 Pass
+2025-08-11 10:51:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:51:21 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
+2025-08-11 10:51:21 INFO  Fields_Validations: TC5 Pass
+2025-08-11 10:51:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:51:21 INFO  Fields_Validations: Dropdown contains data:
+2025-08-11 10:51:21 INFO  Fields_Validations: 01 - Annual Leave
+2025-08-11 10:51:21 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
+2025-08-11 10:51:21 INFO  Fields_Validations: 04 - اجازة زواج
+2025-08-11 10:51:21 INFO  Fields_Validations: 05 - اجازة مولود
+2025-08-11 10:51:22 INFO  Fields_Validations: 06 - اجازة وفاة
+2025-08-11 10:51:22 INFO  Fields_Validations: 09 - اجازة مرضى
+2025-08-11 10:51:22 INFO  Fields_Validations: 10 - Unpaid Leave
+2025-08-11 10:51:22 INFO  Fields_Validations: TC6 Pass
+2025-08-11 10:51:22 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:51:32 INFO  Fields_Validations: Remain value: 35.75
+2025-08-11 10:51:32 INFO  Fields_Validations: TC7 Pass
+2025-08-11 10:51:32 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:51:32 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
+2025-08-11 10:51:32 INFO  Fields_Validations: TC8 Pass
+2025-08-11 10:51:32 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:51:32 INFO  Fields_Validations: Field contains data:
+2025-08-11 10:51:32 INFO  Fields_Validations: 2025
+2025-08-11 10:51:32 INFO  Fields_Validations: TC9 Pass
+2025-08-11 10:51:32 INFO  Fields_Validations: ---------------------------------------------------------------------------
+2025-08-11 10:51:53 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (65683e6c0196a6f4f52c79e71e7eef1d)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
+2025-08-11 10:51:53 INFO  Fields_Validations: Remaining Leave Value: 35.75
+2025-08-11 10:51:53 INFO  Fields_Validations: Number of Days Requested: 1

@@ -74,8 +74,8 @@ public class Fields_Validations {
     }
 
     public static void performLogin() throws InterruptedException {
-        String userName = ConfigReader.get("userName");
-        String password = ConfigReader.get("password");
+        String userName = ConfigReader.get("userName1");
+        String password = ConfigReader.get("password1");
 
         Thread.sleep(1000);
         driver1.findElement(By.cssSelector("#kt_login_signin_form > div.fv-row.mb-8 > input")).sendKeys(userName);
@@ -86,7 +86,7 @@ public class Fields_Validations {
     }
 
     public static void submitLeaveRequest() throws InterruptedException {
-        String Employee1 = ConfigReader.get("userName");
+        String Employee1 = ConfigReader.get("userName1");
         WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(120));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"kt_app_header_wrapper\"]/app-navbar/div[5]/div")));
 
@@ -475,6 +475,7 @@ public class Fields_Validations {
         } catch (Exception e) {
             Infologger("TC12 Fail");
         }
+
 
     }
 }
