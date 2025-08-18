@@ -1,323 +1,82 @@
-2025-07-07 15:31:24 INFO  Fields_Validations: Login
-2025-07-07 15:33:04 INFO  Fields_Validations: Start Fields Validation
-2025-07-07 15:33:04 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-07 15:33:04 INFO  Fields_Validations: TC1 Pass
-2025-07-07 15:33:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:04 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-07 15:33:04 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-07 15:33:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:04 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-07 15:33:04 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-07 15:33:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:04 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-07 15:33:04 INFO  Fields_Validations: TC4 Pass
-2025-07-07 15:33:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:04 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-07 15:33:04 INFO  Fields_Validations: TC5 Pass
-2025-07-07 15:33:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:05 INFO  Fields_Validations: Dropdown contains data:
-2025-07-07 15:33:05 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-07 15:33:05 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-07 15:33:05 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-07 15:33:05 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-07 15:33:05 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-07 15:33:05 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-07 15:33:05 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-07 15:33:05 INFO  Fields_Validations: TC6 Pass
-2025-07-07 15:33:05 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:15 INFO  Fields_Validations: Remain value: 3.25
-2025-07-07 15:33:15 INFO  Fields_Validations: TC7 Pass
-2025-07-07 15:33:15 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:15 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-07 15:33:15 INFO  Fields_Validations: TC8 Pass
-2025-07-07 15:33:15 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:15 INFO  Fields_Validations: Field contains data:
-2025-07-07 15:33:15 INFO  Fields_Validations: 2025
-2025-07-07 15:33:15 INFO  Fields_Validations: TC9 Pass
-2025-07-07 15:33:15 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:33:37 INFO  Fields_Validations: Remaining Leave Value: 3.25
-2025-07-07 15:33:37 INFO  Fields_Validations: Number of Days Requested: 7
-2025-07-07 15:33:37 INFO  Fields_Validations: Remain is less than Number of days
-2025-07-07 15:34:29 INFO  Fields_Validations: TC12 Fail
-2025-07-07 15:47:33 INFO  Fields_Validations: Login
-2025-07-07 15:48:29 INFO  Fields_Validations: Start Fields Validation
-2025-07-07 15:48:29 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-07 15:48:29 INFO  Fields_Validations: TC1 Pass
-2025-07-07 15:48:29 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:29 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-07 15:48:29 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-07 15:48:29 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:29 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-07 15:48:29 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-07 15:48:29 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:29 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-07 15:48:29 INFO  Fields_Validations: TC4 Pass
-2025-07-07 15:48:29 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:29 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-07 15:48:29 INFO  Fields_Validations: TC5 Pass
-2025-07-07 15:48:29 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:29 INFO  Fields_Validations: Dropdown contains data:
-2025-07-07 15:48:30 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-07 15:48:30 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-07 15:48:30 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-07 15:48:30 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-07 15:48:30 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-07 15:48:30 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-07 15:48:30 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-07 15:48:30 INFO  Fields_Validations: TC6 Pass
-2025-07-07 15:48:30 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:40 INFO  Fields_Validations: Remain value: 3.25
-2025-07-07 15:48:40 INFO  Fields_Validations: TC7 Pass
-2025-07-07 15:48:40 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:40 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-07 15:48:40 INFO  Fields_Validations: TC8 Pass
-2025-07-07 15:48:40 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:48:40 INFO  Fields_Validations: Field contains data:
-2025-07-07 15:48:40 INFO  Fields_Validations: 2025
-2025-07-07 15:48:40 INFO  Fields_Validations: TC9 Pass
-2025-07-07 15:48:40 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:49:02 INFO  Fields_Validations: Remaining Leave Value: 3.25
-2025-07-07 15:49:02 INFO  Fields_Validations: Number of Days Requested: 1
-2025-07-07 15:49:45 INFO  Fields_Validations: Login
-2025-07-07 15:50:26 INFO  Fields_Validations: Start Fields Validation
-2025-07-07 15:50:26 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-07 15:50:26 INFO  Fields_Validations: TC1 Pass
-2025-07-07 15:50:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:26 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-07 15:50:26 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-07 15:50:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:26 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-07 15:50:26 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-07 15:50:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:26 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-07 15:50:26 INFO  Fields_Validations: TC4 Pass
-2025-07-07 15:50:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:26 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-07 15:50:26 INFO  Fields_Validations: TC5 Pass
-2025-07-07 15:50:26 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:27 INFO  Fields_Validations: Dropdown contains data:
-2025-07-07 15:50:28 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-07 15:50:28 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-07 15:50:28 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-07 15:50:28 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-07 15:50:28 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-07 15:50:28 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-07 15:50:28 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-07 15:50:28 INFO  Fields_Validations: TC6 Pass
-2025-07-07 15:50:28 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:38 INFO  Fields_Validations: Remain value: 3.25
-2025-07-07 15:50:38 INFO  Fields_Validations: TC7 Pass
-2025-07-07 15:50:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:38 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-07 15:50:38 INFO  Fields_Validations: TC8 Pass
-2025-07-07 15:50:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:50:38 INFO  Fields_Validations: Field contains data:
-2025-07-07 15:50:38 INFO  Fields_Validations: 2025
-2025-07-07 15:50:38 INFO  Fields_Validations: TC9 Pass
-2025-07-07 15:50:38 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:51:19 INFO  Fields_Validations: Login
-2025-07-07 15:52:02 INFO  Fields_Validations: Start Fields Validation
-2025-07-07 15:52:03 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-07-07 15:52:03 INFO  Fields_Validations: TC1 Pass
-2025-07-07 15:52:03 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:04 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-07-07 15:52:04 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-07-07 15:52:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:04 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-07-07 15:52:04 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-07-07 15:52:04 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:05 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-07-07 15:52:05 INFO  Fields_Validations: TC4 Pass
-2025-07-07 15:52:05 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:05 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-07-07 15:52:05 INFO  Fields_Validations: TC5 Pass
-2025-07-07 15:52:05 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:05 INFO  Fields_Validations: Dropdown contains data:
-2025-07-07 15:52:05 INFO  Fields_Validations: 01 - Annual Leave
-2025-07-07 15:52:05 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-07-07 15:52:05 INFO  Fields_Validations: 04 - اجازة زواج
-2025-07-07 15:52:05 INFO  Fields_Validations: 05 - اجازة مولود
-2025-07-07 15:52:06 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-07-07 15:52:06 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-07-07 15:52:06 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-07-07 15:52:06 INFO  Fields_Validations: TC6 Pass
-2025-07-07 15:52:06 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:16 INFO  Fields_Validations: Remain value: 3.25
-2025-07-07 15:52:16 INFO  Fields_Validations: TC7 Pass
-2025-07-07 15:52:16 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:16 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-07-07 15:52:16 INFO  Fields_Validations: TC8 Pass
-2025-07-07 15:52:16 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:16 INFO  Fields_Validations: Field contains data:
-2025-07-07 15:52:16 INFO  Fields_Validations: 2025
-2025-07-07 15:52:16 INFO  Fields_Validations: TC9 Pass
-2025-07-07 15:52:16 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-07-07 15:52:38 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (75005cab51f5125ab4da85a9d749c95f)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
-2025-07-07 15:52:38 INFO  Fields_Validations: Remaining Leave Value: 3.25
-2025-07-07 15:52:38 INFO  Fields_Validations: Number of Days Requested: 7
-2025-07-07 15:52:38 INFO  Fields_Validations: Remain is less than Number of days
-2025-07-07 15:52:59 ERROR Fields_Validations: Request: Leave | Swal Message: Leave Blanace Not Enough / UserName: 200130
-2025-07-07 15:52:59 INFO  Fields_Validations: OK button clicked.
-2025-07-07 15:52:59 INFO  Fields_Validations: TC12 Pass
-2025-08-11 10:01:06 INFO  Fields_Validations: Login
-2025-08-11 10:02:14 INFO  Fields_Validations: Start Fields Validation
-2025-08-11 10:02:14 INFO  Fields_Validations: Field is loaded with data: 200103 - Islam Rabie Elsayed Ali
-2025-08-11 10:02:14 INFO  Fields_Validations: TC1 Pass
-2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:14 INFO  Fields_Validations: Field is loaded with data: Triumph
-2025-08-11 10:02:14 INFO  Fields_Validations: TC2 Pass - Data loaded check
-2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:14 INFO  Fields_Validations: Department field is disabled (dimmed) as expected
-2025-08-11 10:02:14 INFO  Fields_Validations: TC3 Pass - Disabled state check
-2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:14 INFO  Fields_Validations: Field is loaded with data: 06/21/2022
-2025-08-11 10:02:14 INFO  Fields_Validations: TC4 Pass
-2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:14 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-08-11 10:02:14 INFO  Fields_Validations: TC5 Pass
-2025-08-11 10:02:14 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:14 INFO  Fields_Validations: Dropdown contains data:
-2025-08-11 10:02:14 INFO  Fields_Validations: 01 - Annual Leave
-2025-08-11 10:02:15 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-08-11 10:02:15 INFO  Fields_Validations: 04 - اجازة زواج
-2025-08-11 10:02:15 INFO  Fields_Validations: 05 - اجازة مولود
-2025-08-11 10:02:15 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-08-11 10:02:15 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-08-11 10:02:15 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-08-11 10:02:15 INFO  Fields_Validations: TC6 Pass
-2025-08-11 10:02:15 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:25 INFO  Fields_Validations: Remain value: 0
-2025-08-11 10:02:25 INFO  Fields_Validations: TC7 Pass
-2025-08-11 10:02:25 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:27 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-08-11 10:02:27 INFO  Fields_Validations: TC8 Pass
-2025-08-11 10:02:27 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:27 INFO  Fields_Validations: Field contains data:
-2025-08-11 10:02:27 INFO  Fields_Validations: 
-2025-08-11 10:02:28 INFO  Fields_Validations: TC9 Pass
-2025-08-11 10:02:28 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:02:49 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (a7fd16d7c90618755c0922785a8fd056)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
-2025-08-11 10:02:49 INFO  Fields_Validations: Remaining Leave Value: 2.5
-2025-08-11 10:02:49 INFO  Fields_Validations: Number of Days Requested: 7
-2025-08-11 10:02:49 INFO  Fields_Validations: Remain is less than Number of days
-2025-08-11 10:03:15 ERROR Fields_Validations: Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
-2025-08-11 10:03:15 INFO  Fields_Validations: OK button clicked.
-2025-08-11 10:03:15 INFO  Fields_Validations: TC12 Pass
-2025-08-11 10:08:35 INFO  Fields_Validations: Login
-2025-08-11 10:09:30 INFO  Fields_Validations: Login
-2025-08-11 10:10:09 INFO  Fields_Validations: Start Fields Validation
-2025-08-11 10:10:09 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
-2025-08-11 10:10:09 INFO  Fields_Validations: TC1 Pass
-2025-08-11 10:10:09 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:11:35 INFO  Fields_Validations: Login
-2025-08-11 10:12:19 INFO  Fields_Validations: Start Fields Validation
-2025-08-11 10:12:19 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
-2025-08-11 10:12:19 INFO  Fields_Validations: TC1 Pass
-2025-08-11 10:12:19 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:13:58 INFO  Fields_Validations: Login
-2025-08-11 10:14:44 INFO  Fields_Validations: Start Fields Validation
-2025-08-11 10:14:44 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
-2025-08-11 10:14:44 INFO  Fields_Validations: TC1 Pass
-2025-08-11 10:14:44 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:14:44 INFO  Fields_Validations: Field is loaded with data: 06/28/2022
-2025-08-11 10:14:44 INFO  Fields_Validations: TC4 Pass
-2025-08-11 10:14:44 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:14:44 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-08-11 10:14:44 INFO  Fields_Validations: TC5 Pass
-2025-08-11 10:14:44 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:14:44 INFO  Fields_Validations: Dropdown contains data:
-2025-08-11 10:14:44 INFO  Fields_Validations: 01 - Annual Leave
-2025-08-11 10:14:45 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-08-11 10:14:45 INFO  Fields_Validations: 04 - اجازة زواج
-2025-08-11 10:14:45 INFO  Fields_Validations: 05 - اجازة مولود
-2025-08-11 10:14:45 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-08-11 10:14:45 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-08-11 10:14:45 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-08-11 10:14:45 INFO  Fields_Validations: TC6 Pass
-2025-08-11 10:14:45 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:14:55 INFO  Fields_Validations: Remain value: 0
-2025-08-11 10:14:55 INFO  Fields_Validations: TC7 Pass
-2025-08-11 10:14:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:14:55 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-08-11 10:14:55 INFO  Fields_Validations: TC8 Pass
-2025-08-11 10:14:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:14:55 INFO  Fields_Validations: Field contains data:
-2025-08-11 10:14:55 INFO  Fields_Validations: 
-2025-08-11 10:14:55 INFO  Fields_Validations: TC9 Pass
-2025-08-11 10:14:55 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:15:16 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (1e09169949b7f76a1f0e62eef870ba72)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
-2025-08-11 10:15:17 INFO  Fields_Validations: Remaining Leave Value: 0
-2025-08-11 10:15:17 INFO  Fields_Validations: Number of Days Requested: 7
-2025-08-11 10:15:17 INFO  Fields_Validations: Remain is less than Number of days
-2025-08-11 10:16:24 INFO  Fields_Validations: TC12 Fail
-2025-08-11 10:42:37 INFO  Fields_Validations: Login
-2025-08-11 10:43:58 INFO  Fields_Validations: Start Fields Validation
-2025-08-11 10:45:45 INFO  Fields_Validations: Login
-2025-08-11 10:46:38 INFO  Fields_Validations: Login
-2025-08-11 10:48:07 INFO  Fields_Validations: Start Fields Validation
-2025-08-11 10:48:07 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
-2025-08-11 10:48:07 INFO  Fields_Validations: TC1 Pass
-2025-08-11 10:48:07 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:48:07 INFO  Fields_Validations: Field is loaded with data: 06/28/2022
-2025-08-11 10:48:07 INFO  Fields_Validations: TC4 Pass
-2025-08-11 10:48:07 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:48:07 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-08-11 10:48:07 INFO  Fields_Validations: TC5 Pass
-2025-08-11 10:48:07 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:48:08 INFO  Fields_Validations: Dropdown contains data:
-2025-08-11 10:48:08 INFO  Fields_Validations: 01 - Annual Leave
-2025-08-11 10:48:08 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-08-11 10:48:08 INFO  Fields_Validations: 04 - اجازة زواج
-2025-08-11 10:48:08 INFO  Fields_Validations: 05 - اجازة مولود
-2025-08-11 10:48:08 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-08-11 10:48:08 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-08-11 10:48:08 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-08-11 10:48:08 INFO  Fields_Validations: TC6 Pass
-2025-08-11 10:48:08 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:48:18 INFO  Fields_Validations: Remain value: 0
-2025-08-11 10:48:18 INFO  Fields_Validations: TC7 Pass
-2025-08-11 10:48:18 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:48:18 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-08-11 10:48:18 INFO  Fields_Validations: TC8 Pass
-2025-08-11 10:48:18 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:48:18 INFO  Fields_Validations: Field contains data:
-2025-08-11 10:48:18 INFO  Fields_Validations: 2025
-2025-08-11 10:48:18 INFO  Fields_Validations: TC9 Pass
-2025-08-11 10:48:18 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:48:40 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (fc2330efccdf87cfe1c758a5b4b72e5f)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
-2025-08-11 10:48:40 INFO  Fields_Validations: Remaining Leave Value: 35.75
-2025-08-11 10:48:40 INFO  Fields_Validations: Number of Days Requested: 1
-2025-08-11 10:50:06 INFO  Fields_Validations: Login
-2025-08-11 10:51:21 INFO  Fields_Validations: Start Fields Validation
-2025-08-11 10:51:21 INFO  Fields_Validations: Field is loaded with data: 200130 - Osama Adel Metwally Ibrahim
-2025-08-11 10:51:21 INFO  Fields_Validations: TC1 Pass
-2025-08-11 10:51:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:51:21 INFO  Fields_Validations: Field is loaded with data: 06/28/2022
-2025-08-11 10:51:21 INFO  Fields_Validations: TC4 Pass
-2025-08-11 10:51:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:51:21 INFO  Fields_Validations: Hiring Date field is disabled (dimmed) as expected
-2025-08-11 10:51:21 INFO  Fields_Validations: TC5 Pass
-2025-08-11 10:51:21 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:51:21 INFO  Fields_Validations: Dropdown contains data:
-2025-08-11 10:51:21 INFO  Fields_Validations: 01 - Annual Leave
-2025-08-11 10:51:21 INFO  Fields_Validations: 02 - إجازة غير مدفوعة الأجر
-2025-08-11 10:51:21 INFO  Fields_Validations: 04 - اجازة زواج
-2025-08-11 10:51:21 INFO  Fields_Validations: 05 - اجازة مولود
-2025-08-11 10:51:22 INFO  Fields_Validations: 06 - اجازة وفاة
-2025-08-11 10:51:22 INFO  Fields_Validations: 09 - اجازة مرضى
-2025-08-11 10:51:22 INFO  Fields_Validations: 10 - Unpaid Leave
-2025-08-11 10:51:22 INFO  Fields_Validations: TC6 Pass
-2025-08-11 10:51:22 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:51:32 INFO  Fields_Validations: Remain value: 35.75
-2025-08-11 10:51:32 INFO  Fields_Validations: TC7 Pass
-2025-08-11 10:51:32 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:51:32 INFO  Fields_Validations: ✅ File uploaded: ESS Issues.xlsx
-2025-08-11 10:51:32 INFO  Fields_Validations: TC8 Pass
-2025-08-11 10:51:32 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:51:32 INFO  Fields_Validations: Field contains data:
-2025-08-11 10:51:32 INFO  Fields_Validations: 2025
-2025-08-11 10:51:32 INFO  Fields_Validations: TC9 Pass
-2025-08-11 10:51:32 INFO  Fields_Validations: ---------------------------------------------------------------------------
-2025-08-11 10:51:53 INFO  Fields_Validations: [[ChromeDriver: chrome on windows (65683e6c0196a6f4f52c79e71e7eef1d)] -> xpath: //mat-option//span[contains(text(),'Annual Leave')]]
-2025-08-11 10:51:53 INFO  Fields_Validations: Remaining Leave Value: 35.75
-2025-08-11 10:51:53 INFO  Fields_Validations: Number of Days Requested: 1
+2025-08-16 17:47:24 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-16 17:47:55 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-null/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55987/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee9d22ec2bcd568859eba0bbc1063738
+2025-08-16 17:48:43 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1469-LR-01 / UserName: 200130
+2025-08-16 17:48:44 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-17 09:55:08 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 09:59:49 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 10:01:26 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1469-LR-01 / UserName: 200130
+2025-08-17 10:01:27 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-17 10:59:08 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 11:01:40 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 11:02:39 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1469-LR-01 / UserName: 200130
+2025-08-17 11:02:39 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-17 11:02:42 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-17 11:03:13 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='mat-select-min-line ng-tns-c119-19 ng-star-inserted'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63574/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 011872cab84736dad5554a912c4880f4
+2025-08-17 11:04:46 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 11:06:27 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 11:10:58 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 11:11:21 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1469-LR-01 / UserName: 200130
+2025-08-17 11:11:21 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-17 11:11:21 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-17 11:11:53 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='mat-select-min-line ng-tns-c119-19 ng-star-inserted'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63744}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63744/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ed799fe1c762b63055939cf069cb868
+2025-08-17 11:12:51 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 12:51:30 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 12:51:58 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1469-LR-01 / UserName: 200130
+2025-08-17 12:51:59 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-17 12:51:59 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-17 12:52:30 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='mat-select-min-line ng-tns-c119-19 ng-star-inserted'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64114}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64114/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ca43cd1f29006d083ad0c9738e94060f
+2025-08-17 13:02:13 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 13:03:23 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-08-17 13:03:23 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-17 13:03:23 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-17 13:03:55 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='mat-select-min-line ng-tns-c119-19 ng-star-inserted'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64273}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64273/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2bdcabedab42e8e30694efb99f120b9d
+2025-08-17 14:54:17 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 14:55:33 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-08-17 14:55:33 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-17 14:55:34 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-17 14:56:05 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='mat-select-min-line ng-tns-c119-19 ng-star-inserted'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53829}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53829/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a99c19e1261e7a5c6385ae21a8eee94d
+2025-08-17 15:10:15 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 15:12:16 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 15:15:26 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 15:26:33 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 15:47:09 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 15:47:40 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64882}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64882/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cf86a744914fbcb29138cfd8b322e8dc
+2025-08-17 15:53:23 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 15:55:47 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 16:08:25 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-17 16:13:33 INFO  RequestsEmployee1_V4: Leave / UserName :200130
