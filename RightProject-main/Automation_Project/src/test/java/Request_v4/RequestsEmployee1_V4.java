@@ -16,10 +16,11 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 
 import java.time.Duration;
+import java.util.List;
 
 public class RequestsEmployee1_V4 {
     private static final Logger logger = LogManager.getLogger(RequestsEmployee1_V4.class);
-    static WebDriver driver;
+
     static String reqType;
     // Locaters
     static By UserName = By.xpath("//*[@formcontrolname='email']");
@@ -32,11 +33,11 @@ public class RequestsEmployee1_V4 {
     static By TimeManagement = By.xpath("//span[@class='menu-title' and .=' Time Attendance ']");
     static By LeaveRequest = By.xpath("//span[@class='menu-title' and .=' Leaves Request ']");
 
+    //static WebElement VacCode = driver.findElement(By.xpath("" + "//*[@formcontrolname='vacCode']"));
+    //static By wk_VacCode = By.xpath("//*[@formcontrolname='vacCode']");
 
-    static By VacCode = By.xpath("//*[@formcontrolname='vacCode']");
 
-
-    static By AnnualLeave = By.xpath("//span[@class='mat-option-text' and normalize-space()='01 - Annual Leave']");
+    //static By AnnualLeave = By.xpath("//span[@class='mat-option-text' and normalize-space()='01 - Annual Leave']");
 
 
     static By FromDateLeave = By.xpath("//*[@formcontrolname='dateFrom']");
@@ -55,7 +56,7 @@ public class RequestsEmployee1_V4 {
     static By FromTime = By.xpath("//*[@formcontrolname='newUpdatedFromTime']");
     static By ToTime = By.xpath("//*[@formcontrolname='newUpdatedToTime']");
     static By NotesMisssion = By.xpath("//*[@formcontrolname='reason']");
-
+    static WebDriver driver;
 
     static By PermmissionRequest = By.xpath("//span[@class='menu-title' and .=' Permission Request ']");
 
@@ -63,6 +64,14 @@ public class RequestsEmployee1_V4 {
     //---------------------------------------------------------//
     //WebDriverWait wait;
 
+//    public static void waitForPageLoad() {
+//        new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+//                wd -> ((JavascriptExecutor) wd)
+//                        .executeScript("return document.readyState").equals("complete")
+//        );
+//    }
+
+    //---------------------------------------------------------//
     private static void setupDriver() {
         WebDriverManager.chromedriver().setup();
 
@@ -78,7 +87,6 @@ public class RequestsEmployee1_V4 {
         actions = new Actions(driver);
     }
 
-
     private static void SendPath(String Path, String Message) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(Path)));
@@ -88,12 +96,12 @@ public class RequestsEmployee1_V4 {
     }
 
     static void screenname() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2")));
     }
 
     private static WebElement employeeCode(String reqType) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         By locator = EmpCode;
 
         try {
@@ -149,10 +157,10 @@ public class RequestsEmployee1_V4 {
     }
 
     private static void login() {
-        String userName = ConfigReader.get("userName1");
-        String password = ConfigReader.get("password1");
+        String userName = ConfigReader.get("userName2");
+        String password = ConfigReader.get("password2");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(UserName));
         //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -164,9 +172,10 @@ public class RequestsEmployee1_V4 {
         driver.findElement(LoginButton).click();
     }
 
-    static void submitLeaveRequest() {
+    static void submitLeaveRequest() throws InterruptedException {
+
         String Employee1 = ConfigReader.get("userName1");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
         wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
         WebElement newRequest = driver.findElement(NewRequest);
@@ -177,15 +186,46 @@ public class RequestsEmployee1_V4 {
 
         WebElement leaves = driver.findElement(LeaveRequest);
         actions.moveToElement(leaves).click().perform();
+
         //Log Data and Check Screen Openned
         Infologger("Leave" + " / UserName :" + Employee1);
         screenname();
         employeeCode("leave-request");
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(employeeCode("leave-request")));
+//        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+//
+        Thread.sleep(20);
+        WebElement typeDropdown = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//*[@formcontrolname='vacCode']")));
+
+        typeDropdown.click();
+//                By.xpath("//mat-option//span[@class='mat-option-text']")));
+
+        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                By.xpath("//mat-option//span[@class='mat-option-text']")
+        ));
+        if (!options.isEmpty()) {
+            for (WebElement option : options) {
+                Infologger(option.getText());
+            }
+            WebElement annualLeave = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//span[@class='mat-option-text' and normalize-space()='01 - Annual Leave']")
+            ));
+            annualLeave.click();
+            WebElement remainField = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.id("mat-input-5")
+            ));
+//                Thread.sleep(10000);
+            String remainValue = remainField.getAttribute("value");
+            if (!remainValue.equals(0)) {
+            }
+        }
         //Field inputs
-        wait.until(ExpectedConditions.elementToBeClickable(VacCode));
-        driver.findElement(VacCode).click();
-        wait.until(ExpectedConditions.elementToBeClickable(AnnualLeave));
-        driver.findElement(AnnualLeave).click();
+//        WebElement VacCode = driver.findElement(By.xpath("" + "//*[@formcontrolname='vacCode']"));
+
+//        driver.findElement(By.xpath("//*[@formcontrolname='vacCode']")).click();
+//        wait.until(ExpectedConditions.elementToBeClickable(AnnualLeave));
+//        driver.findElement(AnnualLeave).click();
         driver.findElement(FromDateLeave).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
         driver.findElement(FromDateLeave).clear();
         driver.findElement(FromDateLeave).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
@@ -194,7 +234,7 @@ public class RequestsEmployee1_V4 {
         driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
 
 
-        WebDriverWait NumberOfdays = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait NumberOfdays = new WebDriverWait(driver, Duration.ofSeconds(1000));
 
         wait.until(driver -> {
             try {
@@ -225,7 +265,7 @@ public class RequestsEmployee1_V4 {
 
     static void submitMissionRequest() {
         String Employee1 = ConfigReader.get("userName1");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(240));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
         WebElement newRequest = driver.findElement(NewRequest);
         actions.moveToElement(newRequest).perform();
@@ -281,6 +321,6 @@ public class RequestsEmployee1_V4 {
         startBrowser();
         login();
         submitLeaveRequest();
-        //submitMissionRequest();
+        submitMissionRequest();
     }
 }

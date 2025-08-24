@@ -80,3 +80,119 @@ Session ID: cf86a744914fbcb29138cfd8b322e8dc
 2025-08-17 15:55:47 INFO  RequestsEmployee1_V4: Leave / UserName :200130
 2025-08-17 16:08:25 INFO  RequestsEmployee1_V4: Leave / UserName :200130
 2025-08-17 16:13:33 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-18 10:14:48 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-18 10:18:32 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-18 11:03:19 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 10:13:02 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 10:31:16 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 10:39:11 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 10:42:27 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200130
+2025-08-20 10:53:21 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 10:53:53 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60337/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dbf6019da9b991c34addd70089424807
+2025-08-20 15:17:11 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 15:17:42 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59803}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59803/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f709e5abeb07ee40ba950175de3e895
+2025-08-20 15:19:40 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 15:43:57 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 15:44:28 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60031}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60031/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 68764717431fd06c3efe2accb5ca7419
+2025-08-20 15:47:30 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 16:02:41 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 16:11:47 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200130
+2025-08-20 16:11:49 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-20 16:13:22 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 16:16:51 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 16:18:23 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 16:19:31 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 16:21:34 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-20 16:24:32 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 09:47:40 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 09:51:17 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 10:52:46 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 11:04:19 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 11:04:50 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64258}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64258/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe6b2850a040fb52f7f1ad61857bf518
+2025-08-21 11:08:03 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 11:08:34 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64414}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64414/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 55eb5b28731c0393f93d81fff7be6537
+2025-08-21 11:13:02 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 11:13:33 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64640}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64640/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e25de0771b5309a97c4414db6de2062a
+2025-08-21 11:17:44 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 11:18:15 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64849}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64849/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 98b4ffe54d5d9712a1ea75c8b95147e5
+2025-08-21 11:21:35 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 11:22:06 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-select[@id='empCode'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65013}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65013/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fc5ca975afd1bc77c26031340d4aea4f
+2025-08-21 11:26:24 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 11:31:13 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 12:26:56 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 12:27:24 WARN  RequestsEmployee1_V4: Retry 1: Dropdown options not loaded yet.
+2025-08-21 12:27:24 INFO  RequestsEmployee1_V4: Dropdown loaded with 7 options.
+2025-08-21 12:27:25 INFO  RequestsEmployee1_V4: Remain Value: 0
+2025-08-21 12:29:41 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 12:30:34 ERROR RequestsEmployee1_V4: Error while selecting Leave Type: Dropdown options did not load after 5 retries.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: driver.version: unknown
+2025-08-21 12:36:16 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 12:36:17 ERROR RequestsEmployee1_V4: Error while selecting Leave Type: Dropdown options did not load after 5 retries.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: driver.version: unknown
+2025-08-21 12:38:30 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 12:39:28 ERROR RequestsEmployee1_V4: Error while selecting Leave Type: Dropdown options did not load after 5 retries.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: driver.version: unknown
+2025-08-21 15:42:23 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 15:43:00 ERROR RequestsEmployee1_V4: Error while selecting Leave Type: Dropdown options did not load after 5 retries.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: driver.version: unknown
+2025-08-21 15:47:39 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 15:48:01 ERROR RequestsEmployee1_V4: Error while selecting Leave Type: Dropdown options did not load after 5 retries.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: driver.version: unknown
+2025-08-21 15:50:23 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 15:50:24 ERROR RequestsEmployee1_V4: Error while selecting Leave Type: Dropdown options did not load after 5 retries.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: driver.version: unknown
+2025-08-21 15:54:16 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 15:59:50 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-21 16:09:05 INFO  RequestsEmployee1_V4: Leave / UserName :200130
