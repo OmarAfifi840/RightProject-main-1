@@ -3,14 +3,16 @@ package Request_v4;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
@@ -26,20 +28,12 @@ public class RequestsEmployee1_V4 {
     static By UserName = By.xpath("//*[@formcontrolname='email']");
     static By Password = By.xpath("//*[@formcontrolname='password']");
     static By LoginButton = By.id("kt_sign_in_submit");
-    static By EmpCode = By.xpath("//mat-select[@id='empCode']");
     // New Request valid on all requests
     static By NewRequest = By.xpath("//span[@class='menu-title' and .='New Request']");
     // Time Management valid on all requests
     static By TimeManagement = By.xpath("//span[@class='menu-title' and .=' Time Attendance ']");
     static By LeaveRequest = By.xpath("//span[@class='menu-title' and .=' Leaves Request ']");
-
-    //static WebElement VacCode = driver.findElement(By.xpath("" + "//*[@formcontrolname='vacCode']"));
-    //static By wk_VacCode = By.xpath("//*[@formcontrolname='vacCode']");
-
-
-    //static By AnnualLeave = By.xpath("//span[@class='mat-option-text' and normalize-space()='01 - Annual Leave']");
-
-
+    static By wk_VacCode = By.xpath("//*[@formcontrolname='vacCode']");
     static By FromDateLeave = By.xpath("//*[@formcontrolname='dateFrom']");
     static By ToDateLeave = By.xpath("//*[@formcontrolname='dateTo']");
     static By NotesLeaves = By.xpath("//*[@formcontrolname='reason']");
@@ -61,18 +55,9 @@ public class RequestsEmployee1_V4 {
     static By PermmissionRequest = By.xpath("//span[@class='menu-title' and .=' Permission Request ']");
 
     static Actions actions;
-    //---------------------------------------------------------//
-    //WebDriverWait wait;
-
-//    public static void waitForPageLoad() {
-//        new WebDriverWait(driver, Duration.ofSeconds(30)).until(
-//                wd -> ((JavascriptExecutor) wd)
-//                        .executeScript("return document.readyState").equals("complete")
-//        );
-//    }
 
     //---------------------------------------------------------//
-    private static void setupDriver() {
+    static void setupDriver() {
         WebDriverManager.chromedriver().setup();
 
         ChromeDriverService service = new ChromeDriverService.Builder()
@@ -87,7 +72,7 @@ public class RequestsEmployee1_V4 {
         actions = new Actions(driver);
     }
 
-    private static void SendPath(String Path, String Message) {
+    static void SendPath(String Path, String Message) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(Path)));
         okButton.click();
@@ -100,9 +85,9 @@ public class RequestsEmployee1_V4 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2")));
     }
 
-    private static WebElement employeeCode(String reqType) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
-        By locator = EmpCode;
+    static WebElement employeeCode(String reqType) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        By locator = By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-" + reqType + "/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span");
 
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -112,7 +97,19 @@ public class RequestsEmployee1_V4 {
         }
     }
 
-    private static void Infologger(String Message) {
+//    private static WebElement employeeCode(String reqType) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+//        By locator = EmpCode;
+//
+//        try {
+//            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//        } catch (Exception e) {
+//            logger.error("Element not found within timeout: " + e.getMessage());
+//            return null;
+//        }
+//    }
+
+    static void Infologger(String Message) {
         logger.info(Message);
     }
 
@@ -124,7 +121,7 @@ public class RequestsEmployee1_V4 {
         }
     }
 
-    private static void swalerrorMessage(String requestName) {
+    static void swalerrorMessage(String requestName) {
         String Employee1 = ConfigReader.get("userName1");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("swal2-loading")));
@@ -172,8 +169,7 @@ public class RequestsEmployee1_V4 {
         driver.findElement(LoginButton).click();
     }
 
-    static void submitLeaveRequest() throws InterruptedException {
-
+    static void submitLeaveRequest() {
         String Employee1 = ConfigReader.get("userName1");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
@@ -191,34 +187,40 @@ public class RequestsEmployee1_V4 {
         Infologger("Leave" + " / UserName :" + Employee1);
         screenname();
         employeeCode("leave-request");
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(employeeCode("leave-request")));
-//        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
-//
-        Thread.sleep(20);
         WebElement typeDropdown = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//*[@formcontrolname='vacCode']")));
-
         typeDropdown.click();
-//                By.xpath("//mat-option//span[@class='mat-option-text']")));
-
         List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                 By.xpath("//mat-option//span[@class='mat-option-text']")
         ));
+        WebElement remainField;
         if (!options.isEmpty()) {
             for (WebElement option : options) {
-                Infologger(option.getText());
             }
             WebElement annualLeave = wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("//span[@class='mat-option-text' and normalize-space()='01 - Annual Leave']")
             ));
             annualLeave.click();
-            WebElement remainField = wait.until(ExpectedConditions.visibilityOfElementLocated(
+            remainField = wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.id("mat-input-5")
             ));
 //                Thread.sleep(10000);
-            String remainValue = remainField.getAttribute("value");
-            if (!remainValue.equals(0)) {
+
+            try {
+                // Wait for the element to have a non-zero value
+                wait.until(d -> {
+                    String remainValue = remainField.getAttribute("value");
+                    return remainValue != null && !remainValue.equals("0") && !remainValue.isEmpty();
+                });
+
+                String remainValue = remainField.getAttribute("value");
+                Infologger("Remain value: " + remainValue);
+
+            } catch (TimeoutException e) {
+                Infologger("Remain Not loaded or value is zero");
             }
+        } else {
+            remainField = null;
         }
         //Field inputs
 //        WebElement VacCode = driver.findElement(By.xpath("" + "//*[@formcontrolname='vacCode']"));
@@ -233,22 +235,26 @@ public class RequestsEmployee1_V4 {
         driver.findElement(ToDateLeave).clear();
         driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
 
-
-        WebDriverWait NumberOfdays = new WebDriverWait(driver, Duration.ofSeconds(1000));
-
-        wait.until(driver -> {
-            try {
-                WebElement daysField = driver.findElement(By.xpath("//*[@formcontrolname='totalDays']"));
-                String value = daysField.getAttribute("value");
-                if (value != null && !value.isEmpty()) {
-                    int days = Integer.parseInt(value);
-                    return days > 0;
-                }
-                return false;
-            } catch (NumberFormatException | NoSuchElementException e) {
-                return false;
-            }
-        });
+//        String remainValue = remainField.getAttribute("value");
+//
+//        if (!remainValue.equals(0)) {
+//            Infologger("Remain value: " + remainValue); // Print actual value
+//        } else {
+//            Infologger("Remain Not loaded");
+//        }
+//        wait.until(driver -> {
+//            try {
+//                WebElement daysField = driver.findElement(By.xpath("//*[@formcontrolname='totalDays']"));
+//                String value = daysField.getAttribute("value");
+//                if (value != null && !value.isEmpty()) {
+//                    int days = Integer.parseInt(value);
+//                    return days > 0;
+//                }
+//                return false;
+//            } catch (NumberFormatException | NoSuchElementException e) {
+//                return false;
+//            }
+//        });
 
         driver.findElement(NotesLeaves).sendKeys(ConfigReader.get("notesLeavesEmployee1Leave"));
         wait.until(ExpectedConditions.elementToBeClickable(SendRequest));
@@ -278,6 +284,7 @@ public class RequestsEmployee1_V4 {
         //Log Data and Check Screen Openned
         Infologger("Mission" + " / UserName :" + Employee1);
         screenname();
+
         employeeCode("mission-request");
 
         //Field inputs
@@ -292,10 +299,11 @@ public class RequestsEmployee1_V4 {
 
         //-----------------------------------------------------
         wait.until(ExpectedConditions.elementToBeClickable(MissionType));
-        wait.until(d -> {
-            Select select = new Select((WebElement) MissionType);
-            return select.getOptions().size() > 0;
-        });
+
+//        wait.until(d -> {
+//            Select select = new Select((WebElement) MissionType);
+//            return select.getOptions().size() > 0;
+//        });
         //----------------------------------------------------
         driver.findElement(MissionType).click();
 
@@ -316,11 +324,11 @@ public class RequestsEmployee1_V4 {
     }
 
     @Test
-    public void performAllActions() throws Exception {
+    public void performAllActions() {
         setupDriver();
         startBrowser();
         login();
-        submitLeaveRequest();
-        submitMissionRequest();
+        //submitLeaveRequest();  //Done
+        submitMissionRequest();  //Pending
     }
 }

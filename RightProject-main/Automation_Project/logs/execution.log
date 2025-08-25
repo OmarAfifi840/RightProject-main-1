@@ -196,3 +196,72 @@ Driver info: driver.version: unknown
 2025-08-21 15:54:16 INFO  RequestsEmployee1_V4: Leave / UserName :200130
 2025-08-21 15:59:50 INFO  RequestsEmployee1_V4: Leave / UserName :200130
 2025-08-21 16:09:05 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 10:23:30 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 10:24:02 INFO  RequestsEmployee1_V4: 01 - Annual Leave
+2025-08-25 10:24:02 INFO  RequestsEmployee1_V4: 02 - إجازة غير مدفوعة الأجر
+2025-08-25 10:24:02 INFO  RequestsEmployee1_V4: 04 - اجازة زواج
+2025-08-25 10:24:02 INFO  RequestsEmployee1_V4: 05 - اجازة مولود
+2025-08-25 10:24:02 INFO  RequestsEmployee1_V4: 06 - اجازة وفاة
+2025-08-25 10:24:02 INFO  RequestsEmployee1_V4: 09 - اجازة مرضى
+2025-08-25 10:24:02 INFO  RequestsEmployee1_V4: 10 - Unpaid Leave
+2025-08-25 10:24:36 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-08-25 10:24:36 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 10:24:37 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 11:10:51 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 11:11:23 INFO  RequestsEmployee1_V4: 01 - Annual Leave
+2025-08-25 11:11:23 INFO  RequestsEmployee1_V4: 02 - إجازة غير مدفوعة الأجر
+2025-08-25 11:11:23 INFO  RequestsEmployee1_V4: 04 - اجازة زواج
+2025-08-25 11:11:23 INFO  RequestsEmployee1_V4: 05 - اجازة مولود
+2025-08-25 11:11:23 INFO  RequestsEmployee1_V4: 06 - اجازة وفاة
+2025-08-25 11:11:23 INFO  RequestsEmployee1_V4: 09 - اجازة مرضى
+2025-08-25 11:11:23 INFO  RequestsEmployee1_V4: 10 - Unpaid Leave
+2025-08-25 11:12:00 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-08-25 11:12:00 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 11:12:01 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 11:35:20 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 11:36:04 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 11:36:36 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1466-LR-01 / UserName: 200130
+2025-08-25 11:36:36 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 11:36:36 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 11:45:24 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 11:46:14 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 11:46:41 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1466-LR-01 / UserName: 200130
+2025-08-25 11:46:42 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 11:46:42 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 12:24:50 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 12:25:30 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 12:25:57 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1466-LR-01 / UserName: 200130
+2025-08-25 12:25:57 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 12:27:04 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 12:28:51 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 12:29:33 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 12:30:00 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1466-LR-01 / UserName: 200130
+2025-08-25 12:30:00 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 12:30:05 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 12:54:31 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 12:55:08 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 12:55:23 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1466-LR-01 / UserName: 200130
+2025-08-25 12:55:23 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 12:55:23 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 12:55:23 INFO  RequestsEmployee1_V4: wk_locaterMission loaded: By.xpath: //app-ss-employee-select//mat-select//span[contains(@class,'mat-select-placeholder') or contains(@class,'mat-select-value')]
+2025-08-25 13:35:42 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 13:36:16 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 14:18:39 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 14:19:01 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 14:19:07 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1466-LR-01 / UserName: 200130
+2025-08-25 14:19:07 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 14:19:59 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 14:21:24 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-08-25 14:21:47 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-08-25 14:22:01 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: this exceeds the allowed leaves this month / UserName: 200130
+2025-08-25 14:22:01 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-08-25 14:22:02 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 14:30:29 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 14:37:57 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-08-25 14:38:29 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-mission-request/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\Mahmoud\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55800}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55800/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: caa4b0032416681a2cc9f886ccb74f4f
+2025-08-25 14:42:02 INFO  RequestsEmployee1_V4: Mission / UserName :200130
