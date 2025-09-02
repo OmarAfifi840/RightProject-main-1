@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
@@ -44,16 +45,18 @@ public class RequestsEmployee1_V4 {
     static By ToDateMission = By.xpath("//*[@formcontrolname='toDate']");
     static By MissionType = By.xpath("//*[@formcontrolname='missionType']");
     //2 Options of The Mission is now availble to use
-    static By FullTimeMission = By.xpath("//span[@class='mat-option-text' and normalize-space() ='Full Time']");
+    static By FullTimeMission = By.xpath("//span[@class='mat-option-text' and normalize-space()='Full Time']");
     //In case of using Number of Hours please use From Time and To Time
     static By NoOfHours = By.xpath("//span[@class='mat-option-text' and normalize-space() ='No Of Hours']");
     static By FromTime = By.xpath("//*[@formcontrolname='newUpdatedFromTime']");
     static By ToTime = By.xpath("//*[@formcontrolname='newUpdatedToTime']");
     static By NotesMisssion = By.xpath("//*[@formcontrolname='reason']");
     static WebDriver driver;
-
     static By PermmissionRequest = By.xpath("//span[@class='menu-title' and .=' Permission Request ']");
-
+    static By PermissionDate = By.xpath("//*[@formcontrolname='permDate']");
+    static By PermissionTimeFrom = By.xpath("//*[@formcontrolname='newUpdatedFromTime']");
+    static By PermissionTimeTo = By.xpath("//*[@formcontrolname='newUpdatedToTime']");
+    static By NotesPermission = By.xpath("//*[@formcontrolname='reason']");
     static Actions actions;
 
     //---------------------------------------------------------//
@@ -123,7 +126,7 @@ public class RequestsEmployee1_V4 {
 
     static void swalerrorMessage(String requestName) {
         String Employee1 = ConfigReader.get("userName1");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("swal2-loading")));
         WebElement swal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("swal2-html-container")));
 
@@ -168,9 +171,7 @@ public class RequestsEmployee1_V4 {
         driver.findElement(Password).sendKeys(password);
         driver.findElement(LoginButton).click();
     }
-
-    static void submitLeaveRequest() {
-        String Employee1 = ConfigReader.get("userName1");
+    static void TimeMangementMenu () {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
         wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
@@ -179,6 +180,19 @@ public class RequestsEmployee1_V4 {
 
         WebElement timeManagement = driver.findElement(TimeManagement);
         actions.moveToElement(timeManagement).perform();
+    }
+
+    static void submitLeaveRequest() {
+        String Employee1 = ConfigReader.get("userName1");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        //Open Screen
+        TimeMangementMenu();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
+//        WebElement newRequest = driver.findElement(NewRequest);
+//        actions.moveToElement(newRequest).perform();
+//
+//        WebElement timeManagement = driver.findElement(TimeManagement);
+//        actions.moveToElement(timeManagement).perform();
 
         WebElement leaves = driver.findElement(LeaveRequest);
         actions.moveToElement(leaves).click().perform();
@@ -271,44 +285,49 @@ public class RequestsEmployee1_V4 {
 
     static void submitMissionRequest() {
         String Employee1 = ConfigReader.get("userName1");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(240));
         //Open Screen
-        WebElement newRequest = driver.findElement(NewRequest);
-        actions.moveToElement(newRequest).perform();
-
-        WebElement timeManagement = driver.findElement(TimeManagement);
-        actions.moveToElement(timeManagement).perform();
+        TimeMangementMenu();
+//        WebElement newRequest = driver.findElement(NewRequest);
+//        actions.moveToElement(newRequest).perform();
+//
+//        WebElement timeManagement = driver.findElement(TimeManagement);
+//        actions.moveToElement(timeManagement).perform();
 
         WebElement mission = driver.findElement(MissionRequest);
         actions.moveToElement(mission).click().perform();
         //Log Data and Check Screen Openned
+
         Infologger("Mission" + " / UserName :" + Employee1);
         screenname();
 
         employeeCode("mission-request");
 
         //Field inputs
+//        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
+//        driver.findElement(FromDateMission).clear();
+//        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
         driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
         driver.findElement(FromDateMission).clear();
         driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
-
-//        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
-//        driver.findElement(ToDateMission).clear();
-//        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
+        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
+        driver.findElement(ToDateMission).clear();
+        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
 
 
         //-----------------------------------------------------
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(MissionType));
-
+        driver.findElement(MissionType).click();
 //        wait.until(d -> {
 //            Select select = new Select((WebElement) MissionType);
-//            return select.getOptions().size() > 0;
+//            return !select.getOptions().isEmpty();
 //        });
         //----------------------------------------------------
-        driver.findElement(MissionType).click();
+//        driver.findElement(MissionType).click();
 
-        WebElement missionType = wait.until(ExpectedConditions.visibilityOfElementLocated(FullTimeMission));
-        missionType.click();
+        WebElement FullTime = wait.until(ExpectedConditions.elementToBeClickable(FullTimeMission));
+//        missionType.click();
         driver.findElement(FullTimeMission).click();
 
         driver.findElement(NotesMisssion).sendKeys(ConfigReader.get("NotesMissionEmployee1"));
@@ -323,12 +342,37 @@ public class RequestsEmployee1_V4 {
         wait.until(ExpectedConditions.elementToBeClickable(NewRequest));
     }
 
+        static void submitPermissionRequest() {
+        String Employee1 = ConfigReader.get("userName1");
+        TimeMangementMenu();
+        WebElement permission = driver.findElement(PermmissionRequest);
+        actions.moveToElement(permission).click().perform();
+
+        Infologger("Permission" + " / UserName :" + Employee1);
+
+        employeeCode("permission-request");
+
+        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee1"));
+        driver.findElement(PermissionDate).clear();
+        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee1"));
+        driver.findElement(PermissionTimeFrom).sendKeys(ConfigReader.get("FromTimePermissionEmployee1"));
+        driver.findElement(PermissionTimeTo).sendKeys(ConfigReader.get("ToTimePermissionEmployee1"));
+        driver.findElement(NotesPermission).sendKeys(ConfigReader.get("NotesPermissionEmployee1"));
+        driver.findElement(SendRequest).click();
+        try {
+            swalerrorMessage("Permission");
+        } catch (TimeoutException e1) {
+            Infologger("Permission" + " Request is submitted successfully" + " / UserName : " + Employee1);
+        }
+    }
+
     @Test
     public void performAllActions() {
         setupDriver();
         startBrowser();
         login();
-        //submitLeaveRequest();  //Done
-        submitMissionRequest();  //Pending
+        submitLeaveRequest();  //Done
+        submitMissionRequest(); //Done
+        submitPermissionRequest(); //Done
     }
 }
