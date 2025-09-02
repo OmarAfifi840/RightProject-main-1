@@ -57,6 +57,10 @@ public class RequestsEmployee1_V4 {
     static By PermissionTimeFrom = By.xpath("//*[@formcontrolname='newUpdatedFromTime']");
     static By PermissionTimeTo = By.xpath("//*[@formcontrolname='newUpdatedToTime']");
     static By NotesPermission = By.xpath("//*[@formcontrolname='reason']");
+    static By WorkFromHome = By.xpath("//span[@class='menu-title' and .=' Work From Home ']");
+    static By FromDateWFH = By.xpath("//app-wfhrequest//input[@formcontrolname='fromDate']");
+    static By ToDateWFH = By.xpath("//app-wfhrequest//input[@formcontrolname='toDate']");
+    static By WFHNotes = By.xpath("//*[@formcontrolname='reason']");
     static Actions actions;
 
     //---------------------------------------------------------//
@@ -125,7 +129,7 @@ public class RequestsEmployee1_V4 {
     }
 
     static void swalerrorMessage(String requestName) {
-        String Employee1 = ConfigReader.get("userName1");
+        String Employee1 = ConfigReader.get("userName4");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("swal2-loading")));
         WebElement swal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("swal2-html-container")));
@@ -157,8 +161,8 @@ public class RequestsEmployee1_V4 {
     }
 
     private static void login() {
-        String userName = ConfigReader.get("userName2");
-        String password = ConfigReader.get("password2");
+        String userName = ConfigReader.get("userName4");
+        String password = ConfigReader.get("password4");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 
@@ -183,17 +187,10 @@ public class RequestsEmployee1_V4 {
     }
 
     static void submitLeaveRequest() {
-        String Employee1 = ConfigReader.get("userName1");
+        String Employee1 = ConfigReader.get("userName4");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
         TimeMangementMenu();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
-//        WebElement newRequest = driver.findElement(NewRequest);
-//        actions.moveToElement(newRequest).perform();
-//
-//        WebElement timeManagement = driver.findElement(TimeManagement);
-//        actions.moveToElement(timeManagement).perform();
-
         WebElement leaves = driver.findElement(LeaveRequest);
         actions.moveToElement(leaves).click().perform();
 
@@ -237,17 +234,12 @@ public class RequestsEmployee1_V4 {
             remainField = null;
         }
         //Field inputs
-//        WebElement VacCode = driver.findElement(By.xpath("" + "//*[@formcontrolname='vacCode']"));
-
-//        driver.findElement(By.xpath("//*[@formcontrolname='vacCode']")).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(AnnualLeave));
-//        driver.findElement(AnnualLeave).click();
-        driver.findElement(FromDateLeave).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
+        driver.findElement(FromDateLeave).sendKeys(ConfigReader.get("FromDateEmployee4Leave"));
         driver.findElement(FromDateLeave).clear();
-        driver.findElement(FromDateLeave).sendKeys(ConfigReader.get("FromDateEmployee1Leave"));
-        driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
+        driver.findElement(FromDateLeave).sendKeys(ConfigReader.get("FromDateEmployee4Leave"));
+        driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee4Leave"));
         driver.findElement(ToDateLeave).clear();
-        driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
+        driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee4Leave"));
 
 //        String remainValue = remainField.getAttribute("value");
 //
@@ -270,7 +262,7 @@ public class RequestsEmployee1_V4 {
 //            }
 //        });
 
-        driver.findElement(NotesLeaves).sendKeys(ConfigReader.get("notesLeavesEmployee1Leave"));
+        driver.findElement(NotesLeaves).sendKeys(ConfigReader.get("notesLeavesEmployee4Leave"));
         wait.until(ExpectedConditions.elementToBeClickable(SendRequest));
         driver.findElement(SendRequest).click();
 
@@ -284,7 +276,7 @@ public class RequestsEmployee1_V4 {
 
 
     static void submitMissionRequest() {
-        String Employee1 = ConfigReader.get("userName1");
+        String Employee1 = ConfigReader.get("userName4");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(240));
         //Open Screen
         TimeMangementMenu();
@@ -307,12 +299,12 @@ public class RequestsEmployee1_V4 {
 //        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
 //        driver.findElement(FromDateMission).clear();
 //        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
-        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
+        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee4Mission"));
         driver.findElement(FromDateMission).clear();
-        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
-        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
+        driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee4Mission"));
+        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee4Mission"));
         driver.findElement(ToDateMission).clear();
-        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
+        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee4Mission"));
 
 
         //-----------------------------------------------------
@@ -330,7 +322,7 @@ public class RequestsEmployee1_V4 {
 //        missionType.click();
         driver.findElement(FullTimeMission).click();
 
-        driver.findElement(NotesMisssion).sendKeys(ConfigReader.get("NotesMissionEmployee1"));
+        driver.findElement(NotesMisssion).sendKeys(ConfigReader.get("NotesMissionEmployee4"));
         wait.until(ExpectedConditions.elementToBeClickable(SendRequest));
         driver.findElement(SendRequest).click();
 
@@ -343,7 +335,7 @@ public class RequestsEmployee1_V4 {
     }
 
         static void submitPermissionRequest() {
-        String Employee1 = ConfigReader.get("userName1");
+        String Employee1 = ConfigReader.get("userName4");
         TimeMangementMenu();
         WebElement permission = driver.findElement(PermmissionRequest);
         actions.moveToElement(permission).click().perform();
@@ -352,17 +344,52 @@ public class RequestsEmployee1_V4 {
 
         employeeCode("permission-request");
 
-        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee1"));
+        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee4"));
         driver.findElement(PermissionDate).clear();
-        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee1"));
-        driver.findElement(PermissionTimeFrom).sendKeys(ConfigReader.get("FromTimePermissionEmployee1"));
-        driver.findElement(PermissionTimeTo).sendKeys(ConfigReader.get("ToTimePermissionEmployee1"));
-        driver.findElement(NotesPermission).sendKeys(ConfigReader.get("NotesPermissionEmployee1"));
+        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee4"));
+        driver.findElement(PermissionTimeFrom).sendKeys(ConfigReader.get("FromTimePermissionEmployee4"));
+        driver.findElement(PermissionTimeTo).sendKeys(ConfigReader.get("ToTimePermissionEmployee4"));
+        driver.findElement(NotesPermission).sendKeys(ConfigReader.get("NotesPermissionEmployee4"));
         driver.findElement(SendRequest).click();
         try {
             swalerrorMessage("Permission");
         } catch (TimeoutException e1) {
             Infologger("Permission" + " Request is submitted successfully" + " / UserName : " + Employee1);
+        }
+    }
+
+
+    private void submitWFHRequest() {
+        String Employee1 = ConfigReader.get("userName4");
+        Actions actions = new Actions(driver);
+
+        TimeMangementMenu();
+
+        WebElement WFH = driver.findElement(WorkFromHome);
+
+        actions.moveToElement(WFH).click().perform();
+
+        screenname();
+
+        Infologger("WFH" + " / UserName :" + Employee1);
+
+        employeeCode("wfhrequest");
+
+        driver.findElement(FromDateWFH).sendKeys(ConfigReader.get("FromDateEmployee4WFH"));
+        driver.findElement(FromDateWFH).clear();
+        driver.findElement(FromDateWFH).sendKeys(ConfigReader.get("FromDateEmployee4WFH"));
+
+        driver.findElement(ToDateWFH).sendKeys(ConfigReader.get("ToDateEmployee4WFH"));
+        driver.findElement(ToDateWFH).clear();
+        driver.findElement(ToDateWFH).sendKeys(ConfigReader.get("ToDateEmployee4WFH"));
+
+        driver.findElement(WFHNotes).sendKeys(ConfigReader.get("NotesWFHEmployee4"));
+        driver.findElement(SendRequest).click();
+
+        try {
+            swalerrorMessage("WFH");
+        } catch (TimeoutException e1) {
+            Infologger("WFH" + " Request is submitted successfully" + " / UserName : " + Employee1);
         }
     }
 
@@ -374,5 +401,6 @@ public class RequestsEmployee1_V4 {
         submitLeaveRequest();  //Done
         submitMissionRequest(); //Done
         submitPermissionRequest(); //Done
+        submitWFHRequest(); //Pending
     }
 }
