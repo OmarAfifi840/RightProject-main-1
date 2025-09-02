@@ -16,3 +16,16 @@
 2025-09-02 13:50:26 INFO  RequestsEmployee1_V4: Permission Request is submitted successfully / UserName : 200115
 2025-09-02 13:50:27 INFO  RequestsEmployee1_V4: WFH / UserName :200115
 2025-09-02 13:50:48 INFO  RequestsEmployee1_V4: WFH Request is submitted successfully / UserName : 200115
+2025-09-02 14:15:40 INFO  RequestsEmployee1_V4: Leave / UserName :200115
+2025-09-02 14:15:41 INFO  RequestsEmployee1_V4: Remain value: 70
+2025-09-02 14:15:53 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1468-LR-01 / UserName: 200115
+2025-09-02 14:15:53 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-09-02 14:15:54 INFO  RequestsEmployee1_V4: Mission / UserName :200115
+2025-09-02 14:16:06 ERROR RequestsEmployee1_V4: Request: Mission | Swal Message: Cannot Take This Mission Because There Is Another Mission In The Same Date With Serial 103 / UserName: 200115
+2025-09-02 14:16:06 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-09-02 14:16:07 INFO  RequestsEmployee1_V4: Permission / UserName :200115
+2025-09-02 14:16:08 ERROR RequestsEmployee1_V4: Request: Permission | Swal Message: Cannot Take This Permission as there is another permission in same date / UserName: 200115
+2025-09-02 14:16:08 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-09-02 14:16:08 INFO  RequestsEmployee1_V4: WFH / UserName :200115
+2025-09-02 14:16:20 ERROR RequestsEmployee1_V4: Request: WFH | Swal Message: There is Date Used By WFH Request Before With Serial (18) / UserName: 200115
+2025-09-02 14:16:20 INFO  RequestsEmployee1_V4: OK button clicked.
