@@ -32,6 +32,7 @@ public class RequestsEmployee1_V4 {
     static By NewRequest = By.xpath("//span[@class='menu-title' and .='New Request']");
     //Personnel valid on all requests for the Personnel Requests
     static By Personnel = By.xpath("//span[@class='menu-title' and .=' Personnel ']");
+    static By DocumentRequest = By.xpath("//span[@class='menu-title' and .=' Employee Document ']");
     // Time Management valid on all requests for the Time Management Requests
     static By TimeManagement = By.xpath("//span[@class='menu-title' and .=' Time Attendance ']");
     static By LeaveRequest = By.xpath("//span[@class='menu-title' and .=' Leaves Request ']");
@@ -142,7 +143,8 @@ public class RequestsEmployee1_V4 {
 
 
     }
-    static void TimeManagement (){
+
+    static void TimeManagement() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
         wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
@@ -153,7 +155,7 @@ public class RequestsEmployee1_V4 {
         actions.moveToElement(timeManagement).perform();
     }
 
-    static void Personnel(){
+    static void Personnel() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
         wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
@@ -185,13 +187,6 @@ public class RequestsEmployee1_V4 {
         TimeManagement();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 //        //Open Screen
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
-//        WebElement newRequest = driver.findElement(NewRequest);
-//        actions.moveToElement(newRequest).perform();
-//
-//        WebElement timeManagement = driver.findElement(TimeManagement);
-//        actions.moveToElement(timeManagement).perform();
-
         WebElement leaves = driver.findElement(LeaveRequest);
         actions.moveToElement(leaves).click().perform();
 
@@ -297,6 +292,16 @@ public class RequestsEmployee1_V4 {
         String Employee1 = ConfigReader.get("userName1");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         Personnel();
+        WebElement Document = driver.findElement(DocumentRequest);
+        actions.moveToElement(Document).click().perform();
+        //Log Data and Chekc Screen Name
+        Infologger("Document" + " / UserName :" + Employee1);
+        screenname();
+
+        employeeCode("employee-document");
+
+        //Fields inputs
+
 
 
     }
