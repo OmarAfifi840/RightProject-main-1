@@ -285,3 +285,62 @@ Session ID: 7fcd0f740ecafd0957ab2253998b6dcb
 2025-09-07 09:59:08 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 1466-LR-01 / UserName: 200130
 2025-09-07 09:59:08 INFO  RequestsEmployee1_V4: OK button clicked.
 2025-09-07 09:59:09 INFO  RequestsEmployee1_V4: Mission / UserName :200130
+2025-09-09 11:07:19 INFO  RequestsEmployee1_V4: Document / UserName :200130
+2025-09-09 11:35:25 INFO  RequestsEmployee1_V4: Document / UserName :200130
+2025-09-09 11:36:02 INFO  RequestsEmployee1_V4: Document Request Request is submitted successfully / UserName : 200130
+2025-09-09 11:43:19 INFO  RequestsEmployee1_V4: Document / UserName :200130
+2025-09-09 11:45:35 INFO  RequestsEmployee1_V4: Document / UserName :200130
+2025-09-09 11:46:31 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2025-09-09 11:46:39 INFO  RequestsEmployee1_V4: Remain value: 47
+2025-09-09 11:46:46 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200130
+2025-09-09 11:47:27 INFO  RequestsEmployee1_V4: Document / UserName :200130
+2025-09-09 11:48:19 INFO  RequestsEmployee1_V4: Document / UserName :200130
+2025-09-09 11:48:46 INFO  RequestsEmployee1_V4: Document Request Request is submitted successfully / UserName : 200130
+2025-09-09 13:19:20 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-09 13:23:45 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-09 13:25:21 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-09 13:25:22 ERROR RequestsEmployee1_V4: Element not found within timeout: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=137.0.7118.2)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [055046fbdd7ffac7520379589be34b99, findElement {using=xpath, value=/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-employeefamily/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7118.2, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\hP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61375}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61375/devtoo..., se:cdpVersion: 137.0.7118.2, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 055046fbdd7ffac7520379589be34b99
+2025-09-09 13:25:58 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-09 13:50:10 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-09 13:56:44 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-09 13:58:21 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-09 14:02:55 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:15:22 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:15:53 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-employeefamily/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7118.2, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\hP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51764}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51764/devtoo..., se:cdpVersion: 137.0.7118.2, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 55775e6e7561ec25b2cef784b07091f7
+2025-09-10 18:33:39 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:34:11 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-employeefamily/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7118.2, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\hP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51896}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51896/devtoo..., se:cdpVersion: 137.0.7118.2, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc6094d3bdcf873e5988f09bbef723ab
+2025-09-10 18:36:49 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:37:21 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-employeefamily/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7118.2, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\hP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51957/devtoo..., se:cdpVersion: 137.0.7118.2, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01d501bd8f37f3766321e34d1aa5b5ab
+2025-09-10 18:38:37 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:40:32 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:41:02 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:46:52 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 18:52:34 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 19:07:22 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 19:09:32 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 19:12:28 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 19:28:48 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
+2025-09-10 19:33:26 INFO  RequestsEmployee1_V4: Family Medical / UserName :200130
