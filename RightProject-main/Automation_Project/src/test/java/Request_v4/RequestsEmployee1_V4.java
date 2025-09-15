@@ -77,6 +77,13 @@ public class RequestsEmployee1_V4 {
     static By PasswportID = By.xpath("//*[@formcontrolname='passportId']");
     static By Save = By.xpath("//button[@type='submit']");
     static By Delete = By.xpath("//div[@comp-id='84']");
+    //--------------------------------------------------------//
+    static By PenltyModule = By.xpath("//*[@id=\"kt_app_header_menu\"]/div[2]/div/div[3]/span/span[2]");
+    static By PenltyRequest = By.xpath("//*[@id=\"kt_app_header_menu\"]/div[2]/div/div[3]/div/div/a/span[2]");
+    static By MisconductDate = By.xpath("//*[@formcontrolname='misconductDate']");
+    static By Misconduct = By.xpath("//*[@id='genericDropDown']");
+    static By MisconductCode = By.xpath("//*[@class='mat-option-text' and normalize-space()='10 - عدم ارتداء الزي الخاص بالعمل أثناء ساعات العمل']");
+    static By Notes = By.xpath("//*[@formcontrolname='note']");
 
     //--------------------------------------------------------//
     static void setupDriver() {
@@ -104,7 +111,21 @@ public class RequestsEmployee1_V4 {
 
     static WebElement employeeCode(String reqType) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-        By locator = By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-" + reqType + "/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span");
+        By locator = By.xpath(
+                "/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-" + reqType + "/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span");
+
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        } catch (Exception e) {
+            logger.error("Element not found within timeout: " + e.getMessage());
+            return null;
+        }
+    }
+
+    static WebElement employeeCodePenalty(String reqType) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        By locator = By.xpath(
+                "/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-"+ reqType +"/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span");
 
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -166,6 +187,17 @@ public class RequestsEmployee1_V4 {
         actions.moveToElement(timeManagement).perform();
     }
 
+    static void PenaltyMenu() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        //Open Screen
+        wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
+        WebElement newRequest = driver.findElement(NewRequest);
+        actions.moveToElement(newRequest).perform();
+
+        WebElement Penltymenu = driver.findElement(PenltyModule);
+        actions.moveToElement(Penltymenu).perform();
+    }
+
     static void Personnel() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
@@ -178,8 +210,8 @@ public class RequestsEmployee1_V4 {
     }
 
     static void login() {
-        String userName = ConfigReader.get("userName2");
-        String password = ConfigReader.get("password2");
+        String userName = ConfigReader.get("userName");
+        String password = ConfigReader.get("password");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(UserName));
         //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -257,7 +289,6 @@ public class RequestsEmployee1_V4 {
         wait.until(ExpectedConditions.elementToBeClickable(NewRequest));
     }
 
-
     static void submitMissionRequest() {
         String Employee1 = ConfigReader.get("userName1");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
@@ -315,9 +346,8 @@ public class RequestsEmployee1_V4 {
         }
     }
 
-    private void submitWFHRequest() {
+    static void submitWFHRequest() {
         String Employee1 = ConfigReader.get("userName4");
-        Actions actions = new Actions(driver);
         TimeMangementMenu();
         WebElement WFH = driver.findElement(WorkFromHome);
         actions.moveToElement(WFH).click().perform();
@@ -391,7 +421,6 @@ public class RequestsEmployee1_V4 {
         employeeCode("employeefamily");
     }
 
-
     static void AddNewRecord() throws InterruptedException {
         String fileName = "ESS Issues.xlsx"; // Ensure correct filename + extension
         String absolutePath = "D:\\Omar Afifi\\SelfService\\" + fileName;
@@ -443,7 +472,7 @@ public class RequestsEmployee1_V4 {
                     NationalityChoice.click();
                 }
             }
-            driver.findElement(ID).sendKeys("30006248800499");
+            driver.findElement(ID).sendKeys("29011170100566");
             driver.findElement(PasswportID).sendKeys("Test");
         }
         if (!new File(absolutePath).exists()) {
@@ -497,6 +526,101 @@ public class RequestsEmployee1_V4 {
         driver.findElement(SendRequest).click();
     }
 
+    static void NoEmpCode(){
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+        WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='empCode']")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(dropdown).pause(Duration.ofMillis(10000)).click().perform();
+
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//*[@class='mat-option-text' and normalize-space()='201455 - Sherif Abdelrahman Mahmoud Salman']"))); // put the visible text
+                option.click();
+    }
+
+    static void Penalty() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+        String fileName = "ESS Issues.xlsx"; // Ensure correct filename + extension
+        String absolutePath = "D:\\Omar Afifi\\SelfService\\" + fileName;
+        PenaltyMenu();
+        driver.findElement(PenltyRequest).click();
+        WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='empCode']")));
+        NoEmpCode();
+        driver.findElement(Misconduct).click();
+        driver.findElement(MisconductDate).sendKeys("9/19/2025");
+        driver.findElement(MisconductDate).clear();
+        driver.findElement(MisconductDate).sendKeys("9/19/2025");
+        driver.findElement(MisconductCode).click();
+        driver.findElement(Notes).sendKeys("Test");
+        if (!new File(absolutePath).exists()) {
+            throw new RuntimeException("File not found: " + absolutePath);
+        }
+        WebElement fileInput = driver.findElement(By.xpath("//*[@formcontrolname='attachFile']"));
+        fileInput.sendKeys(absolutePath);
+        // Verify upload success by checking if input is now "ng-dirty"
+        try {
+            wait.until(ExpectedConditions.attributeContains(
+                    By.xpath("//*[@formcontrolname='attachFile']"),
+                    "class",
+                    // "ng-pristine"
+                    "ng-dirty"  // Checks if "ng-dirty" exists in class attribute
+            ));
+        } catch (TimeoutException e) {
+            System.err.println("❌ Upload failed");
+            throw e;
+        }
+        driver.findElement(SendRequest).click();
+
+    }
+
+    static void PenaltyValidation() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        String fileName = "ESS Issues.xlsx"; // Ensure correct filename + extension
+        String absolutePath = "D:\\Omar Afifi\\SelfService\\" + fileName;
+        NoEmpCode();
+        driver.findElement(Misconduct).click();
+        driver.findElement(MisconductDate).sendKeys("9/19/2025");
+        driver.findElement(MisconductDate).clear();
+        driver.findElement(MisconductDate).sendKeys("9/19/2025");
+        driver.findElement(MisconductCode).click();
+        driver.findElement(Notes).sendKeys("Test");
+        if (!new File(absolutePath).exists()) {
+            throw new RuntimeException("File not found: " + absolutePath);
+        }
+        WebElement fileInput = driver.findElement(By.xpath("//*[@formcontrolname='attachFile']"));
+        fileInput.sendKeys(absolutePath);
+        // Verify upload success by checking if input is now "ng-dirty"
+        try {
+            wait.until(ExpectedConditions.attributeContains(
+                    By.xpath("//*[@formcontrolname='attachFile']"),
+                    "class",
+                    // "ng-pristine"
+                    "ng-dirty"  // Checks if "ng-dirty" exists in class attribute
+            ));
+        } catch (TimeoutException e) {
+            System.err.println("❌ Upload failed");
+            throw e;
+        }
+        driver.findElement(SendRequest).click();
+        WebElement messageElement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
+        );
+
+        String actualMessage = messageElement.getText().trim();
+        String expectedMessage = "Please check pending requests, or if there is a smilar missconduct on the same date"; // expected value
+
+        try {
+            Assert.assertEquals(actualMessage, expectedMessage);
+            System.out.println("✅ Validation PASSED: " + actualMessage);
+        } catch (AssertionError e) {
+            System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
+                    + " | But got: " + actualMessage);
+            throw e; // let TestNG mark test as failed
+        }
+    }
+
+
+
     @Test
     public void performAllActions() throws InterruptedException {
         setupDriver();
@@ -507,7 +631,9 @@ public class RequestsEmployee1_V4 {
 //        submitPermissionRequest(); //Done
 //        submitWFHRequest();        //Done
 //        submitDocumentRequest();   //Done
-        FamilyMedicalRequest();      //Done
+//        FamilyMedicalRequest();      //Done Except the Grid handling
+//        Penalty(); //Done
+//        PenaltyValidation(); //Done
     }
 }
 
