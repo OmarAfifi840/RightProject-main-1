@@ -84,8 +84,12 @@ public class RequestsEmployee1_V4 {
     static By Misconduct = By.xpath("//*[@id='genericDropDown']");
     static By MisconductCode = By.xpath("//*[@class='mat-option-text' and normalize-space()='10 - عدم ارتداء الزي الخاص بالعمل أثناء ساعات العمل']");
     static By Notes = By.xpath("//*[@formcontrolname='note']");
-
     //--------------------------------------------------------//
+    static By Resignation = By.xpath("//span[@class='menu-title' and .=' Resignation ']");
+    static By ResignationDate = By.xpath("//*[@formcontrolname='resignationDate']");
+    static By ResignationReason = By.xpath("//*[@formcontrolname='reason']");
+    //--------------------------------------------------------//
+
     static void setupDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeDriverService service = new ChromeDriverService.Builder().withLogOutput(System.out).build();
@@ -619,6 +623,53 @@ public class RequestsEmployee1_V4 {
         }
     }
 
+    static void Resignation() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        String Employee1 = ConfigReader.get("userName1");
+        Personnel();
+        WebElement ResignationRequest = driver.findElement(Resignation);
+        actions.moveToElement(ResignationRequest).click().perform();
+        Infologger("Resignation Request" + " / UserName :" + Employee1);
+        screenname();
+        WebElement ResDate = driver.findElement(By.xpath("//*[@formcontrolname='resignationDate']"));
+        ResDate.sendKeys("9/16/2025");
+
+        try {
+            wait.until(ExpectedConditions.attributeContains(
+                    By.xpath("//*[@formcontrolname='resignationDate']"),
+                    "class",
+                    // "ng-pristine"
+                    "ng-dirty"  // Checks if "ng-dirty" exists in class attribute
+            ));
+
+        } catch (TimeoutException e) {
+            System.err.println("Date is Wrong can not submit a request!!");
+            throw e;
+        }
+
+        ResDate.click();
+
+        ResDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+
+        driver.findElement(ResignationDate).sendKeys("10/16/2025");
+
+        driver.findElement(ResignationReason).sendKeys("Test");
+
+        try {
+            wait.until(ExpectedConditions.attributeContains(
+                    By.xpath("//*[@class='mat-input-element mat-form-field-autofill-control height ng-tns-c81-15 cdk-text-field-autofill-monitored ng-touched ng-dirty ng-valid']"),
+                    "class",
+                    // "ng-pristine"
+                    "ng-valid"  // Checks if "ng-valid" exists in class attribute
+            ));
+        } catch (TimeoutException e) {
+            System.err.println("Reason is Empty can not submit a request!!");
+            throw e;
+        }
+        driver.findElement(ResignationReason).sendKeys("Test Test Test");
+        driver.findElement(SendRequest).click();
+    }
+
 
 
     @Test
@@ -634,6 +685,7 @@ public class RequestsEmployee1_V4 {
 //        FamilyMedicalRequest();      //Done Except the Grid handling
 //        Penalty(); //Done
 //        PenaltyValidation(); //Done
+        Resignation();
     }
 }
 

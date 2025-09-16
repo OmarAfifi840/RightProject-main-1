@@ -357,3 +357,12 @@ System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.v
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7118.2, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\hP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53425}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53425/devtoo..., se:cdpVersion: 137.0.7118.2, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: 3be77e99fc6a1ef3f1b897936e2f3f27
+2025-09-16 17:06:13 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:11:17 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:12:43 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:15:09 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:18:00 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:19:37 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:21:16 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:22:38 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
+2025-09-16 17:33:58 INFO  RequestsEmployee1_V4: Resignation Request / UserName :200130
