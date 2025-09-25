@@ -624,7 +624,7 @@ public class RequestsEmployee1_V4 {
     }
 
     static void Resignation() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         String Employee1 = ConfigReader.get("userName1");
         Personnel();
         WebElement ResignationRequest = driver.findElement(Resignation);
@@ -632,7 +632,7 @@ public class RequestsEmployee1_V4 {
         Infologger("Resignation Request" + " / UserName :" + Employee1);
         screenname();
         WebElement ResDate = driver.findElement(By.xpath("//*[@formcontrolname='resignationDate']"));
-        ResDate.sendKeys("9/16/2025");
+        ResDate.sendKeys("6/16/2025");
 
         try {
             wait.until(ExpectedConditions.attributeContains(
@@ -651,26 +651,66 @@ public class RequestsEmployee1_V4 {
 
         ResDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
-        driver.findElement(ResignationDate).sendKeys("10/16/2025");
+        driver.findElement(ResignationDate).sendKeys("10/25/2025");
 
-        driver.findElement(ResignationReason).sendKeys("Test");
+        TryReason();
+
+//        driver.findElement(ResignationReason).sendKeys("Test");
+
+//        driver.findElement(ResignationReason).sendKeys("Test Test Test");
+        driver.findElement(SendRequest).click();
+        WebElement messageElement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
+        );
+
+        String actualMessage = messageElement.getText().trim();
+        String expectedMessage = "A pending or approved resignation request already exists for this employee"; // expected value
 
         try {
-            wait.until(ExpectedConditions.attributeContains(
-                    By.xpath("//*[@class='mat-input-element mat-form-field-autofill-control height ng-tns-c81-15 cdk-text-field-autofill-monitored ng-touched ng-dirty ng-valid']"),
-                    "class",
-                    // "ng-pristine"
-                    "ng-valid"  // Checks if "ng-valid" exists in class attribute
-            ));
-        } catch (TimeoutException e) {
-            System.err.println("Reason is Empty can not submit a request!!");
-            throw e;
+            Assert.assertEquals(actualMessage, expectedMessage);
+            System.out.println("✅ Validation PASSED: " + actualMessage);
+        } catch (AssertionError e) {
+            System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
+                    + " | But got: " + actualMessage);
+            throw e; // let TestNG mark test as failed
         }
-        driver.findElement(ResignationReason).sendKeys("Test Test Test");
-        driver.findElement(SendRequest).click();
+
     }
 
+    public static void TryReason() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        int attempts = 0;
+        boolean isValid = false;
 
+        while (attempts < 5 && !isValid) { // retry max 5 times
+            try {
+                WebElement reasonField = driver.findElement(ResignationReason);
+                reasonField.sendKeys("Test");
+
+                // Click outside to trigger validation
+                driver.findElement(ResignationDate).click();
+
+                // Wait until aria-invalid becomes "false"
+                wait.until(ExpectedConditions.attributeToBe(
+                        reasonField,
+                        "aria-invalid",
+                        "false"
+                ));
+
+                isValid = true; // exit loop if success
+                System.out.println("Reason field is valid now!");
+
+            } catch (TimeoutException e) {
+                attempts++;
+                System.out.println("Attempt " + attempts + ": Reason still invalid...");
+            }
+        }
+
+        if (!isValid) {
+            throw new RuntimeException("Reason is Empty - cannot submit request!!");
+        }
+
+    }
 
     @Test
     public void performAllActions() throws InterruptedException {
