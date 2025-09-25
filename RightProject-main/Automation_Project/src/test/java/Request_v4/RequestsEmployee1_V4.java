@@ -89,6 +89,11 @@ public class RequestsEmployee1_V4 {
     static By ResignationDate = By.xpath("//*[@formcontrolname='resignationDate']");
     static By ResignationReason = By.xpath("//*[@formcontrolname='reason']");
     //--------------------------------------------------------//
+    static By Termination = By.xpath("//span[@class='menu-title' and .=' Termination ']");
+    static By TerminationDate = By.xpath("//*[@formcontrolname='terminationDate']");
+    static By TerminationReason = By.xpath("//*[@formcontrolname='reasonCode']");
+    static By TerminationSecondOption = By.xpath("//span[@class='mat-option-text' and normalize-space() ='Termination of services - System']");
+    static By TerminationNotes = By.xpath("//*[@formcontrolname='notes']");
 
     static void setupDriver() {
         WebDriverManager.chromedriver().setup();
@@ -109,7 +114,7 @@ public class RequestsEmployee1_V4 {
     }
 
     static void screenname() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2")));
     }
 
@@ -531,16 +536,20 @@ public class RequestsEmployee1_V4 {
     }
 
     static void NoEmpCode(){
+try {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='empCode']")));
+    Actions actions = new Actions(driver);
+    actions.moveToElement(dropdown).pause(Duration.ofMillis(20000)).click().perform();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-        WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='empCode']")));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(dropdown).pause(Duration.ofMillis(10000)).click().perform();
+    WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//*[@class='mat-option-text' and normalize-space()='201455 - Sherif Abdelrahman Mahmoud Salman']"))); // put the visible text
+    option.click();
 
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//*[@class='mat-option-text' and normalize-space()='201455 - Sherif Abdelrahman Mahmoud Salman']"))); // put the visible text
-                option.click();
+} catch (TimeoutException e) {
+    NoEmpCode();
     }
+}
 
     static void Penalty() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
@@ -669,11 +678,23 @@ public class RequestsEmployee1_V4 {
         try {
             Assert.assertEquals(actualMessage, expectedMessage);
             System.out.println("✅ Validation PASSED: " + actualMessage);
+            clickSwalOkIfExists();
+            // Shit
+//            WebElement dateField = driver.findElement(ResignationDate);
+// Focus on the field
+//            dateField.click();
+// Select all and delete
+//            dateField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+//            dateField.sendKeys(Keys.DELETE);
+// Now type the new date
+//            dateField.sendKeys("10/27/2025");
+//            driver.findElement(SendRequest).click();
         } catch (AssertionError e) {
             System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
                     + " | But got: " + actualMessage);
             throw e; // let TestNG mark test as failed
         }
+
 
     }
 
@@ -712,6 +733,55 @@ public class RequestsEmployee1_V4 {
 
     }
 
+    static void TerminationRequest(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        String Employee1 = ConfigReader.get("userName");
+        Personnel();
+        WebElement TerminationReq = driver.findElement(Termination);
+        actions.moveToElement(TerminationReq).click().perform();
+        Infologger("Termination Request" + " / UserName :" + Employee1);
+        screenname();
+        NoEmpCode();
+        driver.findElement(TerminationReason).click();
+        driver.findElement(TerminationSecondOption).click();
+        WebElement TermDate = driver.findElement(By.xpath("//*[@formcontrolname='terminationDate']"));
+        TermDate.click();
+
+        TermDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+
+        driver.findElement(TerminationDate).sendKeys("10/30/2025");
+
+        driver.findElement(TerminationNotes).sendKeys("Test");
+        driver.findElement(SendRequest).click();
+        WebElement messageElement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
+        );
+
+        String actualMessage = messageElement.getText().trim();
+        String expectedMessage = "There is pending requests for this employee"; // expected value
+
+        try {
+            Assert.assertEquals(actualMessage, expectedMessage);
+            System.out.println("✅ Validation PASSED: " + actualMessage);
+            clickSwalOkIfExists();
+            // Shit
+//            WebElement dateField = driver.findElement(ResignationDate);
+// Focus on the field
+//            dateField.click();
+// Select all and delete
+//            dateField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+//            dateField.sendKeys(Keys.DELETE);
+// Now type the new date
+//            dateField.sendKeys("10/27/2025");
+//            driver.findElement(SendRequest).click();
+        } catch (AssertionError e) {
+            System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
+                    + " | But got: " + actualMessage);
+            throw e; // let TestNG mark test as failed
+        }
+
+    }
+
     @Test
     public void performAllActions() throws InterruptedException {
         setupDriver();
@@ -725,8 +795,9 @@ public class RequestsEmployee1_V4 {
 //        FamilyMedicalRequest();      //Done Except the Grid handling
 //        Penalty(); //Done
 //        PenaltyValidation(); //Done
-        Resignation();
-    }
+//        Resignation(); //Done
+          TerminationRequest();
+        }
 }
 
 
