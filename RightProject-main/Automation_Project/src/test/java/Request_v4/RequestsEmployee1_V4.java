@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -37,6 +36,10 @@ public class RequestsEmployee1_V4 {
     static By Personnel = By.xpath("//span[@class='menu-title' and .=' Personnel ']");
     // Time Management valid on all requests for the Time Management Requests
     static By TimeManagement = By.xpath("//span[@class='menu-title' and .=' Time Attendance ']");
+    //Travel valid on all requests for the Personnel Requests
+    static By Travel = By.xpath("//span[@class='menu-title' and .=' Travel ']");
+    //-------------------Travel-------------------------//
+    static By TravelRequest = By.xpath("//span[@class='menu-title' and .=' Travelling Request ']");
     //---------------Time Management--------------------//
     static By LeaveRequest = By.xpath("//span[@class='menu-title' and .=' Leaves Request ']");
     static By FromDateLeave = By.xpath("//*[@formcontrolname='dateFrom']");
@@ -195,6 +198,18 @@ public class RequestsEmployee1_V4 {
         WebElement timeManagement = driver.findElement(TimeManagement);
         actions.moveToElement(timeManagement).perform();
     }
+
+    static void TravelMenu() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        //Open Screen
+        wait.until(ExpectedConditions.visibilityOfElementLocated(NewRequest));
+        WebElement newRequest = driver.findElement(NewRequest);
+        actions.moveToElement(newRequest).perform();
+
+        WebElement timeManagement = driver.findElement(Travel);
+        actions.moveToElement(timeManagement).perform();
+    }
+
 
     static void PenaltyMenu() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
@@ -781,15 +796,25 @@ try {
         }
     }
 
-    static void TravellingRequest(){
-        String Employee1 = ConfigReader.get("userName1");
+    static WebElement TravellingRequest() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        String Employee = ConfigReader.get("userName");
+        TravelMenu();
+        WebElement Travel = driver.findElement(TravelRequest);
+        actions.moveToElement(Travel).click().perform();
         screenname();
-        Infologger("Travelling Request" + " / UserName :" + Employee1);
-        employeeCode("travel-request");
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Infologger("Travelling Request" + " / UserName :" + Employee);
+        By locator = By.xpath(
+                "/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-travel-request/div/div/div[2]/div/form/mat-tab-group/div/mat-tab-body[1]/div/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]");
 
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        } catch (Exception e) {
+            logger.error("Element not found within timeout: " + e.getMessage());
+            return null;
+
+            /// ///////////
             WebElement depField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-0")));
-
             String Department = wait.until(d -> {
                 String val = d.findElement(By.id("mat-input-0")).getAttribute("value");
                 return val != null && !val.trim().isEmpty() ? val : null;
@@ -921,6 +946,8 @@ try {
 
 
 
+///html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-travel-request/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span
+///html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-travel-request/div/div/div[2]/div/form/mat-tab-group/div/mat-tab-body[1]/div/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select
 
 
 
