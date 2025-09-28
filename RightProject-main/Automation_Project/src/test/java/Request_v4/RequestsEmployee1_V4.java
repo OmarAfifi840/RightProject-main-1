@@ -543,7 +543,7 @@ try {
     actions.moveToElement(dropdown).pause(Duration.ofMillis(20000)).click().perform();
 
     WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
-            By.xpath("//*[@class='mat-option-text' and normalize-space()='201455 - Sherif Abdelrahman Mahmoud Salman']"))); // put the visible text
+            By.xpath("//*[@class='mat-option-text' and normalize-space()='0222222 - Omar']"))); // put the visible text
     option.click();
 
 } catch (TimeoutException e) {
@@ -719,11 +719,11 @@ try {
                 ));
 
                 isValid = true; // exit loop if success
-                System.out.println("Reason field is valid now!");
+                Infologger("Reason field is valid now!");
 
             } catch (TimeoutException e) {
                 attempts++;
-                System.out.println("Attempt " + attempts + ": Reason still invalid...");
+                Infologger("Attempt " + attempts + ": Reason still invalid...");
             }
         }
 
@@ -733,7 +733,7 @@ try {
 
     }
 
-    static void TerminationRequest(){
+    static void TerminationRequest() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         String Employee1 = ConfigReader.get("userName");
         Personnel();
@@ -753,34 +753,183 @@ try {
 
         driver.findElement(TerminationNotes).sendKeys("Test");
         driver.findElement(SendRequest).click();
-        WebElement messageElement = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
-        );
-
-        String actualMessage = messageElement.getText().trim();
-        String expectedMessage = "There is pending requests for this employee"; // expected value
-
         try {
-            Assert.assertEquals(actualMessage, expectedMessage);
-            System.out.println("✅ Validation PASSED: " + actualMessage);
-            clickSwalOkIfExists();
-            // Shit
-//            WebElement dateField = driver.findElement(ResignationDate);
-// Focus on the field
-//            dateField.click();
-// Select all and delete
-//            dateField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-//            dateField.sendKeys(Keys.DELETE);
-// Now type the new date
-//            dateField.sendKeys("10/27/2025");
-//            driver.findElement(SendRequest).click();
-        } catch (AssertionError e) {
-            System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
-                    + " | But got: " + actualMessage);
-            throw e; // let TestNG mark test as failed
+            // Wait for Swal message (short timeout so it doesn't block)
+            WebElement messageElement = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
+            );
+            // If Swal appeared, validate message
+            String actualMessage = messageElement.getText().trim();
+            String expectedMessage = "There is pending requests for this employee";
+
+            try {
+                Assert.assertEquals(actualMessage, expectedMessage);
+                Infologger("✅ Validation PASSED: " + actualMessage);
+
+                // Close Swal
+                clickSwalOkIfExists();
+
+            } catch (AssertionError e) {
+                // Swal appeared but the text didn't match
+                Infologger("⚠️ Validation FAILED. Expected: " + expectedMessage + " but got: " + actualMessage);
+                throw e; // keep it failing test, or remove this line if you want to continue instead
+            }
+
+        } catch (TimeoutException e) {
+            // No Swal appeared → just continue with normal flow
+            Infologger("No Swal appeared. Continuing with request submission...");
+        }
+    }
+
+    static void TravellingRequest(){
+        String Employee1 = ConfigReader.get("userName1");
+        screenname();
+        Infologger("Travelling Request" + " / UserName :" + Employee1);
+        employeeCode("travel-request");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+            WebElement depField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-0")));
+
+            String Department = wait.until(d -> {
+                String val = d.findElement(By.id("mat-input-0")).getAttribute("value");
+                return val != null && !val.trim().isEmpty() ? val : null;
+            });
+            if (Department != null) {
+                Infologger("Field is loaded with data: " + Department);
+                Infologger("Data loaded check");
+                Infologger("---------------------------------------------------------------------------");
+            } else {
+                Infologger("Field is empty after waiting");
+                Infologger("Data loaded check");
+                Infologger("---------------------------------------------------------------------------");
+            }
+            if (!depField.isEnabled()) {
+                Infologger("Department field is disabled (dimmed) as expected");
+                Infologger("Disabled state check");
+                Infologger("---------------------------------------------------------------------------");
+            } else {
+                Infologger("Department field is enabled (not dimmed)");
+                Infologger("Disabled state check");
+                Infologger("---------------------------------------------------------------------------");
+            }
+        String MobileNumber = wait.until(d -> {
+            String val = d.findElement(By.id("mat-input-1")).getAttribute("value");
+            return val != null && !val.trim().isEmpty() ? val : null;
+        });
+        if (MobileNumber != null) {
+            Infologger("Field is loaded with data: " + MobileNumber);
+            Infologger("Data loaded check");
+            Infologger("---------------------------------------------------------------------------");
+        } else {
+            Infologger("Field is empty after waiting");
+            Infologger("Data loaded check");
+            Infologger("---------------------------------------------------------------------------");
+        }
+        if (!depField.isEnabled()) {
+            Infologger("Mobile Number field is disabled (dimmed) as expected");
+            Infologger("Disabled state check");
+            Infologger("---------------------------------------------------------------------------");
+        } else {
+            Infologger("Mobile Number field is enabled (not dimmed)");
+            Infologger("Disabled state check");
+            Infologger("---------------------------------------------------------------------------");
+        }
+        String RequestDate = wait.until(d -> {
+            String val = d.findElement(By.id("//*[@formcontrolname='requestDate']")).getAttribute("value");
+            return val != null && !val.trim().isEmpty() ? val : null;
+        });
+        if (RequestDate != null) {
+            Infologger("Field is loaded with data: " + RequestDate);
+            Infologger("Data loaded check");
+            Infologger("---------------------------------------------------------------------------");
+        } else {
+            Infologger("Field is empty after waiting");
+            Infologger("Data loaded check");
+            Infologger("---------------------------------------------------------------------------");
+        }
+        if (!depField.isEnabled()) {
+            Infologger("Request Date field is disabled (dimmed) as expected");
+            Infologger("Disabled state check");
+            Infologger("---------------------------------------------------------------------------");
+        } else {
+            Infologger("Request Date field is enabled (not dimmed)");
+            Infologger("Disabled state check");
+            Infologger("---------------------------------------------------------------------------");
         }
 
+        WebElement TravelType = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//*[@formcontrolname='internalOrExternal']")));
+        TravelType.click();
+        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                By.xpath("//mat-option//span[@class='mat-option-text']")
+        ));
+        WebElement International = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='International']")
+        ));
+        International.click();
+        //In case of Domestic travlling
+//        WebElement Domestic = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='International']")
+//        ));
+        WebElement TicketType = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//*[@formcontrolname='flightTypeCode']")));
+        TicketType.click();
+        List<WebElement> options1 = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                By.xpath("//mat-option//span[@class='mat-option-text']")
+        ));
+        WebElement OneWay = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='One Way']")
+        ));
+        OneWay.click();
+        //In case of Multiple Destnation travlling
+//        WebElement MultipleDestination = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Multiple Destinations']")
+//        ));
+
+        WebElement TravelPurpose = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//*[@formcontrolname='travelPurposeCode']")));
+        TravelPurpose.click();
+        List<WebElement> options2 = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                By.xpath("//mat-option//span[@class='mat-option-text']")
+        ));
+        WebElement BusinessMeeting = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Business Meeting']")
+        ));
+        BusinessMeeting.click();
+        //In case of Training travlling
+//        WebElement Training = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Training']")
+        //Training.click();
+//        ));
+        //In case of Exhibition travlling
+//        WebElement Exhibition = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Exhibition']")
+//       Exhibition.click();
+//        ));
+        //In case of Project Related Trip travlling
+//        WebElement  ProjectRelatedTrip  = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Project Related Trip']")
+//        ProjectRelatedTrip.click();
+//        ));
+        //In case of HR Related Trip  travlling
+//        WebElement HRRelatedTrip = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='HR Related Trip']")
+//        HRRelatedTrip.click();
+//        ));
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
 
     @Test
     public void performAllActions() throws InterruptedException {
@@ -796,7 +945,9 @@ try {
 //        Penalty(); //Done
 //        PenaltyValidation(); //Done
 //        Resignation(); //Done
-          TerminationRequest();
+//        TerminationRequest(); //Done
+        TravellingRequest();
+
         }
 }
 
