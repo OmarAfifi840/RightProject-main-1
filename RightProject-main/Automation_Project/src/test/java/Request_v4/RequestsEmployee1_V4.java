@@ -38,8 +38,8 @@ public class RequestsEmployee1_V4 {
     static By TimeManagement = By.xpath("//span[@class='menu-title' and .=' Time Attendance ']");
     //Travel valid on all requests for the Personnel Requests
     static By Travel = By.xpath("//span[@class='menu-title' and .=' Travel ']");
-    //-------------------Travel-------------------------//
-    static By TravelRequest = By.xpath("//span[@class='menu-title' and .=' Travelling Request ']");
+    // Add New Record is Valid for any Screen With grid to add a new record.
+    static By AddNewRecord = By.xpath("//*[@class='mat-button-wrapper'  and .=' Add New Record ']");
     //---------------Time Management--------------------//
     static By LeaveRequest = By.xpath("//span[@class='menu-title' and .=' Leaves Request ']");
     static By FromDateLeave = By.xpath("//*[@formcontrolname='dateFrom']");
@@ -73,7 +73,7 @@ public class RequestsEmployee1_V4 {
     static By NotesDocument = By.xpath("//*[@formcontrolname ='notes']");
     //------------------------------------//
     static By FamilyRequest = By.xpath("//span[@class='menu-title' and .=' Family Medical Insurance ']");
-    static By AddNewRecord = By.xpath("//*[@class='btn btn-primary'  and .=' Add New Record ']");
+
     static By RelativeName = By.xpath("//*[@formcontrolname='relativeName']");
     static By RelativeBirthDate = By.xpath("//*[@formcontrolname='birthDate']");
     static By ID = By.xpath("//*[@formcontrolname='id']");
@@ -97,6 +97,31 @@ public class RequestsEmployee1_V4 {
     static By TerminationReason = By.xpath("//*[@formcontrolname='reasonCode']");
     static By TerminationSecondOption = By.xpath("//span[@class='mat-option-text' and normalize-space() ='Termination of services - System']");
     static By TerminationNotes = By.xpath("//*[@formcontrolname='notes']");
+    //-------------------Travel-------------------------//
+    static By TravelRequest = By.xpath("//span[@class='menu-title' and .=' Travelling Request ']");
+    static By FrequentFlyerNo = By.xpath("//*[@formcontrolname='frequentFlyerNo']");
+    static By IncludeHotel = By.xpath("//*[@formcontrolname='includeHotel']");
+    static By IncludeTransportation = By.xpath("//*[@formcontrolname='includeTransportation']");
+    static By TravellingNotes = By.xpath("//*[@formcontrolname='notes']");
+    static By DestinationTab = By.xpath("//div[@class='mat-tab-label-content' and normalize-space()='Destination']");
+    //static By AddNewRecord = By.xpath("//*[@class='mat-button-wrapper'  and .=' Add New Record ']");
+    static By DepartureCity = By.xpath("//div//mat-select//div//div//span//span[@class='mat-select-min-line ng-tns-c119-36 ng-star-inserted' and normalize-space()='01 - Cairo']");
+    static By DepartureCity2 = By.xpath("//div//mat-select//div//div//span//span[@class='mat-select-min-line ng-tns-c119-46 ng-star-inserted' and normalize-space()='01 - Cairo']");
+    static By Giza = By.xpath("//span[@class='mat-option-text' and normalize-space()='02 - Giza']");
+    static By ArrivalCity = By.xpath("//div//mat-select//div//div//span//span[@class='mat-select-min-line ng-tns-c119-38 ng-star-inserted' and normalize-space()='01 - Cairo']");
+    static By ArrivalCity2 = By.xpath("//div//mat-select//div//div//span//span[@class='mat-select-min-line ng-tns-c119-48 ng-star-inserted' and normalize-space()='01 - Cairo']");
+    static By KafrElSheikh = By.xpath("//span[@class='mat-option-text' and normalize-space()='17 - Kafr El Sheikh']");
+    static By Time = By.xpath("//*[@formcontrolname='timePreferenceCode']");
+    static By MorningTime = By.xpath("//span[@class='mat-option-text' and normalize-space()='Morning']");
+    static By TravelDate = By.xpath("//*[@formcontrolname='travelDate_Date']");
+    static By TravelPurpose = By.xpath("//*[@formcontrolname='travelPurposeNotes']");
+    static By HostedBy = By.xpath("//*[@formcontrolname='hostingPerson']");
+    static By HotelTab = By.xpath("//div[@class='mat-tab-label-content' and normalize-space()='Hotel']");
+    static By CheckIn = By.xpath("//*[@formcontrolname='checkIn_Date']");
+    static By CheckOut = By.xpath("//*[@formcontrolname='checkOut_Date']");
+    static By Include = By.xpath("//*[@formcontrolname='hotelInclude']");
+    static By FoodPref = By.xpath("//*[@formcontrolname='foodPreference']");
+    static By TransPortationTab = By.xpath("//div[@class='mat-tab-label-content' and normalize-space()='Transportation']");
 
     static void setupDriver() {
         WebDriverManager.chromedriver().setup();
@@ -109,7 +134,7 @@ public class RequestsEmployee1_V4 {
     }
 
     static void SendPath(String Path, String Message) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement okButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(Path)));
         okButton.click();
         //System.out.println(Message);
@@ -566,6 +591,22 @@ try {
     }
 }
 
+    static void TravelType(){
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@formcontrolname='flightTypeCode']")));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(dropdown).pause(Duration.ofMillis(20000)).click().perform();
+
+            WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='International']"))); // put the visible text
+            option.click();
+
+        } catch (TimeoutException e) {
+            NoEmpCode();
+        }
+    }
+
     static void Penalty() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         String fileName = "ESS Issues.xlsx"; // Ensure correct filename + extension
@@ -796,53 +837,46 @@ try {
         }
     }
 
-    static WebElement TravellingRequest() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-        String Employee = ConfigReader.get("userName");
-        TravelMenu();
-        WebElement Travel = driver.findElement(TravelRequest);
-        actions.moveToElement(Travel).click().perform();
-        screenname();
-        Infologger("Travelling Request" + " / UserName :" + Employee);
-        By locator = By.xpath(
-                "/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-travel-request/div/div/div[2]/div/form/mat-tab-group/div/mat-tab-body[1]/div/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]");
+    public static void Department() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 
-        try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        } catch (Exception e) {
-            logger.error("Element not found within timeout: " + e.getMessage());
-            return null;
+        WebElement depField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-0")));
 
-            /// ///////////
-            WebElement depField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-0")));
-            String Department = wait.until(d -> {
-                String val = d.findElement(By.id("mat-input-0")).getAttribute("value");
-                return val != null && !val.trim().isEmpty() ? val : null;
-            });
-            if (Department != null) {
-                Infologger("Field is loaded with data: " + Department);
-                Infologger("Data loaded check");
-                Infologger("---------------------------------------------------------------------------");
-            } else {
-                Infologger("Field is empty after waiting");
-                Infologger("Data loaded check");
-                Infologger("---------------------------------------------------------------------------");
-            }
-            if (!depField.isEnabled()) {
-                Infologger("Department field is disabled (dimmed) as expected");
-                Infologger("Disabled state check");
-                Infologger("---------------------------------------------------------------------------");
-            } else {
-                Infologger("Department field is enabled (not dimmed)");
-                Infologger("Disabled state check");
-                Infologger("---------------------------------------------------------------------------");
-            }
-        String MobileNumber = wait.until(d -> {
+        String fieldValue = wait.until(d -> {
+            String val = d.findElement(By.id("mat-input-0")).getAttribute("value");
+            return val != null && !val.trim().isEmpty() ? val : null;
+        });
+        if (fieldValue != null) {
+            Infologger("Field is loaded with data: " + fieldValue);
+            Infologger("Data loaded check");
+            Infologger("---------------------------------------------------------------------------");
+        } else {
+            Infologger("Field is empty after waiting");
+            Infologger("Data loaded check");
+            Infologger("---------------------------------------------------------------------------");
+        }
+
+        if (!depField.isEnabled()) {
+            Infologger("Department field is disabled (dimmed) as expected");
+            Infologger("Disabled state check");
+            Infologger("---------------------------------------------------------------------------");
+        } else {
+            Infologger("Department field is enabled (not dimmed)");
+            Infologger("Disabled state check");
+            Infologger("---------------------------------------------------------------------------");
+        }
+    }
+    public static void MobileNumber(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
+
+        WebElement depField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-0")));
+
+        String fieldValue = wait.until(d -> {
             String val = d.findElement(By.id("mat-input-1")).getAttribute("value");
             return val != null && !val.trim().isEmpty() ? val : null;
         });
-        if (MobileNumber != null) {
-            Infologger("Field is loaded with data: " + MobileNumber);
+        if (fieldValue != null) {
+            Infologger("Field is loaded with data: " + fieldValue);
             Infologger("Data loaded check");
             Infologger("---------------------------------------------------------------------------");
         } else {
@@ -859,12 +893,44 @@ try {
             Infologger("Disabled state check");
             Infologger("---------------------------------------------------------------------------");
         }
-        String RequestDate = wait.until(d -> {
-            String val = d.findElement(By.id("//*[@formcontrolname='requestDate']")).getAttribute("value");
-            return val != null && !val.trim().isEmpty() ? val : null;
-        });
-        if (RequestDate != null) {
-            Infologger("Field is loaded with data: " + RequestDate);
+
+    }
+
+    public static void waitForPageLoad() {
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                webDriver -> ((JavascriptExecutor) webDriver)
+                        .executeScript("return document.readyState").equals("complete")
+        );
+    }
+
+
+    static void TravellingRequest() throws InterruptedException {
+        String fileName = "ESS Issues.xlsx"; // Ensure correct filename + extension
+        String absolutePath = "D:\\Omar Afifi\\SelfService\\" + fileName;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        String Employee = ConfigReader.get("userName");
+        TravelMenu();
+        WebElement Travel = driver.findElement(TravelRequest);
+        actions.moveToElement(Travel).click().perform();
+        waitForPageLoad();
+        screenname();
+        Infologger("Travelling Request" + " / UserName :" + Employee);
+        By locator = By.xpath(
+                "/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-travel-request/div/div/div[2]/div/form/mat-tab-group/div/mat-tab-body[1]/div/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]");
+
+        try {
+             wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        } catch (Exception e) {
+            Infologger("");
+        }
+        Department();
+        MobileNumber();
+            WebElement requestDateElement = wait.until(d -> d.findElement(By.xpath("//*[@formcontrolname='requestDate']")));
+
+            String requestDateValue = requestDateElement.getAttribute("value");
+
+        if (requestDateValue != null) {
+            Infologger("Field is loaded with data: " + requestDateValue);
             Infologger("Data loaded check");
             Infologger("---------------------------------------------------------------------------");
         } else {
@@ -872,7 +938,7 @@ try {
             Infologger("Data loaded check");
             Infologger("---------------------------------------------------------------------------");
         }
-        if (!depField.isEnabled()) {
+        if (!requestDateElement.isEnabled()) {
             Infologger("Request Date field is disabled (dimmed) as expected");
             Infologger("Disabled state check");
             Infologger("---------------------------------------------------------------------------");
@@ -881,80 +947,243 @@ try {
             Infologger("Disabled state check");
             Infologger("---------------------------------------------------------------------------");
         }
-
+        driver.findElement(FrequentFlyerNo).click();
         WebElement TravelType = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//*[@formcontrolname='internalOrExternal']")));
         TravelType.click();
+
         List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                 By.xpath("//mat-option//span[@class='mat-option-text']")
         ));
-        WebElement International = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='International']")
-        ));
-        International.click();
-        //In case of Domestic travlling
-//        WebElement Domestic = wait.until(ExpectedConditions.elementToBeClickable(
+
+//        WebElement International = wait.until(ExpectedConditions.elementToBeClickable(
 //                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='International']")
 //        ));
+//        International.click();
+//        Infologger("International Option Is clicked");
+//        In case of Domestic travlling
+        WebElement Domestic = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Domestic']")
+        ));
+        Domestic.click();
+        Infologger("Domestic Option Is clicked");
+        /// /////////////////////////////////////
         WebElement TicketType = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//*[@formcontrolname='flightTypeCode']")));
         TicketType.click();
         List<WebElement> options1 = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                 By.xpath("//mat-option//span[@class='mat-option-text']")
         ));
-        WebElement OneWay = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='One Way']")
-        ));
-        OneWay.click();
-        //In case of Multiple Destnation travlling
-//        WebElement MultipleDestination = wait.until(ExpectedConditions.elementToBeClickable(
-//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Multiple Destinations']")
+//        WebElement OneWay = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='One Way']")
 //        ));
+//        OneWay.click();
+//        Infologger("One Way Option Is clicked");
+//        In case of Multiple Destnation travlling
+        WebElement MultipleDestination = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Multiple Destinations']")
+        ));
+        MultipleDestination.click();
+        Infologger("Multiple Destinations Option Is clicked");
 
+        /// ///////////////////////////////////
         WebElement TravelPurpose = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//*[@formcontrolname='travelPurposeCode']")));
         TravelPurpose.click();
         List<WebElement> options2 = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                 By.xpath("//mat-option//span[@class='mat-option-text']")
         ));
-        WebElement BusinessMeeting = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Business Meeting']")
-        ));
-        BusinessMeeting.click();
-        //In case of Training travlling
-//        WebElement Training = wait.until(ExpectedConditions.elementToBeClickable(
-//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Training']")
-        //Training.click();
+//        WebElement BusinessMeeting = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Business Meeting']")
 //        ));
+//        BusinessMeeting.click();
+        //In case of Training travlling
+        WebElement Training = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Training']")
+        ));
+        Training.click();
+        Infologger("Trainning Option is clicked");
         //In case of Exhibition travlling
 //        WebElement Exhibition = wait.until(ExpectedConditions.elementToBeClickable(
 //                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Exhibition']")
-//       Exhibition.click();
 //        ));
+//       Exhibition.click();
         //In case of Project Related Trip travlling
 //        WebElement  ProjectRelatedTrip  = wait.until(ExpectedConditions.elementToBeClickable(
 //                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Project Related Trip']")
-//        ProjectRelatedTrip.click();
 //        ));
+//        ProjectRelatedTrip.click();
         //In case of HR Related Trip  travlling
 //        WebElement HRRelatedTrip = wait.until(ExpectedConditions.elementToBeClickable(
 //                By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='HR Related Trip']")
-//        HRRelatedTrip.click();
 //        ));
+//        HRRelatedTrip.click();
+//        static By DateFrom = By.xpath("//*[@formcontrolname='dateFrom']");
+//        static By DateTo = By.xpath("//*[@formcontrolname='dateTo']");
+        //driver.findElement(DateFrom).sendKeys("9/30/2025");
+
+        WebElement DateTo = driver.findElement(By.xpath("//*[@formcontrolname='dateTo']"));
+        DateTo.click();
+        DateTo.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+        DateTo.sendKeys("10/3/2025");
+        WebElement DateFrom = driver.findElement(By.xpath("//*[@formcontrolname='dateFrom']"));
+        DateFrom.click();
+        DateFrom.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+        DateFrom.sendKeys("10/2/2025");
+        driver.findElement(IncludeHotel).click();
+        driver.findElement(IncludeTransportation).click();
+        driver.findElement(FrequentFlyerNo).sendKeys("Test");
+        driver.findElement(TravellingNotes).sendKeys("Test");
+        if (!new File(absolutePath).exists()) {
+            throw new RuntimeException("File not found: " + absolutePath);
+        }
+        WebElement fileInput = driver.findElement(By.xpath("//*[@formcontrolname='attachFile']"));
+        fileInput.sendKeys(absolutePath);
+        // Verify upload success by checking if input is now "ng-dirty"
+        try {
+            wait.until(ExpectedConditions.attributeContains(
+                    By.xpath("//*[@formcontrolname='attachFile']"),
+                    "class",
+                    // "ng-pristine"
+                    "ng-dirty"  // Checks if "ng-dirty" exists in class attribute
+            ));
+        } catch (TimeoutException e) {
+            System.err.println("❌ Upload failed");
+            throw e;
+        }
+        driver.findElement(SendRequest).click();
+
+        WebElement messageElement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
+        );
+
+        String actualMessage = messageElement.getText().trim();
+        String expectedMessage = "Please Add Destination."; // expected value
+
+        try {
+            Assert.assertEquals(actualMessage, expectedMessage);
+            System.out.println("✅ Validation PASSED: " + actualMessage);
+        } catch (AssertionError e) {
+            System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
+                    + " | But got: " + actualMessage);
+            throw e; // let TestNG mark test as failed
+        }
+        clickSwalOkIfExists();
+
+        driver.findElement(DestinationTab).click();
+        scrollToTop(driver);
+        driver.findElement(AddNewRecord).click();
+        AddNewRecordTravelling();
+        driver.findElement(AddNewRecord).click();
+        AddNewRecord2Travelling();
+        AddingHotel();
+    }
+
+    public static void scrollToTop(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // First try window scroll
+        js.executeScript("window.scrollTo(0, 0);");
+
+        // Then check if there are scrollable elements and scroll them too
+        js.executeScript(
+                "var elems = document.querySelectorAll('*');" +
+                        "for (var i = 0; i < elems.length; i++) {" +
+                        "  if (elems[i].scrollTop) {" +
+                        "    elems[i].scrollTop = 0;" +
+                        "  }" +
+                        "}"
+        );
+    }
 
 
+    static void AddNewRecordTravelling(){
+        driver.findElement(DepartureCity).click();
+        driver.findElement(Giza).click();
+        driver.findElement(ArrivalCity).click();
+        driver.findElement(KafrElSheikh).click();
+        driver.findElement(Time).click();
+        driver.findElement(MorningTime).click();
+        driver.findElement(TravelDate).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+        driver.findElement(TravelDate).sendKeys("10/2/2025");
+        driver.findElement(TravelPurpose).sendKeys("Test");
+        driver.findElement(HostedBy).sendKeys("Test");
+        driver.findElement(Save).click();
+    }
+    static void AddNewRecord2Travelling() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        driver.findElement(DepartureCity2).click();
+        driver.findElement(KafrElSheikh).click();
+        driver.findElement(ArrivalCity2).click();
+        driver.findElement(Giza).click();
+        driver.findElement(Time).click();
+        driver.findElement(MorningTime).click();
+        driver.findElement(TravelDate).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+        driver.findElement(TravelDate).sendKeys("10/3/2025");
+        driver.findElement(TravelPurpose).sendKeys("Test");
+        driver.findElement(HostedBy).sendKeys("Test");
+        driver.findElement(Save).click();
 
+        driver.findElement(SendRequest).click();
 
+        WebElement messageElement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
+        );
 
-///html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-travel-request/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span
-///html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-travel-request/div/div/div[2]/div/form/mat-tab-group/div/mat-tab-body[1]/div/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select
+        String actualMessage = messageElement.getText().trim();
+        String expectedMessage = "Please Add Hotel."; // expected value
 
+        try {
+            Assert.assertEquals(actualMessage, expectedMessage);
+            System.out.println("✅ Validation PASSED: " + actualMessage);
+        } catch (AssertionError e) {
+            System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
+                    + " | But got: " + actualMessage);
+            throw e; // let TestNG mark test as failed
+        }
+        clickSwalOkIfExists();
+        //Thread.sleep(10000);
+        scrollToTop(driver);
+        Thread.sleep(10000);
+        driver.findElement(HotelTab).click();
 
+    }
+    static void AddingHotel() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        driver.findElement(AddNewRecord).click();
+        driver.findElement(CheckIn).sendKeys("10/2/2025");
+        driver.findElement(CheckOut).sendKeys("10/3/2025");
+        driver.findElement(Include).sendKeys("Test");
+        driver.findElement(FoodPref).sendKeys("Test");
+        driver.findElement(Save).click();
 
+        driver.findElement(SendRequest).click();
+
+        WebElement messageElement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='swal2-html-container']"))
+        );
+
+        String actualMessage = messageElement.getText().trim();
+        String expectedMessage = "Please Add Transportation."; // expected value
+
+        try {
+            Assert.assertEquals(actualMessage, expectedMessage);
+            System.out.println("✅ Validation PASSED: " + actualMessage);
+        } catch (AssertionError e) {
+            System.out.println("❌ Validation FAILED! Expected: " + expectedMessage
+                    + " | But got: " + actualMessage);
+            throw e; // let TestNG mark test as failed
+        }
+        clickSwalOkIfExists();
+        //Thread.sleep(10000);
+        scrollToTop(driver);
+        Thread.sleep(10000);
+        driver.findElement(TransPortationTab).click();
 
 
 
     }
+
 
 
 
