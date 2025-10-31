@@ -15,10 +15,11 @@
         <!--            <version>12.8.1.jre11</version> &lt;!&ndash; choose version based on your JDK &ndash;&gt;-->
         <!--        </dependency>-->
 
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.34.0</version>
+            <version>4.38.0</version>
         </dependency>
 
         <dependency>
@@ -27,25 +28,21 @@
             <version>7.11.0</version>
             <scope>test</scope>
         </dependency>
+
+<!--         https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager-->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.8.0</version>
+            <version>6.3.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.22.1</version> <!-- Latest as of early 2025 -->
         </dependency>
 
-
-        <!-- Selenium -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.10.0</version>
-        </dependency>
-
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <!-- SQL Server JDBC Driver -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
@@ -59,11 +56,11 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.7</version>
         </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.8.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.github.bonigarcia</groupId>-->
+<!--            <artifactId>webdrivermanager</artifactId>-->
+<!--            <version>5.8.0</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 

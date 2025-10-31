@@ -17,6 +17,10 @@ public class Employee_Cycle {
     public static WebDriver driver;
     public static Actions actions;
 
+    static By UserName = By.xpath("//*[@formcontrolname='email']");
+    static By Password = By.xpath("//*[@formcontrolname='password']");
+    static By LoginButton = By.id("kt_sign_in_submit");
+
     public static void startBrowser() {
         String browser = ConfigReader.get("browser");
         String url = ConfigReader.get("url");
@@ -42,31 +46,66 @@ public class Employee_Cycle {
         Create_New_Employee();
 
 }
-    private void loginHR() throws InterruptedException {
+
+    public void loginHR() throws InterruptedException {
         String userName = ConfigReader.get("USERNAME");
         String password = ConfigReader.get("PASSWORD");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(UserName));
+        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(UserName));
+        driver.findElement(UserName).clear();
+        driver.findElement(Password).clear();
+        driver.findElement(UserName).sendKeys(userName);
+        driver.findElement(Password).sendKeys(password);
+        driver.findElement(LoginButton).click();
 
-        Thread.sleep(1000);
-        driver.findElement(By.cssSelector("#kt_login_signin_form > div.fv-row.mb-8 > input")).sendKeys(userName);
-        driver.findElement(By.cssSelector("#kt_login_signin_form > div:nth-child(3) > input")).sendKeys(password);
-        driver.findElement(By.id("kt_sign_in_submit")).click();
     }
-private void Create_New_Employee() throws InterruptedException {
+    public void Create_New_Employee() throws InterruptedException {
     String UserName = ConfigReader.get("USERNAME");
-Thread.sleep(15000);
-    driver.findElement(By.xpath("//*[@id=\"#kt_app_sidebar_menu\"]/div[1]/span/span[2]")).click();
-    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
-    WebElement Employee = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"#kt_app_sidebar_menu\"]/div[1]/div/div[2]/a/span[2]")));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+
+
+    WebElement Basic = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//span//span[@class = 'menu-title'and normalize-space()='Basic']")));
+    driver.findElement(By.xpath("//div//span//span[@class = 'menu-title'and normalize-space()='Basic']")).click();
+    Basic.click();
+    WebElement Employee = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//a//span[@class = 'menu-title'and normalize-space()='Employee']")));
     Employee.click();
-    WebElement Check = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-tab-label-2-0\"]/div")));
+
     driver.findElement(By.name("FirstEngName")).sendKeys("Omar");
     driver.findElement(By.name("SecondEngName")).sendKeys("Hussien");
     driver.findElement(By.name("LastEngName")).sendKeys("Afifi");
     driver.findElement(By.name("ArFirstName")).sendKeys("عمر");
     driver.findElement(By.name("ArSecondName")).sendKeys("حسين");
     driver.findElement(By.name("ArLastName")).sendKeys("عفيفي");
-    driver.findElement(By.name("ArLastName")).sendKeys("Address....");
     driver.findElement(By.xpath("//*[@formcontrolname='stateID']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Cairo']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='cityID']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='15 May']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='townID']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='TEST']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='nationalityCode']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Egyptian']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='employeeNationalID']")).sendKeys("30006248800499");
+    driver.findElement(By.xpath("//*[@formcontrolname='religionCode']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='مسلم']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='maritalCode']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='single']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='militaryCode']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='اعفاء نهائى']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='registerCode']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Permanent']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='empGrpCode']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Test']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='empTel']")).sendKeys("01146225274");
+    driver.findElement(By.xpath("//*[@formcontrolname='empMob']")).sendKeys("01146225274");
+    driver.findElement(By.xpath("//*[@formcontrolname='mailType']")).click();
+    driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='SelfMail']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='empEmail']")).sendKeys("Omarafifi107@gmail.com");
+    driver.findElement(By.xpath("//*[@formcontrolname='nameEmerg']")).sendKeys("Omar");
+    driver.findElement(By.xpath("//*[@formcontrolname='phNo_EmgMob']")).sendKeys("Test");
+    driver.findElement(By.xpath("//*[@formcontrolname='emailEmerg']")).sendKeys("Test");
+
 
 
     // Apply for all Navigators

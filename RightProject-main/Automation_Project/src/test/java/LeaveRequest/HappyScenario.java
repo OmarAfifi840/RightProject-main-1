@@ -95,7 +95,6 @@ public class HappyScenario {
         driver1.findElement(By.xpath("//*[@formcontrolname='email']")).sendKeys(userName);
         driver1.findElement(By.xpath("//*[@formcontrolname='password']")).sendKeys(password);
         driver1.findElement(By.id("kt_sign_in_submit")).click();
-
     }
 
     private void submitLeaveRequest() throws InterruptedException {
