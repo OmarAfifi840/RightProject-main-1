@@ -70,7 +70,7 @@ public class Employee_Cycle {
     WebElement Employee = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//a//span[@class = 'menu-title'and normalize-space()='Employee']")));
     Employee.click();
 
-        driver.findElement(By.name("empCode")).sendKeys("2525");
+        driver.findElement(By.name("empCode")).sendKeys("252");
         driver.findElement(By.name("FirstEngName")).sendKeys("Omar");
         Thread.sleep(1000);
     driver.findElement(By.name("SecondEngName")).sendKeys("Hussien");
@@ -88,14 +88,7 @@ public class Employee_Cycle {
         Thread.sleep(1000);
         driver.findElement(By.name("SecondEngName")).sendKeys("Hussien");
         Thread.sleep(1000);
-        driver.findElement(By.name("LastEngName")).sendKeys("Afifi");
-        Thread.sleep(1000);
-        driver.findElement(By.name("ArFirstName")).sendKeys("عمر");
-        Thread.sleep(1000);
-        driver.findElement(By.name("ArSecondName")).sendKeys("حسين");
-        Thread.sleep(1000);
-        driver.findElement(By.name("ArLastName")).sendKeys("عفيفي");
-        Thread.sleep(1000);
+
     driver.findElement(By.xpath("//*[@formcontrolname='stateID']")).click();
     driver.findElement(By.xpath("//mat-option//span[@class='mat-option-text' and normalize-space()='Cairo']")).click();
     driver.findElement(By.xpath("//*[@formcontrolname='cityID']")).click();
@@ -165,7 +158,7 @@ public class Employee_Cycle {
     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", IntegrationOptions);
     driver.findElement(By.xpath("//mat-expansion-panel-header[@id='mat-expansion-panel-header-3']")).click();
     driver.findElement(By.xpath("//*[@formcontrolname='empCodeTimeAtt']")).sendKeys("1444");
-driver.findElement(By.id("mat-radio-3")).click();
+    driver.findElement(By.id("mat-radio-3")).click();
     //driver.findElement(By.xpath("//input[@tabindex='0' and @value='1']")).click();
     driver.findElement(By.xpath("//*[@formcontrolname='weekEndCode']")).click();
     driver.findElement(By.xpath("//span[@class = 'mat-option-text' and normalize-space()='Friday & Saturday']")).click();
@@ -185,9 +178,9 @@ driver.findElement(By.id("mat-radio-3")).click();
     Thread.sleep(500); // optional short delay
     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Users);
     driver.findElement(By.xpath("//mat-expansion-panel-header[@id='mat-expansion-panel-header-9']")).click();
-    driver.findElement(By.xpath("//*[@formcontrolname='userID']")).sendKeys("2525");
+    driver.findElement(By.xpath("//*[@formcontrolname='userID']")).sendKeys("252");
     driver.findElement(By.xpath("//*[@formcontrolname='userName']")).clear();
-    driver.findElement(By.xpath("//*[@formcontrolname='userName']")).sendKeys("2525");
+    driver.findElement(By.xpath("//*[@formcontrolname='userName']")).sendKeys("252");
     driver.findElement(By.xpath("//*[@formcontrolname='password']")).clear();
     driver.findElement(By.xpath("//*[@formcontrolname='password']")).sendKeys("1234");
     driver.findElement(By.xpath("//input[@name='confirmPassword']")).sendKeys("1234");
@@ -196,7 +189,27 @@ driver.findElement(By.id("mat-radio-3")).click();
     driver.findElement(By.xpath("//*[@formcontrolname='groupCode']")).click();
     driver.findElement(By.xpath("//span[@class = 'mat-option-text' and normalize-space()='ESS']")).click();
     driver.findElement(By.xpath("//button[@type='submit']")).click();
-        Thread.sleep(100000000);
+        Thread.sleep(500);
+        actions.sendKeys(Keys.PAGE_UP).perform();
+    WebElement Multibanks  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='tab' and .//text()[normalize-space()='Multi Banks']]")));
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Multibanks);
+    Thread.sleep(500); // optional short delay
+    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Multibanks);
+    driver.findElement(By.xpath("//button[normalize-space()='Add New Record']")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@formcontrolname='bankCode']")).click();
+    driver.findElement(By.xpath("//span[@class = 'mat-option-text' and normalize-space()='ALEXBANK']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='idBankNO']")).sendKeys("12345678912");
+    driver.findElement(By.xpath("//*[@formcontrolname='empAcNo']")).sendKeys("98765432198");
+    driver.findElement(By.xpath("//*[@formcontrolname='branchCode']")).click();
+    driver.findElement(By.xpath("//span[@class = 'mat-option-text' and normalize-space()='Test']")).click();
+    driver.findElement(By.xpath("//*[@formcontrolname='per_Val']")).clear();
+    driver.findElement(By.xpath("//*[@formcontrolname='per_Val']")).sendKeys("50000");
+    driver.findElement(By.xpath("//*[@formcontrolname='ipan']")).sendKeys("1234");
+    driver.findElement(By.xpath("//*[@formcontrolname='currencyCode']")).click();
+    driver.findElement(By.xpath("//span[@class = 'mat-option-text' and normalize-space()='جنيه مصري']")).click();
+    driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/mat-dialog-container/app-multi-bank-dialog/div/div/div[3]/button[2]/span")).click();
+
     WebElement PertsonalData  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='tab' and .//text()[normalize-space()='Personal Data']]")));
     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", PertsonalData);
     Thread.sleep(500); // optional short delay
