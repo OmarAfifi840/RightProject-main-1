@@ -1180,8 +1180,6 @@ try {
         Thread.sleep(10000);
         driver.findElement(TransPortationTab).click();
 
-
-
     }
 
 
@@ -1196,13 +1194,13 @@ try {
 //        submitMissionRequest();     //Done
 //        submitPermissionRequest(); //Done
 //        submitWFHRequest();        //Done
-//        submitDocumentRequest();   //Done
+        submitDocumentRequest();   //Done
 //        FamilyMedicalRequest();      //Done Except the Grid handling
 //        Penalty(); //Done
 //        PenaltyValidation(); //Done
 //        Resignation(); //Done
 //        TerminationRequest(); //Done
-        TravellingRequest();
+//        TravellingRequest();
 
         }
 }

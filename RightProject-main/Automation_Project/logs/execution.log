@@ -1562,3 +1562,6 @@ Session ID: bdebe3c778796e1629333804611231ff
 2025-10-02 12:31:16 INFO  RequestsEmployee1_V4: Trainning Option is clicked
 2025-10-02 12:31:22 INFO  RequestsEmployee1_V4: OK button clicked.
 2025-10-02 12:31:39 INFO  RequestsEmployee1_V4: OK button clicked.
+2025-11-06 16:05:29 INFO  RequestsEmployee1_V4: Travelling Request / UserName :200103
+2025-11-06 16:10:57 INFO  RequestsEmployee1_V4: Document / UserName :200130
+2025-11-06 16:11:29 INFO  RequestsEmployee1_V4: Document Request Request is submitted successfully / UserName : 200130
