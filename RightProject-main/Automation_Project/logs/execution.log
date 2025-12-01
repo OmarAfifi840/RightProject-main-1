@@ -1709,3 +1709,103 @@ Session ID: bdebe3c778796e1629333804611231ff
 2025-11-24 12:44:37 INFO  Employee_DocumentNew: Document / UserName :200130
 2025-11-24 12:47:03 INFO  Employee_DocumentNew: Document / UserName :200130
 2025-11-24 12:47:32 INFO  Employee_DocumentNew: Document Request Request is submitted successfully / UserName : 200130
+2025-11-24 13:45:48 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-24 13:45:50 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-24 13:46:22 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-24 13:46:25 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-24 13:51:21 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-24 13:51:22 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-24 13:51:45 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-24 13:51:48 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-24 13:56:20 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-24 13:56:21 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-24 13:56:43 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-24 13:56:46 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-24 13:57:32 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-24 13:57:35 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-24 13:57:58 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-24 13:58:01 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-25 16:49:17 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-25 16:49:37 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-25 16:57:15 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-25 16:57:29 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-25 17:02:54 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-25 17:02:58 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-25 17:03:24 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-25 17:03:27 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-25 17:16:12 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-25 17:16:16 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-25 17:17:39 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-25 17:17:42 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-25 17:37:46 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-25 17:37:47 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-25 17:38:10 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-25 17:38:14 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-25 17:40:17 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-25 17:40:20 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-25 17:40:45 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-25 17:40:48 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-11-26 09:11:16 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-11-26 09:11:51 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-11-26 09:12:44 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-11-26 09:12:47 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 12:56:05 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 12:56:29 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 14:37:51 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 14:37:54 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 14:49:52 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 14:49:53 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 14:51:13 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 14:51:16 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:19:40 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:19:41 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:20:14 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:20:17 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:22:47 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:22:47 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:23:16 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:23:19 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:25:31 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:25:32 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:26:10 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:26:10 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:26:35 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:26:38 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:28:22 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:28:23 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:28:48 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:28:51 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:30:37 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:30:38 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:31:03 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:31:06 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:32:42 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:32:42 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:33:07 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:33:10 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:34:33 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:34:34 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:34:58 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:35:01 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:35:05 INFO  Employee_DocumentNew: DB -> DocumentType: 01 | Notes: Document Request
+2025-12-01 15:35:05 INFO  Employee_DocumentNew: ✔️ DB verification passed.
+2025-12-01 15:36:17 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 15:36:17 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 15:37:14 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 15:37:17 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 15:37:21 INFO  Employee_DocumentNew: DB -> DocumentType: 01 | Notes: Document Request
+2025-12-01 15:37:21 INFO  Employee_DocumentNew: ✔️ DB verification passed.
+2025-12-01 16:04:54 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 16:04:54 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 16:05:19 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 16:05:22 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 16:05:26 INFO  Employee_DocumentNew: DB -> DocumentType: 01 | Notes: Document Request
+2025-12-01 16:05:26 INFO  Employee_DocumentNew: ✔️ DB verification passed.
+2025-12-01 16:13:22 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 16:13:22 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 16:13:58 INFO  Employee_DocumentNew: Document / UserName : 200130
+2025-12-01 16:13:59 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2025-12-01 16:14:30 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2025-12-01 16:14:33 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2025-12-01 16:14:37 INFO  Employee_DocumentNew: DB -> DocumentType: 01 | Notes: Document Request
+2025-12-01 16:14:37 INFO  Employee_DocumentNew: ✔️ DB verification passed.

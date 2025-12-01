@@ -56,11 +56,13 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.7</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>io.github.bonigarcia</groupId>-->
-<!--            <artifactId>webdrivermanager</artifactId>-->
-<!--            <version>5.8.0</version>-->
-<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>13.3.0.jre11-preview</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
     <build>
