@@ -236,10 +236,11 @@ public class Employee_DocumentNew {
     // ---------- verifyDocumentRequestInDB ----------
     public void verifyDocumentRequestInDB() throws Exception {
         // Use detectedEmployeeCode if captured; fall back to config value
+        String userName = ConfigReader.get("userName");
         String detectedEmployeeCode = "";
         String employeeCode = (detectedEmployeeCode != null && !detectedEmployeeCode.isEmpty())
                 ? detectedEmployeeCode
-                : ConfigReader.get("userName1");
+                : ConfigReader.get("userName");
 
         logger.info("Verifying DB for EmployeeCode = " + employeeCode);
 
@@ -247,7 +248,7 @@ public class Employee_DocumentNew {
         Thread.sleep(3000);
 
         // Use same exact SQL as your DB expects. If table/columns differ, adjust.
-        String sql = "SELECT TOP 1 * FROM EmpDocumentRequest WHERE EmpCode= 201336 ORDER BY ID DESC";
+        String sql = "SELECT TOP 1 * FROM EmpDocumentRequest WHERE EmpCode= 200103 ORDER BY ID DESC";
 
         ResultSet rs = null;
         try {
@@ -257,11 +258,15 @@ public class Employee_DocumentNew {
 
             String dbDocType = rs.getString("DocmentCode");
             String dbNotes = rs.getString("Notes");
+            String dbRequesterID = rs.getString("RequesterID");
+            String dbID = rs.getString("ID");
 
-            logger.info("DB -> DocumentType: " + dbDocType + " | Notes: " + dbNotes);
+
+            logger.info( "DB ->" + "ID:" + dbID +  " |DocumentType: "+ dbDocType + " | Notes: " + dbNotes + " | RequesterID:" + dbRequesterID) ;
 
             Assert.assertEquals(dbDocType, "01", "DocmentType mismatch.");
             Assert.assertEquals(dbNotes, "Document Request", "Notes mismatch.");
+            Assert.assertEquals(dbRequesterID, userName , "User Name mismatch.");
 
             logger.info("✔️ DB verification passed.");
         } finally {

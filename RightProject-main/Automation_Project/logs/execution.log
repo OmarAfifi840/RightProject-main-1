@@ -1809,3 +1809,55 @@ Session ID: bdebe3c778796e1629333804611231ff
 2025-12-01 16:14:33 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
 2025-12-01 16:14:37 INFO  Employee_DocumentNew: DB -> DocumentType: 01 | Notes: Document Request
 2025-12-01 16:14:37 INFO  Employee_DocumentNew: ✔️ DB verification passed.
+2026-01-05 13:34:45 INFO  Employee_DocumentNew: Document / UserName : 200130
+2026-01-05 15:25:45 INFO  Employee_DocumentNew: Document / UserName : 200130
+2026-01-05 15:25:58 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2026-01-05 15:27:09 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2026-01-05 15:27:12 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200130
+2026-01-05 15:32:36 INFO  Employee_DocumentNew: Document / UserName : 200130
+2026-01-05 15:32:56 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2026-01-05 15:33:21 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2026-01-05 15:33:24 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200103
+2026-01-05 15:33:28 INFO  Employee_DocumentNew: DB -> DocumentType: 01 | Notes: Document Request
+2026-01-05 15:33:28 INFO  Employee_DocumentNew: ✔️ DB verification passed.
+2026-01-14 10:53:45 INFO  Employee_DocumentNew: Document / UserName : 200130
+2026-01-14 10:53:46 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2026-01-14 10:54:12 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2026-01-14 10:54:15 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200103
+2026-01-14 10:54:19 INFO  Employee_DocumentNew: DB ->ID:2DocumentType: 01 | Notes: Document Request | RequesterID:200103
+2026-01-14 10:54:19 INFO  Employee_DocumentNew: ✔️ DB verification passed.
+2026-01-14 14:44:14 INFO  Employee_DocumentNew: Document / UserName : 200130
+2026-01-14 14:44:15 INFO  Employee_DocumentNew: Detected employee element text: 200103 - Islam Rabie Elsayed Ali
+2026-01-14 14:44:41 INFO  Employee_DocumentNew: Document Request submitted successfully / UserName : 200130
+2026-01-14 14:44:44 INFO  Employee_DocumentNew: Verifying DB for EmployeeCode = 200103
+2026-01-14 14:44:48 INFO  Employee_DocumentNew: DB ->ID:3 |DocumentType: 01 | Notes: Document Request | RequesterID:200103
+2026-01-14 14:44:48 INFO  Employee_DocumentNew: ✔️ DB verification passed.
+2026-01-14 15:24:59 INFO  RequestsEmployee1_V4: Leave / UserName :200130
+2026-01-14 15:25:51 INFO  RequestsEmployee1_V4: Remain value: 1/14/2026
+2026-01-14 15:25:58 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200130
+2026-01-14 15:30:35 INFO  RequestsEmployee1_V4: Leave / UserName :200112
+2026-01-14 15:31:38 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-leave-request/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7118.2, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\hP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62374}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62374/devtoo..., se:cdpVersion: 137.0.7118.2, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28c7bf7cabbcc99bf5df9d9e4e7c693c
+2026-01-14 15:37:21 INFO  RequestsEmployee1_V4: Leave / UserName :200112
+2026-01-14 15:37:54 INFO  RequestsEmployee1_V4: Remain value: 1/14/2026
+2026-01-14 15:38:00 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200112
+2026-01-14 15:38:00 INFO  RequestsEmployee1_V4: Verifying DB for EmployeeCode = 200103
+2026-01-14 15:38:05 INFO  RequestsEmployee1_V4: DB ->ID:1523-LR-01 | Leave Type: 01 | Notes: null | RequesterID:200103 | From Date : 2025-12-15 13:46:43.0 | To Date : 2025-12-15 13:46:43.0
+2026-01-15 11:22:29 INFO  RequestsEmployee1_V4: Leave / UserName :200112
+2026-01-15 11:22:50 INFO  RequestsEmployee1_V4: Remain value: 1/15/2026
+2026-01-15 11:22:57 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200112
+2026-01-15 11:22:57 INFO  RequestsEmployee1_V4: Verifying DB for EmployeeCode = 200103
+2026-01-15 11:23:03 INFO  RequestsEmployee1_V4: DB -> ID:1523-LR-01 | Leave Type: 01 | Notes: null | RequesterID:200103 | From Date : 2025-12-15 13:46:43.0 | To Date : 2025-12-15 13:46:43.0
+2026-01-15 13:56:27 INFO  RequestsEmployee1_V4: Leave / UserName :200112
+2026-01-15 13:56:31 INFO  RequestsEmployee1_V4: Remain value: 1/15/2026
+2026-01-15 13:59:07 INFO  RequestsEmployee1_V4: Leave / UserName :200112
+2026-01-15 13:59:09 INFO  RequestsEmployee1_V4: Remain value: 1/15/2026
+2026-01-15 14:09:52 INFO  RequestsEmployee1_V4: Leave / UserName :200112
+2026-01-15 14:09:55 INFO  RequestsEmployee1_V4: Remain value: 1/15/2026
+2026-01-15 14:10:01 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200112
+2026-01-15 14:10:01 INFO  RequestsEmployee1_V4: Verifying DB for EmployeeCode = 200103
+2026-01-15 14:10:06 INFO  RequestsEmployee1_V4: DB -> ID:1523-LR-01 | Leave Type: 01 | Notes: null | RequesterID:200103 | From Date : 2025-12-15 13:46:43.0 | To Date : 2025-12-15 13:46:43.0

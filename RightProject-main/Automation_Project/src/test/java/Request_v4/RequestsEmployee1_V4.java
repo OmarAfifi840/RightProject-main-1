@@ -14,8 +14,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
+import utilities.DBUtils;
 
 import java.io.File;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.Duration;
 import java.util.List;
 
@@ -183,7 +186,7 @@ public class RequestsEmployee1_V4 {
         }
     }
 
-    static void swalerrorMessage(String requestName) {
+    static void swalerrorMessage (String requestName) {
         String Employee1 = ConfigReader.get("userName1");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("swal2-loading")));
@@ -258,8 +261,8 @@ public class RequestsEmployee1_V4 {
     }
 
     static void login() {
-        String userName = ConfigReader.get("userName");
-        String password = ConfigReader.get("password");
+        String userName = ConfigReader.get("userName3");
+        String password = ConfigReader.get("password3");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(UserName));
         //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -271,15 +274,15 @@ public class RequestsEmployee1_V4 {
         driver.findElement(LoginButton).click();
     }
 
-    static void submitLeaveRequest() {
-        String Employee1 = ConfigReader.get("userName1");
+    static void submitLeaveRequest() throws Exception {
+        String Employee3 = ConfigReader.get("userName3");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 //        //Open Screen
         TimeMangementMenu();
         WebElement leaves = driver.findElement(LeaveRequest);
         actions.moveToElement(leaves).click().perform();
         //Log Data and Check Screen Openned
-        Infologger("Leave" + " / UserName :" + Employee1);
+        Infologger("Leave" + " / UserName :" + Employee3);
         screenname();
         employeeCode("leave-request");
         WebElement typeDropdown = wait.until(ExpectedConditions.elementToBeClickable(
@@ -332,9 +335,70 @@ public class RequestsEmployee1_V4 {
         try {
             swalerrorMessage("Leave");
         } catch (TimeoutException e1) {
-            Infologger("Leave" + " Request is submitted successfully" + " / UserName :" + Employee1);
+            Infologger("Leave" + " Request is submitted successfully" + " / UserName :" + Employee3);
+            verifyLeaveRequestInDB();
         }
+
         wait.until(ExpectedConditions.elementToBeClickable(NewRequest));
+    }
+
+    public static void verifyLeaveRequestInDB() throws Exception {
+        // Use detectedEmployeeCode if captured; fall back to config value
+        String detectedEmployeeCode = "";
+        String employeeCode = (detectedEmployeeCode != null && !detectedEmployeeCode.isEmpty())
+                ? detectedEmployeeCode
+                : ConfigReader.get("userName");
+
+        logger.info("Verifying DB for EmployeeCode = " + employeeCode);
+
+        // small wait before DB reading (consider polling instead)
+        Thread.sleep(3000);
+
+        // Use same exact SQL as your DB expects. If table/columns differ, adjust.
+        String sql = "SELECT TOP 1 * FROM LeavesRequestMaster WHERE EmpCode = 200103 ORDER BY SerialNo DESC";
+
+        ResultSet rs = null;
+        try {
+            rs = DBUtils.executeQuery(sql);
+
+            Assert.assertTrue(rs.next(), "❌ Record NOT found in DB for EmployeeCode: " + employeeCode);
+
+
+            String dbID = rs.getString("SerialNo");
+            String dbVacCode = rs.getString("VacCode");
+            String dbNotes = rs.getString("Reason");
+            String dbRequesterID = rs.getString("RequesterID");
+            String dbDateFrom = rs.getString("DateFrom");
+            String dbDateTo = rs.getString("DateTo");
+            String Employee1 = ConfigReader.get("userName1");
+
+            logger.info( "DB -> "
+                    + "ID:"
+                    + dbID
+                    +  " | Leave Type: "
+                    + dbVacCode
+                    + " | Notes: "
+                    + dbNotes
+                    + " | RequesterID:"
+                    + dbRequesterID
+                    +" | From Date : "
+                    + dbDateFrom
+                    +" | To Date : "
+                    + dbDateTo) ;
+
+            Assert.assertEquals(dbVacCode, "01", "Vacation Code mismatch." + dbVacCode );
+            Assert.assertEquals(dbNotes, "notesLeavesEmployee1Leave", "Notes mismatch." + dbNotes);
+            Assert.assertEquals(dbRequesterID, Employee1 , "User Name mismatch." + dbRequesterID);
+            Assert.assertEquals(dbDateFrom, FromDateLeave , "From Date mismatch." + dbDateFrom);
+            Assert.assertEquals(dbRequesterID, ToDateLeave , "To Date mismatch." + dbDateTo);
+
+            logger.info("✔️ DB verification passed.");
+        } finally {
+            // close resultset if DBUtils doesn't do it internally
+            if (rs != null) {
+                try { rs.close(); } catch (SQLException ignored) {}
+            }
+        }
     }
 
     static void submitMissionRequest() {
@@ -902,7 +966,6 @@ try {
         );
     }
 
-
     static void TravellingRequest() throws InterruptedException {
         String fileName = "ESS Issues.xlsx"; // Ensure correct filename + extension
         String absolutePath = "D:\\Omar Afifi\\SelfService\\" + fileName;
@@ -1185,11 +1248,12 @@ try {
 
 
     @Test
-    public void performAllActions() throws InterruptedException {
+    public void performAllActions() throws Exception {
         setupDriver();
         startBrowser();
         login();
-//        submitLeaveRequest();        //Done
+        submitLeaveRequest();        //Done
+        verifyLeaveRequestInDB();
 //        submitMissionRequest();     //Done
 //        submitPermissionRequest(); //Done
 //        submitWFHRequest();        //Done
@@ -1199,7 +1263,7 @@ try {
 //        PenaltyValidation(); //Done
 //        Resignation(); //Done
 //        TerminationRequest(); //Done
-        TravellingRequest();
+//        TravellingRequest();
 
         }
 }
