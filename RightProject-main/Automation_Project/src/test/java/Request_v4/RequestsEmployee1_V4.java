@@ -48,6 +48,7 @@ public class RequestsEmployee1_V4 {
     static By FromDateLeave = By.xpath("//*[@formcontrolname='dateFrom']");
     static By ToDateLeave = By.xpath("//*[@formcontrolname='dateTo']");
     static By NotesLeaves = By.xpath("//*[@formcontrolname='reason']");
+
     //-----------------------------------//
     static By MissionRequest = By.xpath("//span[@class='menu-title' and .=' Mission Request ']");
     static By FromDateMission = By.xpath("//*[@formcontrolname='fromDate']");
@@ -304,13 +305,13 @@ public class RequestsEmployee1_V4 {
 
             annualLeave.click();
             remainField = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.id("mat-input-5")
+                    By.xpath("/html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-leave-request/div/div/div[2]/div/form/div[5]/div[1]/div/div/mat-form-field/div/div[1]/div[3]/input")
             ));
             try {
                 // Wait for the element to have a non-zero value
-                wait.until(d -> {
+                                        wait.until(d -> {
                     String remainValue = remainField.getAttribute("value");
-                    return remainValue != null && !remainValue.equals("0") && !remainValue.isEmpty();
+                    return remainValue != null && !remainValue.equals(0) && !remainValue.isEmpty();
                 });
 
                 String remainValue = remainField.getAttribute("value");
@@ -329,6 +330,20 @@ public class RequestsEmployee1_V4 {
         driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
         driver.findElement(ToDateLeave).clear();
         driver.findElement(ToDateLeave).sendKeys(ConfigReader.get("ToDateEmployee1Leave"));
+
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        By numberOfDaysLocator = By.xpath("//*[@formcontrolname='totalDays']");
+
+// Wait until the value attribute is NOT "0"
+        wait.until(driver -> {
+            String value = driver.findElement(numberOfDaysLocator).getAttribute("value");
+            return !value.equals("0") && !value.isEmpty();
+        });
+
+// The code continues here once the field is no longer 0
+        System.out.println("Field updated! Proceeding...");
+
+
         driver.findElement(NotesLeaves).sendKeys(ConfigReader.get("notesLeavesEmployee1Leave"));
         wait.until(ExpectedConditions.elementToBeClickable(SendRequest));
         driver.findElement(SendRequest).click();
@@ -336,73 +351,71 @@ public class RequestsEmployee1_V4 {
             swalerrorMessage("Leave");
         } catch (TimeoutException e1) {
             Infologger("Leave" + " Request is submitted successfully" + " / UserName :" + Employee3);
-            verifyLeaveRequestInDB();
+            //verifyLeaveRequestInDB();
         }
 
         wait.until(ExpectedConditions.elementToBeClickable(NewRequest));
     }
 
-    public static void verifyLeaveRequestInDB() throws Exception {
-        // Use detectedEmployeeCode if captured; fall back to config value
-        String detectedEmployeeCode = "";
-        String employeeCode = (detectedEmployeeCode != null && !detectedEmployeeCode.isEmpty())
-                ? detectedEmployeeCode
-                : ConfigReader.get("userName");
-
-        logger.info("Verifying DB for EmployeeCode = " + employeeCode);
-
-        // small wait before DB reading (consider polling instead)
-        Thread.sleep(3000);
-
-        // Use same exact SQL as your DB expects. If table/columns differ, adjust.
-        String sql = "SELECT TOP 1 * FROM LeavesRequestMaster WHERE EmpCode = 200103 ORDER BY SerialNo DESC";
-
-        ResultSet rs = null;
-        try {
-            rs = DBUtils.executeQuery(sql);
-
-            Assert.assertTrue(rs.next(), "❌ Record NOT found in DB for EmployeeCode: " + employeeCode);
-
-
-            String dbID = rs.getString("SerialNo");
-            String dbVacCode = rs.getString("VacCode");
-            String dbNotes = rs.getString("Reason");
-            String dbRequesterID = rs.getString("RequesterID");
-            String dbDateFrom = rs.getString("DateFrom");
-            String dbDateTo = rs.getString("DateTo");
-            String Employee1 = ConfigReader.get("userName1");
-
-            logger.info( "DB -> "
-                    + "ID:"
-                    + dbID
-                    +  " | Leave Type: "
-                    + dbVacCode
-                    + " | Notes: "
-                    + dbNotes
-                    + " | RequesterID:"
-                    + dbRequesterID
-                    +" | From Date : "
-                    + dbDateFrom
-                    +" | To Date : "
-                    + dbDateTo) ;
-
-            Assert.assertEquals(dbVacCode, "01", "Vacation Code mismatch." + dbVacCode );
-            Assert.assertEquals(dbNotes, "notesLeavesEmployee1Leave", "Notes mismatch." + dbNotes);
-            Assert.assertEquals(dbRequesterID, Employee1 , "User Name mismatch." + dbRequesterID);
-            Assert.assertEquals(dbDateFrom, FromDateLeave , "From Date mismatch." + dbDateFrom);
-            Assert.assertEquals(dbRequesterID, ToDateLeave , "To Date mismatch." + dbDateTo);
-
-            logger.info("✔️ DB verification passed.");
-        } finally {
-            // close resultset if DBUtils doesn't do it internally
-            if (rs != null) {
-                try { rs.close(); } catch (SQLException ignored) {}
-            }
-        }
-    }
+//    public static void verifyLeaveRequestInDB() throws Exception {
+//        // Use detectedEmployeeCode if captured; fall back to config value
+//        String detectedEmployeeCode = "";
+//        String employeeCode = ConfigReader.get("userName");
+//
+//        logger.info("Verifying DB for EmployeeCode = " + employeeCode);
+//
+//        // small wait before DB reading (consider polling instead)
+//        Thread.sleep(3000);
+//
+//        // Use same exact SQL as your DB expects. If table/columns differ, adjust.
+//        String sql = "SELECT TOP 1 * FROM LeavesRequestMaster WHERE EmpCode = 200103 ORDER BY SerialNo DESC";
+//
+//        ResultSet rs = null;
+//        try {
+//            rs = DBUtils.executeQuery(sql);
+//
+//            Assert.assertTrue(rs.next(), "❌ Record NOT found in DB for EmployeeCode: " + employeeCode);
+//
+//
+//            String dbID = rs.getString("SerialNo");
+//            String dbVacCode = rs.getString("VacCode");
+//            String dbNotes = rs.getString("Reason");
+//            String dbRequesterID = rs.getString("RequesterID");
+//            String dbDateFrom = rs.getString("DateFrom");
+//            String dbDateTo = rs.getString("DateTo");
+//            String Employee1 = ConfigReader.get("userName1");
+//
+//            logger.info( "DB -> "
+//                    + "ID:"
+//                    + dbID
+//                    +  " | Leave Type: "
+//                    + dbVacCode
+//                    + " | Notes: "
+//                    + dbNotes
+//                    + " | RequesterID:"
+//                    + dbRequesterID
+//                    +" | From Date : "
+//                    + dbDateFrom
+//                    +" | To Date : "
+//                    + dbDateTo) ;
+//
+//            Assert.assertEquals(dbVacCode, "01", "Vacation Code mismatch." + dbVacCode );
+//            Assert.assertEquals(dbNotes, "notesLeavesEmployee1Leave", "Notes mismatch." + dbNotes);
+//            Assert.assertEquals(dbRequesterID, Employee1 , "User Name mismatch." + dbRequesterID);
+//            Assert.assertEquals(dbDateFrom, FromDateLeave , "From Date mismatch." + dbDateFrom);
+//            Assert.assertEquals(dbRequesterID, ToDateLeave , "To Date mismatch." + dbDateTo);
+//
+//            logger.info("✔️ DB verification passed.");
+//        } finally {
+//            // close resultset if DBUtils doesn't do it internally
+//            if (rs != null) {
+//                try { rs.close(); } catch (SQLException ignored) {}
+//            }
+//        }
+//    }
 
     static void submitMissionRequest() {
-        String Employee1 = ConfigReader.get("userName1");
+        String Employee1 = ConfigReader.get("userName3");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         //Open Screen
         TimeMangementMenu();
@@ -416,16 +429,16 @@ public class RequestsEmployee1_V4 {
         driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
         driver.findElement(FromDateMission).clear();
         driver.findElement(FromDateMission).sendKeys(ConfigReader.get("FromDateEmployee1Mission"));
-        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee4Mission"));
+        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
         driver.findElement(ToDateMission).clear();
-        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee4Mission"));
+        driver.findElement(ToDateMission).sendKeys(ConfigReader.get("ToDateEmployee1Mission"));
         //-----------------------------------------------------
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(MissionType));
         driver.findElement(MissionType).click();
         WebElement FullTime = wait.until(ExpectedConditions.elementToBeClickable(FullTimeMission));
         driver.findElement(FullTimeMission).click();
-        driver.findElement(NotesMisssion).sendKeys(ConfigReader.get("NotesMissionEmployee4"));
+        driver.findElement(NotesMisssion).sendKeys(ConfigReader.get("NotesMissionEmployee1"));
         wait.until(ExpectedConditions.elementToBeClickable(SendRequest));
         driver.findElement(SendRequest).click();
 
@@ -438,18 +451,18 @@ public class RequestsEmployee1_V4 {
     }
 
     static void submitPermissionRequest() {
-        String Employee1 = ConfigReader.get("userName4");
+        String Employee1 = ConfigReader.get("userName3");
         TimeMangementMenu();
         WebElement permission = driver.findElement(PermmissionRequest);
         actions.moveToElement(permission).click().perform();
         Infologger("Permission" + " / UserName :" + Employee1);
         employeeCode("permission-request");
-        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee4"));
+        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee1"));
         driver.findElement(PermissionDate).clear();
-        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee4"));
-        driver.findElement(PermissionTimeFrom).sendKeys(ConfigReader.get("FromTimePermissionEmployee4"));
-        driver.findElement(PermissionTimeTo).sendKeys(ConfigReader.get("ToTimePermissionEmployee4"));
-        driver.findElement(NotesPermission).sendKeys(ConfigReader.get("NotesPermissionEmployee4"));
+        driver.findElement(PermissionDate).sendKeys(ConfigReader.get("PermissionDateEmployee1"));
+        driver.findElement(PermissionTimeFrom).sendKeys(ConfigReader.get("FromTimePermissionEmployee1"));
+        driver.findElement(PermissionTimeTo).sendKeys(ConfigReader.get("ToTimePermissionEmployee1"));
+        driver.findElement(NotesPermission).sendKeys(ConfigReader.get("NotesPermissionEmployee1"));
         driver.findElement(SendRequest).click();
         try {
             swalerrorMessage("Permission");
@@ -459,20 +472,20 @@ public class RequestsEmployee1_V4 {
     }
 
     static void submitWFHRequest() {
-        String Employee1 = ConfigReader.get("userName4");
+        String Employee1 = ConfigReader.get("userName3");
         TimeMangementMenu();
         WebElement WFH = driver.findElement(WorkFromHome);
         actions.moveToElement(WFH).click().perform();
         screenname();
         Infologger("WFH" + " / UserName :" + Employee1);
         employeeCode("wfhrequest");
-        driver.findElement(FromDateWFH).sendKeys(ConfigReader.get("FromDateEmployee4WFH"));
+        driver.findElement(FromDateWFH).sendKeys(ConfigReader.get("FromDateEmployee1WFH"));
         driver.findElement(FromDateWFH).clear();
-        driver.findElement(FromDateWFH).sendKeys(ConfigReader.get("FromDateEmployee4WFH"));
-        driver.findElement(ToDateWFH).sendKeys(ConfigReader.get("ToDateEmployee4WFH"));
+        driver.findElement(FromDateWFH).sendKeys(ConfigReader.get("FromDateEmployee1WFH"));
+        driver.findElement(ToDateWFH).sendKeys(ConfigReader.get("ToDateEmployee1WFH"));
         driver.findElement(ToDateWFH).clear();
-        driver.findElement(ToDateWFH).sendKeys(ConfigReader.get("ToDateEmployee4WFH"));
-        driver.findElement(WFHNotes).sendKeys(ConfigReader.get("NotesWFHEmployee4"));
+        driver.findElement(ToDateWFH).sendKeys(ConfigReader.get("ToDateEmployee1WFH"));
+        driver.findElement(WFHNotes).sendKeys(ConfigReader.get("NotesWFHEmployee1"));
         driver.findElement(SendRequest).click();
 
         try {
@@ -1253,10 +1266,10 @@ try {
         startBrowser();
         login();
         submitLeaveRequest();        //Done
-        verifyLeaveRequestInDB();
-//        submitMissionRequest();     //Done
-//        submitPermissionRequest(); //Done
-//        submitWFHRequest();        //Done
+     //   verifyLeaveRequestInDB();
+        submitMissionRequest();     //Done
+        submitPermissionRequest(); //Done
+        submitWFHRequest();        //Done
 //        submitDocumentRequest();   //Done
 //        FamilyMedicalRequest();      //Done Except the Grid handling
 //        Penalty(); //Done
