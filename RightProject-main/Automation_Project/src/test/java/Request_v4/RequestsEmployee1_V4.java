@@ -261,7 +261,7 @@ public class RequestsEmployee1_V4 {
         actions.moveToElement(PersonnelMod).perform();
     }
 
-    static void login() {
+    static void login() throws InterruptedException {
         String userName = ConfigReader.get("userName3");
         String password = ConfigReader.get("password3");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
@@ -273,9 +273,12 @@ public class RequestsEmployee1_V4 {
         driver.findElement(UserName).sendKeys(userName);
         driver.findElement(Password).sendKeys(password);
         driver.findElement(LoginButton).click();
+        Thread.sleep(10000);
     }
 
     static void submitLeaveRequest() throws Exception {
+
+
         String Employee3 = ConfigReader.get("userName3");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 //        //Open Screen
@@ -345,6 +348,7 @@ public class RequestsEmployee1_V4 {
 
 
         driver.findElement(NotesLeaves).sendKeys(ConfigReader.get("notesLeavesEmployee1Leave"));
+        Thread.sleep(10000);
         wait.until(ExpectedConditions.elementToBeClickable(SendRequest));
         driver.findElement(SendRequest).click();
         try {

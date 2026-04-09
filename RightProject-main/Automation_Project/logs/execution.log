@@ -1949,3 +1949,44 @@ Session ID: 28c7bf7cabbcc99bf5df9d9e4e7c693c
 2026-02-26 13:09:12 INFO  RequestsEmployee1_V4: Leave / UserName :200112
 2026-02-26 13:09:22 INFO  RequestsEmployee1_V4: Remain value: 0
 2026-02-26 13:09:31 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :200112
+2026-04-01 11:15:08 INFO  RequestsEmployee1_V4: Leave / UserName :Omar
+2026-04-01 11:15:31 INFO  RequestsEmployee1_V4: Remain value: 0
+2026-04-01 11:16:06 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :Omar
+2026-04-01 11:16:06 INFO  RequestsEmployee1_V4: Mission / UserName :Omar
+2026-04-01 11:17:10 ERROR RequestsEmployee1_V4: Element not found within timeout: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/app-layout/div/div/div/div/div/app-content/div/app-mission-request/div/div/div[2]/div/form/div[1]/div[1]/div/app-ss-employee-select/div/mat-form-field/div/div[1]/div[3]/mat-select/div/div[1]/span/span (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7118.2, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\hP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57155}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57155/devtoo..., se:cdpVersion: 137.0.7118.2, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4104d12c977f99cd91088fa1607db264
+2026-04-01 11:37:20 INFO  RequestsEmployee1_V4: Leave / UserName :Omar
+2026-04-01 11:37:22 INFO  RequestsEmployee1_V4: Remain value: 0
+2026-04-01 11:37:50 INFO  RequestsEmployee1_V4: Leave Request is submitted successfully / UserName :Omar
+2026-04-01 11:37:50 INFO  RequestsEmployee1_V4: Mission / UserName :Omar
+2026-04-01 11:38:13 INFO  RequestsEmployee1_V4: Mission Request is submitted successfully / UserName : Omar
+2026-04-01 11:38:13 INFO  RequestsEmployee1_V4: Permission / UserName :Omar
+2026-04-01 11:38:26 ERROR RequestsEmployee1_V4: Request: Permission | Swal Message: This Date Used By Leaves Request / UserName: 200130
+2026-04-01 11:38:26 INFO  RequestsEmployee1_V4: OK button clicked.
+2026-04-01 11:38:27 INFO  RequestsEmployee1_V4: WFH / UserName :Omar
+2026-04-01 11:38:49 INFO  RequestsEmployee1_V4: WFH Request is submitted successfully / UserName : Omar
+2026-04-07 14:33:57 INFO  RequestsEmployee1_V4: Leave / UserName :Omar
+2026-04-07 14:34:02 INFO  RequestsEmployee1_V4: Remain value: 0
+2026-04-07 14:34:17 ERROR RequestsEmployee1_V4: Request: Leave | Swal Message: There are dates used by serial leave No. 3499-LR-1 / UserName: 200130
+2026-04-07 14:34:18 INFO  RequestsEmployee1_V4: OK button clicked.
+2026-04-07 14:34:18 INFO  RequestsEmployee1_V4: Mission / UserName :Omar
+2026-04-07 14:34:30 ERROR RequestsEmployee1_V4: Request: Mission | Swal Message: There is Overlapping in Mission Time / UserName: 200130
+2026-04-07 14:34:30 INFO  RequestsEmployee1_V4: OK button clicked.
+2026-04-07 14:34:31 INFO  RequestsEmployee1_V4: Permission / UserName :Omar
+2026-04-07 14:34:42 ERROR RequestsEmployee1_V4: Request: Permission | Swal Message: This Date Used By Leaves Request / UserName: 200130
+2026-04-07 14:34:42 INFO  RequestsEmployee1_V4: OK button clicked.
+2026-04-07 14:34:43 INFO  RequestsEmployee1_V4: WFH / UserName :Omar
+2026-04-07 14:34:55 ERROR RequestsEmployee1_V4: Request: WFH | Swal Message: There is Date Used By WFH Request Before With Serial (969) / UserName: 200130
+2026-04-07 14:34:55 INFO  RequestsEmployee1_V4: OK button clicked.
+2026-04-07 14:40:13 INFO  RequestsEmployee1_V4: Leave / UserName :Omar
+2026-04-07 14:40:31 INFO  RequestsEmployee1_V4: Remain value: 0
+2026-04-07 15:00:05 INFO  RequestsEmployee1_V4: Leave / UserName :Omar
+2026-04-07 15:00:18 INFO  RequestsEmployee1_V4: Remain value: 0
+2026-04-07 15:01:08 INFO  RequestsEmployee1_V4: Leave / UserName :Omar
+2026-04-07 15:01:11 INFO  RequestsEmployee1_V4: Remain value: 0
+2026-04-07 15:03:52 INFO  RequestsEmployee1_V4: Leave / UserName :Omar
+2026-04-07 15:04:03 INFO  RequestsEmployee1_V4: Remain value: 0
